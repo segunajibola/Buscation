@@ -15,7 +15,7 @@ function App() {
                           <span className="text-indigo-500">Take advantage of that.</span>
                       </h1>
                       <p className="mt-2 text-gray-600 sm:text-xl">
-                          Buscation helps you tour beautiful locations so you can enjoy nature.
+                          Buscation helps you tour beautiful locations so you can enjoy nature..
                       </p>
                       <div className="mt-4 sm:mt-6 space-x-1">
                           <a href="#" className="inline-block px-5 py-3 uppercase tracking-wider font-semibold text-sm sm:text-base rounded-lg focus:outline-none focus:ring focus:ring-offset-2 bg-indigo-500 hover:bg-indigo-300 focus:ring-indigo-500 focus:ring-opacity-50 active:bg-indigo-600 text-white shadow-lg hover:-translate-y-0.5 transform  transition ">Join next tour</a>
