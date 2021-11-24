@@ -1,4 +1,7 @@
+import React from "react";
 import "./assets/main.css";
+import popularDestinations from "./data/popularDestinations";
+import DestinationCards from "./components/DestinationCards";
 
 function App() {
   return (
@@ -6,8 +9,8 @@ function App() {
         <div className="bg-gray-100 grid lg:grid-cols-2 2xl:grid-cols-5">
             <div className="px-4 py-12 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2">
               <div className="max-w-xl">
-                      <img className="w-32 h-20 inline" src="/images/buscation.png" alt="Buscation" />
-                      <h1 className="text-gray-900 inline m-5 ml-20 tracking-wide font-bold text-4xl">Buscation</h1>
+                      <img className="w-32 h-28 inline-block" src="/images/buscation.png" alt="Buscation" />
+                      <h1 className="text-gray-900 inline-block tracking-wide font-bold text-center text-6xl">Buscation</h1>
                       <img src="/images/bus.jpg" alt="People going in the bus" className="w-full h-52 my-2 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:object-cover object-center lg:hidden" />
                       <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">
                           You can travel anywhere. 
@@ -32,92 +35,19 @@ function App() {
                <h2 className="text-xl text-gray-900">Popular destination</h2>
                <p className="mt-2 text-gray-600">A selection of great work-freindly</p>
                <div className="mt-6 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
-                <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-                    <img src="/images/location1.jpeg" alt="Toronto skyline" className="h-32 w-32 flex-shrink-0" />
-                    <div className="px-6 py-4">
-                        <h3 className="text-lg font-semibold text-gray-800">Toronto</h3>
-                        <p className="text-gray-600">
-                            $120
-                        </p>
-                        <div className="mt-4">
-                            <a href="#" className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
-                                Explore 76 properties
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-                    <img src="/images/location1.jpeg" alt="Toronto skyline" className="h-32 w-32 flex-shrink-0" />
-                    <div className="px-6 py-4">
-                        <h3 className="text-lg font-semibold text-gray-800">Toronto</h3>
-                        <p className="text-gray-600">
-                            $120
-                        </p>
-                        <div className="mt-4">
-                            <a href="#" className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
-                                Explore 76 properties
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-                    <img src="/images/location1.jpeg" alt="Toronto skyline" className="h-32 w-32 flex-shrink-0" />
-                    <div className="px-6 py-4">
-                        <h3 className="text-lg font-semibold text-gray-800">Toronto</h3>
-                        <p className="text-gray-600">
-                            $120
-                        </p>
-                        <div className="mt-4">
-                            <a href="#" className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
-                                Explore 76 properties
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-                    <img src="/images/location1.jpeg" alt="Toronto skyline" className="h-32 w-32 flex-shrink-0" />
-                    <div className="px-6 py-4">
-                        <h3 className="text-lg font-semibold text-gray-800">Toronto</h3>
-                        <p className="text-gray-600">
-                            $120
-                        </p>
-                        <div className="mt-4">
-                            <a href="#" className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
-                                Explore 76 properties
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-                    <img src="/images/location1.jpeg" alt="Toronto skyline" className="h-32 w-32 flex-shrink-0" />
-                    <div className="px-6 py-4">
-                        <h3 className="text-lg font-semibold text-gray-800">Toronto</h3>
-                        <p className="text-gray-600">
-                            $120
-                        </p>
-                        <div className="mt-4">
-                            <a href="#" className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
-                                Explore 76 properties
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-                    <img src="/images/location1.jpeg" alt="Toronto skyline" className="h-32 w-32 flex-shrink-0" />
-                    <div className="px-6 py-4">
-                        <h3 className="text-lg font-semibold text-gray-800">Toronto</h3>
-                        <p className="text-gray-600">
-                            $120
-                        </p>
-                        <div className="mt-4">
-                            <a href="#" className="text-indigo-500 hover:text-indigo-400 font-semibold text-sm">
-                                Explore 76 properties
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-               </div> 
+               
+               {/* <DestinationCards destination={popularDestinations[1]} key={destination.city} /> */}
+
+                {popularDestinations.map((destination) => (
+                    <>
+               <DestinationCards destination={popularDestinations[1]} key={destination.city} />
+
+                <DestinationCards destination={destination} key={destination.city} />
+
+                </>
+                ))}
+
+            </div> 
             </div>  
       </>
   )
