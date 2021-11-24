@@ -40,7 +40,7 @@ function App() {
 
                 {popularDestinations.map((destination) => (
                     <>
-               <DestinationCards destination={popularDestinations[1]} key={destination.city} />
+               {/* <DestinationCards destination={popularDestinations[1]} key={destination.city} /> repeating */}
 
                 <DestinationCards destination={destination} key={destination.city} />
 
