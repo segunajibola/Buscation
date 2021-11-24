@@ -7,10 +7,10 @@ function App() {
   return (
       <>
         <div className="bg-gray-100 grid lg:grid-cols-2 2xl:grid-cols-5">
-            <div className="px-4 py-12 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2">
+            <div className="px-4 py-4 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2">
               <div className="max-w-xl">
-                      <img className="w-32 h-28 inline-block" src="/images/buscation.png" alt="Buscation" />
-                      <h1 className="text-gray-900 inline-block tracking-wide font-bold text-center text-6xl">Buscation</h1>
+                      <img className="w-28 h-28 inline-block" src="/images/buscation.png" alt="Buscation" />
+                      <h1 className="text-gray-900 inline-block tracking-wide font-bold text-6xl">Buscation</h1>
                       <img src="/images/bus.jpg" alt="People going in the bus" className="w-full h-52 my-2 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:object-cover object-center lg:hidden" />
                       <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">
                           You can travel anywhere. 
