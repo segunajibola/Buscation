@@ -12,12 +12,12 @@ function darkMode() {
 
 function App() {
   return (
-      <div className="dark" id="dark">
+      <div className="" id="dark">
         <div className="bg-gray-100 dark:bg-gray-900 grid lg:grid-cols-2 2xl:grid-cols-5">
             <div className="px-4 py-4 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2">
               <div className="max-w-xl">
-                      <p className="text-right text-gray-900 dark:text-white" onClick={darkMode}>Dark mode</p>
-                      <FontAwesomeIcon icon="fa-solid fa-moon" />
+                      <p className="text-right text-gray-900 dark:text-white  cursor-pointer" onClick={darkMode}>Dark mode</p>
+                      <FontAwesomeIcon icon="check-square" />
                       <img className="w-28 h-28 inline-block" src="/images/buscation.png" alt="Buscation" />
                       <h1 className="text-gray-900 dark:text-white inline-block tracking-wide font-bold text-5xl ml-5 ">Buscation</h1>
                       <img src="/images/bus.jpg" alt="People going in the bus" className="w-full h-52 my-2 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:object-cover object-center lg:hidden" />
