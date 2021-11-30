@@ -1,8 +1,10 @@
-import React from "react";
+import React, { Component } from 'react';
 import "./assets/main.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon } from '@fortawesome/fontawesome-free-solid'
 import popularDestinations from "./data/popularDestinations";
 import DestinationCards from "./components/DestinationCards";
+
 
 function darkMode() {
     const btn = document.getElementById("dark");
@@ -16,10 +18,9 @@ function App() {
         <div className="bg-gray-100 dark:bg-gray-900 grid lg:grid-cols-2 2xl:grid-cols-5">
             <div className="px-4 py-4 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2">
               <div className="max-w-xl">
-                      <p className="text-right text-gray-900 dark:text-white  cursor-pointer" onClick={darkMode}>Dark mode</p>
-                      <FontAwesomeIcon icon="check-square" />
                       <img className="w-28 h-28 inline-block" src="/images/buscation.png" alt="Buscation" />
                       <h1 className="text-gray-900 dark:text-white inline-block tracking-wide font-bold text-5xl ml-5 ">Buscation</h1>
+                      <FontAwesomeIcon className="text-right text-2xl ml-40 text-black  dark:text-white cursor-pointer" onClick={darkMode} icon={faMoon} />
                       <img src="/images/bus.jpg" alt="People going in the bus" className="w-full h-52 my-2 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:object-cover object-center lg:hidden" />
                       <h1 className="mt-6 text-2xl font-bold text-gray-900 dark:text-white sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">
                           You can travel anywhere. 
@@ -40,10 +41,10 @@ function App() {
             </div>
         </div>
 
-        <div className="max-w-md sm:max-w-xl lg:max-w-6xl mx-auto px-8 lg:px-12 py-8">
-               <h2 className="text-xl text-gray-900">Popular destination</h2>
-               <p className="mt-2 text-gray-600">A selection of great work-freindly</p>
-               <div className="mt-6 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+        <div className="max-w-md sm:max-w-xl lg:max-w-full mx-auto px-8 lg:px-8 py-4 dark:bg-gray-900">
+               <h2 className="text-xl text-gray-900 dark:text-white  text-center">Popular destination</h2>
+               <p className="mt-2 text-gray-600 dark:text-white  text-center">A selection of great work-freindly</p>
+               <div className="mt-6 grid gap-6 lg:grid-cols-2 xl:grid-cols-3 dark:bg-gray-900">
                
                {/* <DestinationCards destination={popularDestinations[1]} key={destination.city} /> */}
 
