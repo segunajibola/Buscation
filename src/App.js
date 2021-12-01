@@ -7,9 +7,27 @@ import DestinationCards from "./components/DestinationCards";
 
 
 function darkMode() {
-    const btn = document.getElementById("dark");
 
-    btn.addEventListener("click", () => btn.classList.toggle("dark"))    
+    const btn = document.getElementById("dark");
+    
+    if (btn.classList.contains("dark")) {
+        btn.classList = "" } else {
+            btn.classList = "dark";
+        }
+    
+    // const btn = document.querySelector("#dark");
+
+    // btn.addEventListener("click", () => btn.classList.toggle("dark"))
+    
+    // document.querySelector("#dark").addEventListener("click", (e) => {
+    //     const btn = e.target.classList;
+    //     if (btn.contains("dark")) {
+    //         btn.toggle("");
+    //     } 
+    //      else{
+    //         btn.toggle("dark")
+    //     }
+    // })
 }
 
 function App() {
@@ -18,9 +36,9 @@ function App() {
         <div className="bg-gray-100 dark:bg-gray-900 grid lg:grid-cols-2 2xl:grid-cols-5">
             <div className="px-4 py-4 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2">
               <div className="max-w-xl">
-                      <img className="w-28 h-28 inline-block" src="/images/buscation.png" alt="Buscation" />
-                      <h1 className="text-gray-900 dark:text-white inline-block tracking-wide font-bold text-5xl ml-5 ">Buscation</h1>
-                      <FontAwesomeIcon className="text-right text-2xl ml-40 text-black  dark:text-white cursor-pointer" onClick={darkMode} icon={faMoon} />
+                      <img className="w-16 h-12 inline-block mb-5" src="/images/buscation.png" alt="Buscation" />
+                      <h1 className="text-gray-900 dark:text-white inline-block tracking-wide font-bold text-5xl ml-2 ">Buscation</h1>
+                      <FontAwesomeIcon className="text-right text-2xl ml-10 mb-1 lg:ml-40 text-black  dark:text-white cursor-pointer" onClick={darkMode}  icon={faMoon} />
                       <img src="/images/bus.jpg" alt="People going in the bus" className="w-full h-52 my-2 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:object-cover object-center lg:hidden" />
                       <h1 className="mt-6 text-2xl font-bold text-gray-900 dark:text-white sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">
                           You can travel anywhere. 
