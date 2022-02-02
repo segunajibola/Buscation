@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import "./assets/main.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/fontawesome-free-solid'
+import { faAngleDown } from '@fortawesome/fontawesome-free-solid'
 import popularDestinations from "./data/popularDestinations";
 import DestinationCards from "./components/DestinationCards";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function darkMode() {
@@ -45,24 +46,31 @@ function App() {
             </div>
         </div>
 
-        <div className="max-w-md sm:max-w-xl lg:max-w-full mx-auto px-8 lg:px-8 py-4 dark:bg-gray-900">
-               <h2 className="text-xl text-gray-900 dark:text-white  text-center">Popular destination</h2>
-               <p className="mt-2 text-gray-600 dark:text-white  text-center">A selection of great work-freindly</p>
+        <div className="max-w-full lg:max-w-full mx-auto px-8 lg:px-8 py-4 dark:bg-gray-900">
+               <h2 className="text-xl text-gray-900 dark:text-white text-center">Popular destination</h2>
+               <p className="mt-2 text-gray-600 dark:text-white text-center">A selection of great work-freindly</p>
+               <div className='text-center'>
+                <p className='mt-2 text-gray-600 dark:text-white inline-block border border-red-200 p-3'>Show By Location<FontAwesomeIcon className="text-xl text-black inline-block ml-2 -mb-1 text-right dark:text-white cursor-pointer" icon={faAngleDown} /></p>
+               </div>
+               
                <div className="mt-6 grid gap-6 lg:grid-cols-2 xl:grid-cols-3 dark:bg-gray-900">
                
-               {/* <DestinationCards destination={popularDestinations[1]} key={destination.city} /> */}
+                {/* <DestinationCards destination={popularDestinations[1]} key={popularDestinations[1].city} /> show for one */}
 
-                {popularDestinations.map((destination) => (
-                    <>
-               {/* <DestinationCards destination={popularDestinations[1]} key={destination.city} /> repeating */}
+                    {popularDestinations.map((eachDestination) => (
+                        <>
+                            <DestinationCards destination={eachDestination} key={eachDestination.city} />
+                        </>
+                    ))}
 
-                <DestinationCards destination={destination} key={destination.city} />
-
-                </>
-                ))}
-
-            </div> 
-            </div>  
+                    <ul className='mt-10 font-medium text-center'> Only Lagos: </ul>
+                        {
+                            popularDestinations.filter(destination => destination.city === 'Lagos')
+                            .map(destination => <DestinationCards destination={destination} key={destination.city} />) 
+                        }
+                    
+                </div> 
+        </div>  
       </div>
   )
 }
