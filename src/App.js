@@ -4,30 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/fontawesome-free-solid'
 import popularDestinations from "./data/popularDestinations";
 import DestinationCards from "./components/DestinationCards";
+// import { Link } from "react-router-dom";
 
 
 function darkMode() {
-
     const btn = document.getElementById("dark");
-    
     if (btn.classList.contains("dark")) {
-        btn.classList = "" } else {
-            btn.classList = "dark";
-        }
-    
-    // const btn = document.querySelector("#dark");
-
-    // btn.addEventListener("click", () => btn.classList.toggle("dark"))
-    
-    // document.querySelector("#dark").addEventListener("click", (e) => {
-    //     const btn = e.target.classList;
-    //     if (btn.contains("dark")) {
-    //         btn.toggle("");
-    //     } 
-    //      else{
-    //         btn.toggle("dark")
-    //     }
-    // })
+        btn.classList = "" }
+    else {
+        btn.classList = "dark";
+    }
 }
 
 function App() {
@@ -46,7 +32,7 @@ function App() {
                           <span className="text-indigo-500 dark:text-indigo-600">Take advantage of that.</span>
                       </h1>
                       <p className="mt-2 text-gray-600 dark:text-white sm:text-xl">
-                          Buscation helps you tour beautiful locations so you can enjoy nature..
+                          Buscation helps you tour beautiful locations so you can enjoy nature.
                       </p>
                       <div className="mt-4 sm:mt-6 space-x-1">
                           <a href="#" className="inline-block px-5 py-3 uppercase tracking-wider font-semibold text-sm sm:text-base rounded-lg focus:outline-none focus:ring focus:ring-offset-2 bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-300 focus:ring-indigo-500 focus:ring-opacity-50 active:bg-indigo-600 text-white dark:text-black shadow-lg hover:-translate-y-0.5 transform  transition ">Join next tour</a>
