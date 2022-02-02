@@ -50,7 +50,7 @@ function App() {
                <h2 className="text-xl text-gray-900 dark:text-white text-center">Popular destination</h2>
                <p className="mt-2 text-gray-600 dark:text-white text-center">A selection of great work-freindly</p>
                <div className='text-center'>
-                <p className='mt-2 text-gray-600 dark:text-white inline-block border border-red-200 p-3'>Show By Location<FontAwesomeIcon className="text-xl text-black inline-block ml-2 -mb-1 text-right dark:text-white cursor-pointer" icon={faAngleDown} /></p>
+                <p className='mt-2 text-gray-600 dark:text-white inline-block border-2 border-red-500 p-3'>Show By Location<FontAwesomeIcon className="text-xl text-black inline-block ml-2 -mb-1 text-right dark:text-white cursor-pointer" icon={faAngleDown} /></p>
                </div>
                
                <div className="mt-6 grid gap-6 lg:grid-cols-2 xl:grid-cols-3 dark:bg-gray-900">
