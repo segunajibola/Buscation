@@ -16,7 +16,7 @@ const Home = () => {
     return (
         <div className="bg-gray-100 dark:bg-gray-900 grid lg:grid-cols-2 2xl:grid-cols-5">
             <div className="px-4 py-4 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2">
-              <div className="max-w-xl mx-2">
+              <div className="max-w-xl">
                       <img className="w-16 h-12 inline-block mb-5" src="/images/buscation.png" alt="Buscation" />
                       <h1 className="text-gray-900 dark:text-white inline-block tracking-wide font-bold text-5xl ml-2 ">Buscation</h1>
                       <FontAwesomeIcon className="text-right text-2xl ml-10 mb-1 lg:ml-40 text-black  dark:text-white cursor-pointer" onClick={darkMode}  icon={faMoon} />
@@ -35,7 +35,7 @@ const Home = () => {
                       </div>
               </div>
             </div>
-            <div className="hidden relative lg:block 2xl:col-span-3">
+            <div className="hidden relative lg:block 2xl:col-span-3 mr-3">
                         <img src="/images/bus.jpg" alt="People going in the bus" className="absolute inset-0 w-full h-full object-cover object-center" />
             </div>
         </div>
