@@ -8,11 +8,15 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 
 const Footer = () => {
+
+    let getYear = () => {
+        return new Date().getFullYear();
+    }
   return (
     <div>
-        <footer className="bg-gray-500 dark:bg-gray-900 md:mx-0">
+        <footer className="bg-gray-400 dark:bg-gray-900 md:mx-0 dark:text-gray-400">
             <div className="p-5">
-                <div className="grid grid-cols-2 md:grid-cols-4 max-w-7xl gap-2 space-y-4 mx-auto md:mx-2 dark:text-gray-400">
+                <div className="grid grid-cols-2 md:grid-cols-4 max-w-7xl gap-2 space-y-4 mx-auto md:mx-2 ">
                     <div>
                         <h5 className="font-semibold text-lg mt-4 dark:text-gray-200">
                             Company
@@ -54,6 +58,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <p className='text-center p-3'>Copyright &copy; {getYear()}. All right reserved.</p>
         </footer>
     </div>
   )
