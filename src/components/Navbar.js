@@ -49,8 +49,8 @@ const Navbar = () => {
 
             {/* Secondary Navbar items --> show from md up */}
             <div class="hidden md:flex items-center space-x-3">
-              <a href="" className="py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 dark:text-white transition duration-300">Log In</a>
-              <a href="" className="py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 transition duration-300">Sign Up</a>
+              <Link to="/log-in" className="py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 dark:text-white transition duration-300">Log In</Link>
+              <Link to="/sign-up" className="py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 transition duration-300">Sign Up</Link>
               <FontAwesomeIcon className="text-lg mt-1 mr-3 md:mr-0 text-yellow-400 dark:text-white cursor-pointer" onClick={darkMode}  icon={faMoon} />
             </div>
             
@@ -66,11 +66,13 @@ const Navbar = () => {
         </div>
 
         <div className="hidden" id='menu'>
-          <ul className="dark:text-white">
-            <li className=""><Link to="index.html" className="block text-sm px-2 py-4 hover:bg-indigo-400 dark:hover:bg-indigo-300 dark:hover:text-black">Home</Link></li>
-            <li><Link to="#services" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-300">Services</Link></li>
-            <li><Link to="#about" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-300">About</Link></li>
-            <li><Link to="#contact" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-400">Contact Us</Link></li>
+          <ul className="dark:text-white py-3 px-2 m-1 bg-gray-500">
+            <li className=""><Link to="/" className="block text-sm px-2 py-4 hover:bg-indigo-400 dark:hover:bg-indigo-300 dark:hover:text-black">Home</Link></li>
+            <li><Link to="/services" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-300">Services</Link></li>
+            <li><Link to="/about" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-300">About</Link></li>
+            <li><Link to="/contact" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-400">Contact Us</Link></li>
+            <li><Link to="/log-in" className="inline py-2 my-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 dark:text-white transition duration-300">Log In</Link></li>
+            <li><Link to="/sign-up" className="inline py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 transition duration-300">Sign Up</Link></li>
           </ul>
         </div>
       </nav>

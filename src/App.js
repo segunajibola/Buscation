@@ -20,9 +20,6 @@ function App() {
                   <Route path="/all-states">
                   <StatesCards />
                   </Route>
-                  {/* <Route path="/blogs/:id"> */}
-                  {/* <BlogDetails /> */}
-                  {/* </Route> */}
                   <Route path="*">
                   <NotFound />
                   </Route>
