@@ -55,7 +55,7 @@ const Home = () => {
                     {popularDestinations.filter(destination => destination.city === 'Lagos').map(destination => <DestinationCards destination={destination} key={destination.city} />)} */}
             </div>
             <div className='text-center'>
-                <Link to='/'><button className='border-4 rounded-lg border-indigo-500 px-2 py-1 m-4 text-2xl dark:text-white dark:border-white'>See all</button></Link>
+                <Link to='/'><button className='border-2 rounded-lg bg-indigo-400 border-indigo-800 hover:bg-indigo-500 px-2 py-1 m-5 text-2xl dark:text-white dark:border-white'>See all</button></Link>
             </div>
     </div>  
         </>
