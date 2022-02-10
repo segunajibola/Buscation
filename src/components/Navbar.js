@@ -66,11 +66,11 @@ const Navbar = () => {
         </div>
 
         <div className="hidden" id='menu'>
-          <ul className="">
-            <li className=""><Link to="index.html" className="block text-sm px-2 py-4 hover:bg-indigo-400">Home</Link></li>
-            <li><Link to="#services" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300">Services</Link></li>
-            <li><Link to="#about" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300">About</Link></li>
-            <li><Link to="#contact" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300">Contact Us</Link></li>
+          <ul className="dark:text-white">
+            <li className=""><Link to="index.html" className="block text-sm px-2 py-4 hover:bg-indigo-400 dark:hover:bg-indigo-300 dark:hover:text-black">Home</Link></li>
+            <li><Link to="#services" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-300">Services</Link></li>
+            <li><Link to="#about" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-300">About</Link></li>
+            <li><Link to="#contact" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-400">Contact Us</Link></li>
           </ul>
         </div>
       </nav>
