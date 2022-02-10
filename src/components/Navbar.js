@@ -29,7 +29,7 @@ const Navbar = () => {
         <div className='max-w-7xl px-4 m-auto text-xs'>
           <div className="flex justify-between">
             <div className='flex space-x-8'>
-              <div className='md:mr-10'>
+              <div className='md:mr-32'>
                 {/* Website Logo --> show on all screens*/}
                 <a href="#" className="flex items-center py-4 px-1">
                   <img className="w-12 h-8 inline-block" src="/images/buscation.png" alt="Buscation" />
@@ -37,7 +37,7 @@ const Navbar = () => {
                 </a>
               </div>
               {/* Primary Navbar items --> show from md up */}
-              <div className="hidden md:flex items-center space-x-3 text-indigo-600 dark:text-white"> 
+              <div className="hidden md:flex items-center space-x-8 text-indigo-600 dark:text-white"> 
                 <Link to="/" className="py-4 px-2 hover:text-black">Home</Link>
                 <Link className="py-4 px-2 hover:text-black transition duration-300">Experience</Link>
                 <Link className="py-4 px-2 hover:text-black transition duration-300">Pickup Route</Link>
@@ -48,14 +48,14 @@ const Navbar = () => {
             </div>
 
             {/* Secondary Navbar items --> show from md up */}
-            <div class="hidden md:flex items-center space-x-3 "> 
+            <div class="hidden md:flex items-center space-x-3">
               <a href="" className="py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 dark:text-white transition duration-300">Log In</a>
               <a href="" className="py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 transition duration-300">Sign Up</a>
+              <FontAwesomeIcon className="text-lg mt-1 mr-3 md:mr-0 text-yellow-400 dark:text-white cursor-pointer" onClick={darkMode}  icon={faMoon} />
             </div>
             
             {/* Mobile menu button icon --> only shows in sm */}
             <div class="md:hidden flex items-center"> 
-            <FontAwesomeIcon className="text-lg mt-1 mr-3 text-yellow-400 dark:text-white cursor-pointer" onClick={darkMode}  icon={faMoon} />
               <button className="outline-none" onClick={toggleMenu}>
                 <svg className="w-6 h-6 dark:text-indigo-500" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"> <path d="M4 6h16M4 12h16M4 18h16"></path></svg>
               </button>

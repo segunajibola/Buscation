@@ -16,7 +16,7 @@ const Footer = () => {
     <div>
         <footer className="bg-gray-400 dark:bg-gray-900 md:mx-0 dark:text-gray-400">
             <div className="p-5">
-                <div className="grid grid-cols-2 md:grid-cols-4 max-w-7xl gap-2 space-y-4 mx-auto md:mx-2 ">
+                <div className="grid grid-cols-2 md:grid-cols-4 max-w-7xl gap-6 space-y-4 mx-auto md:mx-2 ">
                     <div>
                         <h5 className="font-semibold text-lg mt-4 dark:text-gray-200">
                             Company
@@ -25,7 +25,6 @@ const Footer = () => {
                         <p><Link>Awards</Link></p>
                         <p><Link>Contact us</Link></p>
                         <p><Link>Bus Terminals</Link></p>
-                        <p><Link>FAQs</Link></p>
                     </div>
                     <div>
                         <h5 className="font-semibold text-lg mb-1 dark:text-gray-200">
@@ -34,6 +33,7 @@ const Footer = () => {
                         <p><Link>Tour Moments</Link></p>
                         <p><Link>Academy</Link></p>
                         <p><Link>Safety</Link></p>
+                        <p><Link>FAQs</Link></p>
                     </div>
                     <div>
                         <h5 className="font-semibold text-lg mb-1 dark:text-gray-200">
