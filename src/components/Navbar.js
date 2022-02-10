@@ -49,18 +49,20 @@ const Navbar = () => {
 
             {/* Secondary Navbar items --> show from md up */}
             <div class="hidden md:flex items-center space-x-3 "> 
-              <a href="" class="py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 dark:text-white transition duration-300">Log In</a>
-              <a href="" class="py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 transition duration-300">Sign Up</a>
+              <a href="" className="py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 dark:text-white transition duration-300">Log In</a>
+              <a href="" className="py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 transition duration-300">Sign Up</a>
             </div>
             
             {/* Mobile menu button icon --> only shows in sm */}
             <div class="md:hidden flex items-center"> 
-              <button class="outline-none mobile-menu-button">
-                <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 " x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"> <path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <FontAwesomeIcon className="text-lg mt-1 mr-3 text-yellow-400 dark:text-white cursor-pointer" onClick={darkMode}  icon={faMoon} />
+              <button className="outline-none mobile-menu-button">
+                <svg className=" w-6 h-6 text-gray-500 hover:text-green-500 " x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"> <path d="M4 6h16M4 12h16M4 18h16"></path></svg>
               </button>
+
             </div>
 
-            <FontAwesomeIcon className="text-lg mt-6 text-yellow-400 dark:text-white cursor-pointer" onClick={darkMode}  icon={faMoon} />
+            
 
           </div>
         </div>
