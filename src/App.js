@@ -4,31 +4,29 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import StatesCards from './components/StatesCards';
+import Footer from './components/Footer';
 
 
 function App() {
   return (
       <div className="" id="dark">
         <Router>
-        <div className="">
             <Navbar />
-            <div className="content">
-            <Switch>
-                <Route exact path="/">
-                <Home />
-                </Route>
-                <Route path="/states">
-                <StatesCards />
-                </Route>
-                {/* <Route path="/blogs/:id"> */}
-                {/* <BlogDetails /> */}
-                {/* </Route> */}
-                <Route path="*">
-                {/* <NotFound /> */}
-                </Route>
-            </Switch>
-            </div>
-        </div>
+              <Switch>
+                  <Route exact path="/">
+                  <Home />
+                  </Route>
+                  <Route path="/states">
+                  <StatesCards />
+                  </Route>
+                  {/* <Route path="/blogs/:id"> */}
+                  {/* <BlogDetails /> */}
+                  {/* </Route> */}
+                  <Route path="*">
+                  {/* <NotFound /> */}
+                  </Route>
+              </Switch>
+            <Footer />
         </Router>
       </div>
   )
