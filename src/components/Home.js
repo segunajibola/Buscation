@@ -3,7 +3,7 @@ import { faAngleDown } from '@fortawesome/fontawesome-free-solid'
 
 const Home = () => {
     return (
-        <div className="bg-gray-200 dark:bg-gray-900 grid lg:grid-cols-2 2xl:grid-cols-5">
+        <div className="bg-gray-200 dark:bg-gray-800 grid lg:grid-cols-2 2xl:grid-cols-5">
             <div className="px-4 py-4 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2">
               <div className="max-w-xl">
                       <h1 className="mt-2 lg:mt-4 text-2xl font-bold text-gray-900 dark:text-white sm:mt-4 sm:text-4xl lg:text-3xl xl:text-4xl">
