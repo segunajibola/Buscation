@@ -16,7 +16,7 @@ function App() {
                   <Route exact path="/">
                   <Home />
                   </Route>
-                  <Route path="/states">
+                  <Route path="/all-states">
                   <StatesCards />
                   </Route>
                   {/* <Route path="/blogs/:id"> */}
