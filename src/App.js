@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import StatesCards from './components/StatesCards';
 import Footer from './components/Footer';
+import NotFound from './components/NotFound';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
                   {/* <BlogDetails /> */}
                   {/* </Route> */}
                   <Route path="*">
-                  {/* <NotFound /> */}
+                  <NotFound />
                   </Route>
               </Switch>
             <Footer />

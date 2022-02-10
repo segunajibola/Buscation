@@ -39,7 +39,7 @@ const Navbar = () => {
               {/* Primary Navbar items --> show from md up */}
               <div className="hidden md:flex items-center space-x-8 text-indigo-600 dark:text-white"> 
                 <Link to="/" className="py-4 px-2 hover:text-black">Home</Link>
-                <Link className="py-4 px-2 hover:text-black transition duration-300">Experience</Link>
+                <Link to="/df" className="py-4 px-2 hover:text-black transition duration-300">Experience</Link>
                 <Link className="py-4 px-2 hover:text-black transition duration-300">Pickup Route</Link>
                 <Link className="py-4 px-2 hover:text-black transition duration-300">Buscation Plus</Link>
                 <Link className="py-4 px-2 hover:text-black transition duration-300">Work with us</Link>
