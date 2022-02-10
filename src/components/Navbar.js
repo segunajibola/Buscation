@@ -4,14 +4,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/fontawesome-free-solid'
 
 
-// function toggleMenu() {
-//   const btn = document.querySelector("button.mobile-menu-button");
-//   const menu = document.querySelector(".mobile-menu");
+function toggleMenu() {
+  // const btn = document.querySelector("button.mobile-menu-button");
+  const menu = document.getElementById("menu");
 
-//   btn.addEventListener("click", () => {
-//     menu.classList.toggle("hidden");
-//   }); 
-// }
+  if (menu.classList.contains("hidden")) {
+    menu.classList = " " }
+  else {
+    menu.classList = "hidden";
+}
+
+  // btn.addEventListener("click", () => {
+  //   menu.classList.toggle("hidden");
+};
 
 function darkMode() {
   const btn = document.getElementById("dark");
@@ -56,18 +61,16 @@ const Navbar = () => {
             {/* Mobile menu button icon --> only shows in sm */}
             <div class="md:hidden flex items-center"> 
             <FontAwesomeIcon className="text-lg mt-1 mr-3 text-yellow-400 dark:text-white cursor-pointer" onClick={darkMode}  icon={faMoon} />
-              <button className="outline-none mobile-menu-button">
+              <button className="outline-none mobile-menu-button" onClick={toggleMenu}>
                 <svg className="w-6 h-6 dark:text-indigo-500" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"> <path d="M4 6h16M4 12h16M4 18h16"></path></svg>
               </button>
 
             </div>
 
-            
-
           </div>
         </div>
 
-        <div className="hidden mobile-menu">
+        <div className="hidden mobile-menu" id='menu'>
           <ul className="">
             <li className="active"><a href="index.html" className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
             <li><a href="#services" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Services</a></li>
