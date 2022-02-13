@@ -51,7 +51,9 @@ const Navbar = () => {
             <div class="hidden md:flex items-center space-x-3">
               <Link to="/log-in" className="py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 dark:text-white transition duration-300">Log In</Link>
               <Link to="/sign-up" className="py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 transition duration-300">Sign Up</Link>
-              <FontAwesomeIcon className="text-lg mt-1 mr-3 md:mr-0 text-yellow-400 dark:text-white cursor-pointer" onClick={darkMode}  icon={faMoon} />
+            </div>
+            <div>
+              <FontAwesomeIcon className="text-lg mt-4 md:mt-1 ml-10 md:mr-3 text-yellow-400 dark:text-white cursor-pointer" onClick={darkMode}  icon={faMoon} />
             </div>
             
             {/* Mobile menu button icon --> only shows in sm */}
@@ -72,7 +74,7 @@ const Navbar = () => {
             <li><Link to="/about" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-300">About</Link></li>
             <li><Link to="/contact" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-400">Contact Us</Link></li>
             <li><Link to="/log-in" className="inline py-2 my-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 dark:text-white transition duration-300">Log In</Link></li>
-            <li><Link to="/sign-up" className="inline py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 transition duration-300">Sign Up</Link></li>
+            <li><Link to="/sign-up" className="nline py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 transition duration-300">Sign Up</Link></li>
           </ul>
         </div>
       </nav>
