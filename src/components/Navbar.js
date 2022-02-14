@@ -55,7 +55,7 @@ const Navbar = () => {
               <Link to="/sign-up" className="py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 transition duration-300">Sign Up</Link>
             </div>
             <div>
-              <FontAwesomeIcon className="text-xl mt-6 ml-32 sm:ml-80 md:ml-0 -mr-20 text-yellow-400 dark:text-white cursor-pointer" onClick={darkMode}  icon={faMoon} />
+              <FontAwesomeIcon className="text-xl mt-6 ml-28 sm:ml-80 md:ml-0 -mr-20 text-yellow-400 dark:text-white cursor-pointer" onClick={darkMode} icon={faMoon} />
             </div>
             
             {/* Mobile menu button icon --> only shows in sm */}
