@@ -23,7 +23,7 @@ const Home = () => {
                         </p>
                         <img src="/images/bus.jpg" alt="People going in the bus" className="w-full h-52 my-2 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:object-cover object-center lg:hidden" />
                         <div className="mt-4 sm:mt-6 space-x-1">
-                            <a href="#" className="inline-block px-5 py-3 uppercase tracking-wider font-semibold text-sm sm:text-base rounded-lg focus:outline-none focus:ring focus:ring-offset-2 bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-300 focus:ring-indigo-500 focus:ring-opacity-50 active:bg-indigo-600 text-white shadow-lg hover:-translate-y-0.5 transform  transition ">Join next tour</a>
+                            <a href="#" className="inline-block px-5 py-3 uppercase tracking-wider font-semibold text-sm sm:text-base rounded-lg focus:outline-none focus:ring focus:ring-offset-2 bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-400 focus:ring-indigo-500 focus:ring-opacity-50 active:bg-indigo-600 text-white shadow-lg hover:-translate-y-0.5 transform  transition ">Join next tour</a>
                             <a href="#" className="inline-block px-5 py-3 uppercase tracking-wider font-semibold text-sm sm:text-base rounded-lg focus:outline-none focus:ring focus:ring-offset-2 bg-gray-300 hover:bg-gray-200 focus:ring-gray-300 focus:ring-opacity-50 active:bg-gray-400 text-gray-800">Know more</a>
                         </div>
                 </div>
@@ -58,7 +58,7 @@ const Home = () => {
                     {popularDestinations.filter(destination => destination.city === 'Lagos').map(destination => <DestinationCards destination={destination} key={destination.city} />)} */}
             </div>
             <div className='text-center'>
-                <Link to='/all-states'><button className='border-2 rounded-lg bg-indigo-400 border-indigo-800 hover:bg-indigo-500 px-2 py-1 m-5 text-2xl dark:text-white dark:border-white' onClick={() => window.scrollTo(0, 0)}>See all</button></Link>
+                <Link to='/all-states'><button className='rounded-lg uppercase tracking-wider font-semibold px-2 py-2 m-5 text-sm text-white dark:text-white dark:border-white bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-400 focus:ring-indigo-500 focus:ring-opacity-50 active:bg-indigo-600 shadow-lg hover:-translate-y-0.5 transform transition' onClick={() => window.scrollTo(0, 0)}>See all</button></Link>
             </div>
     </div>  
         </>
