@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <>
-            <div className="bg-gray-200 dark:bg-gray-800 grid lg:grid-cols-2 2xl:grid-cols-5">
+            <div className="bg-gray-100 dark:bg-gray-800 grid lg:grid-cols-2 2xl:grid-cols-5">
                 <div className="px-4 py-4 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2">
                 <div className="max-w-xl">
                         <h1 className="mt-2 lg:mt-4 text-2xl font-bold text-gray-900 dark:text-white sm:mt-4 sm:text-4xl lg:text-3xl xl:text-4xl">
@@ -32,7 +32,7 @@ const Home = () => {
                             <img src="/images/bus.jpg" alt="People going in the bus" className="absolute inset-0 w-full h-full rounded object-cover object-center" />
                 </div>
             </div>
-            <div className="max-w-full lg:max-w-full mx-auto px-8 lg:px-8 py-4 dark:bg-gray-900">
+            <div className="max-w-full lg:max-w-full mx-auto px-8 lg:px-8 py-4 dark:bg-gray-800">
             <h2 className="text-xl text-gray-900 dark:text-white text-center">Popular destination</h2>
             {/* <div className='text-center'>
             <p className='mt-2 text-gray-600 dark:text-white inline-block border-2 border-red-500 p-3'>Sort By Location<FontAwesomeIcon className="text-xl text-black inline-block ml-2 -mb-1 text-right dark:text-white cursor-pointer" icon={faAngleDown} /></p>
@@ -45,7 +45,7 @@ const Home = () => {
                 </select>
             </div> */}
             
-            <div className="mt-6 grid gap-6 lg:grid-cols-2 xl:grid-cols-3 dark:bg-gray-900">
+            <div className="mt-6 grid gap-6 p-4 rounded-md lg:grid-cols-2 xl:grid-cols-3">
             
             {/* <DestinationCards destination={popularDestinations[1]} key={popularDestinations[1].city} /> show for one */}
                 {popularDestinations.filter((item, index) => index < 6).map((eachDestination) => (

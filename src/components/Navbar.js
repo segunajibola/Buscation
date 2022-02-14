@@ -26,9 +26,8 @@ function darkMode() {
 
 const Navbar = () => {
   return (
-    <div>
-      <nav className="bg-white dark:bg-gray-900 shadow-lg">
-        <div className='max-w-7xl px-4 m-auto text-xs'>
+      <nav className="z-10 bg-white dark:bg-gray-900 shadow-lg">
+        <div className='z-20 fixed max-w-7xl px-4 m-auto text-xs'>
           <div className="flex justify-between">
             <div className='flex space-x-8'>
               <div className='md:mr-32'>
@@ -40,12 +39,12 @@ const Navbar = () => {
               </div>
               {/* Primary Navbar items --> show from md up */}
               <div className="hidden md:flex items-center space-x-8 text-indigo-600 dark:text-white"> 
-                <Link to="/" className="py-4 px-2 hover:text-black">Home</Link>
-                <Link to="/df" className="py-4 px-2 hover:text-black transition duration-300">Experience</Link>
-                <Link className="py-4 px-2 hover:text-black transition duration-300">Pickup Route</Link>
-                <Link className="py-4 px-2 hover:text-black transition duration-300">Buscation Plus</Link>
-                <Link className="py-4 px-2 hover:text-black transition duration-300">Work with us</Link>
-                <Link className="py-4 px-2 hover:text-black transition duration-300">Contact Us</Link>
+                <Link to="/" className="py-4 px-2 hover:text-black dark:hover:text-gray-400">Home</Link>
+                <Link to="/experience" className="py-4 px-2 hover:text-black dark:hover:text-gray-400 transition duration-300">Experience</Link>
+                <Link to="/pickup-route" className="py-4 px-2 hover:text-black dark:hover:text-gray-400 transition duration-300">Pickup Route</Link>
+                <Link to="/buscation-plus" className="py-4 px-2 hover:text-black dark:hover:text-gray-400 transition duration-300">Buscation Plus</Link>
+                <Link to="/woek-with-us" className="py-4 px-2 hover:text-black dark:hover:text-gray-400 transition duration-300">Work with us</Link>
+                <Link to="/contact" className="py-4 px-2 hover:text-black dark:hover:text-gray-400 transition duration-300">Contact Us</Link>
               </div>
             </div>
 
@@ -80,7 +79,6 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
-</div>
   );
 };
 
