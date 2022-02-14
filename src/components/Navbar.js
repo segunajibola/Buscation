@@ -3,18 +3,15 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/fontawesome-free-solid'
 
-const menu = document.getElementById("menu");
+
 
 function toggleMenu() {
+  const menu = document.getElementById("menu");
   if (menu.classList.contains("hidden")) {
     menu.classList = " " }
   else {
     menu.classList = "hidden";
 }};
-
-function hideContainer() {
-  menu.classList.toggle("hidden");
-};
 
 function darkMode() {
   const btn = document.getElementById("dark");
@@ -73,13 +70,13 @@ const Navbar = () => {
         </div>
 
         <div className="hidden" id='menu'>
-          <ul className="dark:text-white py-3 px-2 m-1 bg-gray-500" onClick={hideContainer}>
+          <ul className="dark:text-white py-3 px-2 m-1 bg-gray-500" onClick={toggleMenu}>
             <li className=""><Link to="/" className="block text-sm px-2 py-4 hover:bg-indigo-400 dark:hover:bg-indigo-300 dark:hover:text-black">Home</Link></li>
             <li><Link to="/services" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-300">Services</Link></li>
             <li><Link to="/about" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-300">About</Link></li>
             <li><Link to="/contact" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-400">Contact Us</Link></li>
-            <li><Link to="/log-in" className="inline py-2 my-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 dark:text-white transition duration-300">Log In</Link></li>
-            <li><Link to="/sign-up" className="inline py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 transition duration-300">Sign Up</Link></li>
+            <li><Link to="/log-in" className="inline-block py-2 my- px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 dark:text-white transition duration-300">Log In</Link></li>
+            <li><Link to="/sign-up" className="inline-block py-2 px-2 my-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 transition duration-300">Sign Up</Link></li>
           </ul>
         </div>
       </nav>

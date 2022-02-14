@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <div>
         <footer className="bg-gray-400 dark:bg-gray-900 md:mx-0 dark:text-gray-400">
-            <div className="p-5">
+            <div className="p-4">
                 <div className="grid grid-cols-2 md:grid-cols-4 max-w-7xl gap-6 space-y-4 mx-auto md:mx-2 ">
                     <div>
                         <h5 className="font-semibold text-lg mt-4 dark:text-gray-200">
@@ -52,8 +52,8 @@ const Footer = () => {
                         <Link to="https://www.instagram.com/"><i className="fab fa-instagram text-red-900 mr-2"></i><FontAwesomeIcon className="text-lg mt-1 mr-3 text-green-800"  icon={faWhatsapp} /></Link>
                         <p className='mt-4'>Download Our App</p>
                         <div className=''>
-                        <Link><img src="/images/playstore.png" alt="People going in the bus" className="inline w-20 h-8" /></Link>
-                        <Link><img src="/images/appstore.png" alt="People going in the bus" className="inline w-26 h-11" /></Link>
+                        <Link><img src="/images/playstore.png" alt="Google playstore picture" className="inline w-16 md:w-20 h-8" /></Link>
+                        <Link><img src="/images/appstore.png" alt="Appstore picture" className="inline w-24 md:w-26 h-11" /></Link>
                         </div>
                     </div>
                 </div>
