@@ -1,5 +1,5 @@
 import DestinationCards from './DestinationCards';
-import popularDestinations from '../data/popularDestinations';
+import popularDestinations from '../data/allDestinations';
 import { Link } from 'react-router-dom';
 
 // scroll = () => { window.scrollTo(0, 0); }
