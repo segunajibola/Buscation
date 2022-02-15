@@ -1,5 +1,5 @@
 import DestinationCards from './DestinationCards';
-import popularDestinations from '../data/allDestinations';
+import allDestinations from '../data/allDestinations';
 import { Link } from 'react-router-dom';
 
 // scroll = () => { window.scrollTo(0, 0); }
@@ -48,9 +48,9 @@ const Home = () => {
             <div className="mt-6 grid gap-6 rounded-md lg:grid-cols-2 xl:grid-cols-3">
             
             {/* <DestinationCards destination={popularDestinations[1]} key={popularDestinations[1].city} /> show for one */}
-                {popularDestinations.filter((item, index) => index < 6).map((eachDestination) => (
+                {allDestinations.filter((item, index) => index < 6).map((eachDestination) => (
                     <>
-                        <DestinationCards destination={eachDestination} key={eachDestination.city} />
+                        <DestinationCards destination={eachDestination} key={eachDestination.id} />
                     </>
                 ))}
 
@@ -58,7 +58,7 @@ const Home = () => {
                     {popularDestinations.filter(destination => destination.city === 'Lagos').map(destination => <DestinationCards destination={destination} key={destination.city} />)} */}
             </div>
             <div className='text-center'>
-                <Link to='/all-states'><button className='rounded-lg uppercase tracking-wider font-semibold px-2 py-2 m-5 text-sm text-white dark:text-white dark:border-white bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-400 focus:ring-indigo-500 focus:ring-opacity-50 active:bg-indigo-600 shadow-lg hover:-translate-y-0.5 transform transition' onClick={() => window.scrollTo(0, 0)}>See all</button></Link>
+                <Link to='/all-states'><button className='rounded-lg uppercase tracking-widest font-semibold px-6 py-2 m-5 text-sm text-white dark:text-white dark:border-white bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-400 focus:ring-indigo-500 focus:ring-opacity-50 active:bg-indigo-600 shadow-lg hover:-translate-y-0.5 transform transition' onClick={() => window.scrollTo(0, 0)}>See all</button></Link>
             </div>
     </div>  
         </>

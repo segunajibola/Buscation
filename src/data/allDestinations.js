@@ -5,6 +5,7 @@ export default [
         propertyCount: 76,
         imageUrl: "/images/location1.jpeg",
         imageAlt: "Toronto skyline",
+        id: 1,
     },
     {
         city: "Abuja",
@@ -12,6 +13,7 @@ export default [
         propertyCount: 40,
         imageUrl: "/images/location2.jpeg",
         imageAlt: "Toronto skyline",
+        id: 2,
     },
     {
         city: "Port-harcourt",
@@ -19,6 +21,7 @@ export default [
         propertyCount: 38,
         imageUrl: "/images/location3.jpeg",
         imageAlt: "Toronto skyline",
+        id: 3,
     },
     {
         city: "Delta",
@@ -26,6 +29,7 @@ export default [
         propertyCount: 33,
         imageUrl: "/images/location4.jpeg",
         imageAlt: "Toronto skyline",
+        id: 4,
     },
     {
         city: "Ondo",
@@ -33,6 +37,7 @@ export default [
         propertyCount: 40,
         imageUrl: "/images/location5.jpeg",
         imageAlt: "Toronto skyline",
+        id: 5,
     },
     {
         city: "Kaduna",
@@ -40,6 +45,7 @@ export default [
         propertyCount: 20,
         imageUrl: "/images/location6.jpeg",
         imageAlt: "Toronto skyline",
+        id: 6,
     },
     {
         city: "Kwara",
@@ -47,6 +53,7 @@ export default [
         propertyCount: 25,
         imageUrl: "/images/location6.jpeg",
         imageAlt: "Toronto skyline",
+        id: 7,
     },
     {
         city: "Osun",
@@ -54,6 +61,7 @@ export default [
         propertyCount: 25,
         imageUrl: "/images/location6.jpeg",
         imageAlt: "Toronto skyline",
+        id: 8,
     },
     {
         city: "Koggi",
@@ -61,6 +69,7 @@ export default [
         propertyCount: 25,
         imageUrl: "/images/location6.jpeg",
         imageAlt: "Toronto skyline",
+        id: 9,
     },
     {
         city: "Imo",
@@ -68,6 +77,7 @@ export default [
         propertyCount: 25,
         imageUrl: "/images/location6.jpeg",
         imageAlt: "Toronto skyline",
+        id: 10,
     },
     {
         city: "Adamawa",
@@ -75,6 +85,7 @@ export default [
         propertyCount: 25,
         imageUrl: "/images/location6.jpeg",
         imageAlt: "Toronto skyline",
+        id: 11,
     },
     {
         city: "Kano",
@@ -82,5 +93,6 @@ export default [
         propertyCount: 25,
         imageUrl: "/images/location6.jpeg",
         imageAlt: "Toronto skyline",
+        id: 12,
     }, 
 ]
