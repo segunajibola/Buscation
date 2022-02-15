@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <>
-            <div className="bg-gray-100 dark:bg-gray-800 grid lg:grid-cols-2 2xl:grid-cols-5">
+            <div className="bg-gray-100 dark:bg-gray-700 pt-16 grid lg:grid-cols-2 2xl:grid-cols-5">
                 <div className="px-4 py-4 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2">
                 <div className="max-w-xl">
                         <h1 className="mt-2 lg:mt-4 text-2xl font-bold text-gray-900 dark:text-white sm:mt-4 sm:text-4xl lg:text-3xl xl:text-4xl">
@@ -45,7 +45,7 @@ const Home = () => {
                 </select>
             </div> */}
             
-            <div className="mt-6 grid gap-6 p-4 rounded-md lg:grid-cols-2 xl:grid-cols-3">
+            <div className="mt-6 grid gap-6 rounded-md lg:grid-cols-2 xl:grid-cols-3">
             
             {/* <DestinationCards destination={popularDestinations[1]} key={popularDestinations[1].city} /> show for one */}
                 {popularDestinations.filter((item, index) => index < 6).map((eachDestination) => (

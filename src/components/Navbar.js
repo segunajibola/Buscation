@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/fontawesome-free-solid'
 
-
-
 function toggleMenu() {
   const menu = document.getElementById("menu");
   if (menu.classList.contains("hidden")) {
@@ -22,12 +20,10 @@ function darkMode() {
   }
 }
 
-
-
 const Navbar = () => {
   return (
-      <nav className="z-10 bg-white dark:bg-gray-900 shadow-lg">
-        <div className='z-20 fixed max-w-7xl px-4 m-auto text-xs'>
+      <nav className="z-10 fixed w-full bg-white dark:bg-gray-800 shadow-lg">
+        <div className='z-20 max-w-7xl px-4 m-auto text-xs'>
           <div className="flex justify-between">
             <div className='flex space-x-8'>
               <div className='md:mr-32'>
@@ -54,7 +50,7 @@ const Navbar = () => {
               <Link to="/sign-up" className="py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 transition duration-300">Sign Up</Link>
             </div>
             <div>
-              <FontAwesomeIcon className="text-xl mt-6 ml-28 sm:ml-80 md:ml-0 -mr-20 text-yellow-400 dark:text-white cursor-pointer" onClick={darkMode} icon={faMoon} />
+              <FontAwesomeIcon className="text-xl mt-6 ml-24 sm:ml-80 md:ml-0 -mr-20 text-yellow-400 dark:text-white cursor-pointer" onClick={darkMode} icon={faMoon} />
             </div>
             
             {/* Mobile menu button icon --> only shows in sm */}
