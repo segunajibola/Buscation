@@ -37,6 +37,8 @@ export default [
             address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
             rating: "4.1/5",
             image: "/images/location2.jpeg",
+            imageUrl: "/images/location2.jpeg",
+            imageAlt: "Toronto skyline",
             },
             {
             id: 2,
@@ -44,6 +46,8 @@ export default [
             address: "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
             rating: "4.2/5",
             image: "/images/location3.jpeg",
+            imageUrl: "/images/location2.jpeg",
+            imageAlt: "Toronto skyline",
             },
         ]
     },
