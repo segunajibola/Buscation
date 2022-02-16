@@ -28,7 +28,7 @@ const Navbar = () => {
             <div className='flex space-x-8'>
               <div className='md:mr-32'>
                 {/* Website Logo --> show on all screens*/}
-                <a href="#" className="flex items-center py-4 px-1">
+                <a href="/" className="flex items-center py-4 px-1">
                   <img className="w-12 h-8 inline-block" src="/images/buscation.png" alt="Buscation" />
                   <span className="font-semibold ml-1 text-base text-indigo-700 dark:text-white">Buscation</span>
                 </a>
