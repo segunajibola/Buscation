@@ -17,16 +17,16 @@ function App() {
             <Navbar />
               <Switch>
                   <Route exact path="/">
-                  <Home />
+                    <Home />
                   </Route>
                   <Route path="/all-states">
-                  <StatesCards destination= { destination }/>
+                    <StatesCards destination= { destination }/>
                   </Route>
                   <Route path="/states/:state">
-                  <ParticularState destination={ destination } />
+                    <ParticularState destination={ destination } />
                   </Route>
                   <Route path="*">
-                  <NotFound />
+                    <NotFound />
                   </Route>
               </Switch>
             <Footer />
