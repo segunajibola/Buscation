@@ -11,7 +11,12 @@ const ParticularState = ({ destination }) => {
                     <div className='text-center max-w-7xl mx-auto' key={ destination.id }>
                         <img src={destination.imageUrl} alt={destination.imageAlt} className="h-32 w-full flex-shrink-0" />
                         <h1 className='m-8'>All tourism center in {destination.state}</h1>
-                    
+                    </div>
+                ))}
+        </div>
+
+        <div className='pt-12 pb-4'>
+                {destination.filter((destination) => destination.state === state).map((destination) => destination.tourCenter.map((center) => (  <h1>{center.name}</h1> )))}
                         {/* <div className="flex items-center rounded-lg cursor-pointer bg-gray-200 dark:bg-gray-900 shadow-lg overflow-hidden hover:-translate-y-2.5 transform transition hover:scale-110">
                             <img src={destination.imageUrl} alt="{destination.imageAlt}" className='h-40 w-26'/>
                             <div className="px-5 py-4">
@@ -26,13 +31,14 @@ const ParticularState = ({ destination }) => {
                                 </div>
                             </div>
                         </div> */}
-                    </div>
-                ))}
+                    
 
-                {destination.map((eachCenter) => eachCenter.tourCenter.map((center) => (
-                    <h1>{center.name}</h1>
-                )))}
+                
         </div>
+
+        {/* {destination.map((eachCenter) => eachCenter.tourCenter.map((center) => (
+                    <h1>{center.name}</h1>
+                )))} */}
     </>
   )
 }
