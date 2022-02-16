@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./assets/main.css";
+import destination from './data/allDestinations.js'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './components/Home';
 import Navbar from './components/Navbar';
@@ -19,10 +20,10 @@ function App() {
                   <Home />
                   </Route>
                   <Route path="/all-states">
-                  <StatesCards />
+                  <StatesCards destination= { destination }/>
                   </Route>
-                  <Route path="/states/:id">
-                  <ParticularState />
+                  <Route path="/states/:state">
+                  <ParticularState destination={ destination } />
                   </Route>
                   <Route path="*">
                   <NotFound />

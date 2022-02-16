@@ -1,6 +1,6 @@
 export default [
     {
-        city: "Lagos",
+        state: "Lagos",
         averagePrice: "50,000",
         propertyCount: 76,
         imageUrl: "/images/location1.jpeg",
@@ -8,7 +8,7 @@ export default [
         id: 1,
     },
     {
-        city: "Abuja",
+        state: "Abuja",
         averagePrice: "45,000",
         propertyCount: 40,
         imageUrl: "/images/location2.jpeg",
@@ -16,7 +16,7 @@ export default [
         id: 2,
     },
     {
-        city: "Port-harcourt",
+        state: "Port-harcourt",
         averagePrice: "40,000",
         propertyCount: 38,
         imageUrl: "/images/location3.jpeg",
@@ -24,7 +24,7 @@ export default [
         id: 3,
     },
     {
-        city: "Delta",
+        state: "Delta",
         averagePrice: "25,000",
         propertyCount: 33,
         imageUrl: "/images/location4.jpeg",
@@ -32,7 +32,7 @@ export default [
         id: 4,
     },
     {
-        city: "Ondo",
+        state: "Ondo",
         averagePrice: "30,000",
         propertyCount: 40,
         imageUrl: "/images/location5.jpeg",
@@ -40,7 +40,7 @@ export default [
         id: 5,
     },
     {
-        city: "Kaduna",
+        state: "Kaduna",
         averagePrice: "15,000",
         propertyCount: 20,
         imageUrl: "/images/location6.jpeg",
@@ -48,7 +48,7 @@ export default [
         id: 6,
     },
     {
-        city: "Kwara",
+        state: "Kwara",
         averagePrice: "30,000",
         propertyCount: 25,
         imageUrl: "/images/location6.jpeg",
@@ -56,7 +56,7 @@ export default [
         id: 7,
     },
     {
-        city: "Osun",
+        state: "Osun",
         averagePrice: "30,000",
         propertyCount: 25,
         imageUrl: "/images/location6.jpeg",
@@ -64,7 +64,7 @@ export default [
         id: 8,
     },
     {
-        city: "Koggi",
+        state: "Koggi",
         averagePrice: "30,000",
         propertyCount: 25,
         imageUrl: "/images/location6.jpeg",
@@ -72,7 +72,7 @@ export default [
         id: 9,
     },
     {
-        city: "Imo",
+        state: "Imo",
         averagePrice: "30,000",
         propertyCount: 25,
         imageUrl: "/images/location6.jpeg",
@@ -80,7 +80,7 @@ export default [
         id: 10,
     },
     {
-        city: "Adamawa",
+        state: "Adamawa",
         averagePrice: "30,000",
         propertyCount: 25,
         imageUrl: "/images/location6.jpeg",
@@ -88,7 +88,7 @@ export default [
         id: 11,
     },
     {
-        city: "Kano",
+        state: "Kano",
         averagePrice: "30,000",
         propertyCount: 25,
         imageUrl: "/images/location6.jpeg",
