@@ -46,10 +46,10 @@ const Footer = () => {
                         <h5 className="font-semibold text-lg mb-1 dark:text-gray-200">
                             Connect
                         </h5>
-                        <Link to="https://www.twitter.com/"><i className="fab fa-twitter text-blue-400 mr-2"></i><FontAwesomeIcon className="text-lg mt-1 mr-3 text-blue-800"  icon={faTwitter} /></Link>
-                        <Link to="https://www.facebook.com/"><i className="fab fa-facebook text-blue-300 mr-2"></i><FontAwesomeIcon className="text-lg mt-1 mr-3 text-blue-800"  icon={faFacebook} /></Link>
-                        <Link to="https://wa.me/"><i className="fab fa-whatsapp text-green-400 mr-2"></i><FontAwesomeIcon className="text-lg mt-1 mr-3 text-red-800"  icon={faInstagram} /></Link>
-                        <Link to="https://www.instagram.com/"><i className="fab fa-instagram text-red-900 mr-2"></i><FontAwesomeIcon className="text-lg mt-1 mr-3 text-green-800"  icon={faWhatsapp} /></Link>
+                        <Link to="https://www.twitter.com/"><FontAwesomeIcon className="text-lg mt-1 mr-3 text-blue-800"  icon={faTwitter} /></Link>
+                        <Link to="https://www.facebook.com/"><FontAwesomeIcon className="text-lg mt-1 mr-3 text-blue-800"  icon={faFacebook} /></Link>
+                        <Link to="https://wa.me/"><FontAwesomeIcon className="text-lg mt-1 mr-3 text-red-800"  icon={faInstagram} /></Link>
+                        <Link to="https://www.instagram.com/"><FontAwesomeIcon className="text-lg mt-1 mr-3 text-green-800"  icon={faWhatsapp} /></Link>
                         <p className='mt-4'>Download Our App</p>
                         <div className=''>
                         <Link><img src="/images/playstore.png" alt="Google playstore picture" className="inline w-16 md:w-20 h-8" /></Link>
