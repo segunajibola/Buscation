@@ -28,10 +28,10 @@ const Navbar = () => {
             <div className='flex space-x-8'>
               <div className='md:mr-32'>
                 {/* Website Logo --> show on all screens*/}
-                <a href="/" className="flex items-center py-4 px-1">
+                <Link to="/" className="flex items-center py-4 px-1">
                   <img className="w-12 h-8 inline-block" src="/images/buscation.png" alt="Buscation" />
                   <span className="font-semibold ml-1 text-base text-indigo-700 dark:text-white">Buscation</span>
-                </a>
+                </Link>
               </div>
               {/* Primary Navbar items --> show from md up */}
               <div className="hidden md:flex items-center space-x-8 text-indigo-600 dark:text-white"> 

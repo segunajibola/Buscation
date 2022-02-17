@@ -44,7 +44,8 @@ export default [
             name: "Tafawa Balewa Square",
             address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
             rating: "4.1/5",
-            image: "/images/location2.jpeg",
+            imageUrl: "/images/location1.jpeg",
+            imageAlt: "Toronto skyline",
             },
             {
             id: 6,
@@ -64,6 +65,14 @@ export default [
             },
             {
             id: 8,
+            name: "Jhalobia Recreation Park and Gardens",
+            address: "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
+            rating: "4.2/5",
+            imageUrl: "/images/location1.jpeg",
+            imageAlt: "Toronto skyline",
+            },
+            {
+            id: 9,
             name: "Jhalobia Recreation Park and Gardens",
             address: "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
             rating: "4.2/5",

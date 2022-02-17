@@ -16,11 +16,9 @@ const ParticularState = ({ destination }) => {
                 ))}
         </div>
 
-        <div className='pt-12 pb-4'>
+        <div className="mt-6 grid gap-6 rounded-md md:grid-cols-2 xl:grid-cols-3">
                 {destination.filter((destination) => destination.state === state).map((destination) => destination.tourCenter.map((center) => (
-                        <div className="mt-6 grid gap-6 rounded-md lg:grid-cols-2 lg:grid-row-3 xl:grid-cols-3" key={ center.id }>
-                            <TourismCards center={center}/>
-                        </div>
+                            <TourismCards center={center} key={ center.id }/>
                         )))}
         </div>
     </>
