@@ -17,7 +17,7 @@ export default [
             },
             {
             id: 2,
-            name: "Park and Gardens",
+            name: "Jhalobia Recreation Park and Gardens",
             address: "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
             rating: "4.2/5",
             imageUrl: "/images/location1.jpeg",
