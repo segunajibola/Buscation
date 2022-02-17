@@ -17,8 +17,8 @@ export default [
             },
             {
             id: 2,
-            name: "Jhalobia Recreation Park and Gardens",
-            address: "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
+            name: "Park and Gardens",
+            address: "M/M International,",
             rating: "4.2/5",
             imageUrl: "/images/location1.jpeg",
             imageAlt: "Toronto skyline",
