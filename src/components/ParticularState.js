@@ -7,10 +7,10 @@ const ParticularState = ({ destination }) => {
 
   return (
     <>
-        <div className='pt-12 pb-2'>
+        <div className='pt-12 pb-2 max-w-7xl mx-auto overflow-hidden'>
                 {destination.filter((destination) => destination.state === state).map((destination) => (
-                    <div className='text-center max-w-7xl mx-auto' key={ destination.id }>
-                        <img src={destination.imageUrl} alt={destination.imageAlt} className="h-32 w-full flex-shrink-0" />
+                    <div className='text-center   flex-shrink-0' key={ destination.id }>
+                        <img src={destination.imageUrl} alt={destination.imageAlt} className="h-32 w-full object-cover" />
                         <h1 className='m-8 font-semibold text-3xl'>All tourism center in {destination.state}</h1>
                     </div>
                 ))}
