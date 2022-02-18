@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const DestinationCards = ({ destination }) => {
     return (
         <Link to={ `/states/${destination.state}` } className='block'>
-            <div className="flex items-center rounded-lg cursor-pointer bg-gray-200 dark:bg-gray-900 shadow-lg overflow-hidden hover:-translate-y-2.5 transform transition hover:scale-105">
+            <div className="flex items-center rounded-lg cursor-pointer bg-gray-200 dark:bg-gray-800 shadow-lg overflow-hidden hover:-translate-y-2.5 transform transition hover:scale-105">
                     <img src={destination.imageUrl} alt={destination.imageAlt} className="h-32 w-32 flex-shrink-0" />
                     <div className="px-5 py-4">
                         <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{destination.state}</h3>

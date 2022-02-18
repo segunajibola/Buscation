@@ -50,7 +50,7 @@ const Navbar = () => {
               <Link to="/sign-up" className="py-2 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 transition duration-300">Sign Up</Link>
             </div>
             <div>
-              <FontAwesomeIcon className="text-xl mt-6 ml-24 sm:ml-80 md:ml-0 -mr-20 text-yellow-400 dark:text-white cursor-pointer" onClick={darkMode} icon={faMoon} />
+              <FontAwesomeIcon className="text-xl mt-6 ml-20 sm:ml-72 md:ml-0 -mr-20 text-yellow-400 dark:text-white cursor-pointer" onClick={darkMode} icon={faMoon} />
             </div>
             
             {/* Mobile menu button icon --> only shows in sm */}
@@ -65,12 +65,12 @@ const Navbar = () => {
         </div>
 
         <div className="hidden" id='menu'>
-          <ul className="dark:text-white py-3 px-2 m-1 bg-gray-500" onClick={toggleMenu}>
-            <li className=""><Link to="/" className="block text-sm px-2 py-4 hover:bg-indigo-400 dark:hover:bg-indigo-300 dark:hover:text-black">Home</Link></li>
-            <li><Link to="/services" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-300">Services</Link></li>
-            <li><Link to="/about" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-300">About</Link></li>
-            <li><Link to="/contact" className="block text-sm px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-400">Contact Us</Link></li>
-            <li><Link to="/log-in" className="inline-block py-2 my- px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 dark:text-white transition duration-300">Log In</Link></li>
+          <ul className="dark:text-white py-3 px-2 m-1 bg-gray-200 dark:bg-gray-500 text-lg" onClick={toggleMenu}>
+            <li className=""><Link to="/" className="block px-2 py-4 hover:bg-indigo-400 dark:hover:bg-indigo-300 dark:hover:text-black">Home</Link></li>
+            <li><Link to="/services" className="block px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-300">Services</Link></li>
+            <li><Link to="/about" className="block px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-300">About</Link></li>
+            <li><Link to="/contact" className="block px-2 py-4 hover:bg-indigo-400 transition duration-300 dark:hover:text-black dark:hover:bg-indigo-400">Contact Us</Link></li>
+            <li><Link to="/log-in" className="inline-block py-2 mt-1 px-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 dark:text-white transition duration-300">Log In</Link></li>
             <li><Link to="/sign-up" className="inline-block py-2 px-2 my-2 font-medium text-white rounded bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-600 transition duration-300">Sign Up</Link></li>
           </ul>
         </div>
