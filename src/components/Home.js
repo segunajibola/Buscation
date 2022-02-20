@@ -33,7 +33,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="max-w-full lg:max-w-full mx-auto px-8 lg:px-8 py-4 dark:bg-gray-800">
-            <h2 className="text-xl text-gray-900 dark:text-white text-center">Popular destination</h2>
+            <h2 className="text-2xl font-semibold tracking-wider text-gray-900 dark:text-white text-center">Popular destination</h2>
             {/* <div className='text-center'>
             <p className='mt-2 text-gray-600 dark:text-white inline-block border-2 border-red-500 p-3'>Sort By Location<FontAwesomeIcon className="text-xl text-black inline-block ml-2 -mb-1 text-right dark:text-white cursor-pointer" icon={faAngleDown} /></p>
             <label for="location">Sort by Location:</label>
