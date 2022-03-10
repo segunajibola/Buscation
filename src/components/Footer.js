@@ -1,10 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   let getYear = () => {
@@ -12,103 +12,103 @@ const Footer = () => {
   };
   return (
     <div>
-      <footer className="bg-gray-400 dark:bg-gray-900 dark:text-gray-400 md:mx-0">
-        <div className="p-4">
-          <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 space-y-4 md:mx-2 md:grid-cols-4 ">
+      <footer className='bg-gray-400 dark:bg-gray-900 dark:text-gray-400 md:mx-0'>
+        <div className='p-4'>
+          <div className='mx-auto grid max-w-7xl grid-cols-2 gap-6 space-y-4 md:mx-2 md:grid-cols-4 '>
             <div>
-              <h5 className="mt-4 text-lg font-semibold dark:text-gray-200">
+              <h5 className='mt-4 text-lg font-semibold dark:text-gray-200'>
                 Company
               </h5>
               <p>
-                <Link>About</Link>
+                <Link to='/'>About</Link>
               </p>
               <p>
-                <Link>Awards</Link>
+                <Link to='/'>Awards</Link>
               </p>
               <p>
-                <Link>Contact us</Link>
+                <Link to='/'>Contact us</Link>
               </p>
               <p>
-                <Link>Bus Terminals</Link>
+                <Link to='/'>Bus Terminals</Link>
               </p>
             </div>
             <div>
-              <h5 className="mb-1 text-lg font-semibold dark:text-gray-200">
+              <h5 className='mb-1 text-lg font-semibold dark:text-gray-200'>
                 Exerience
               </h5>
               <p>
-                <Link>Tour Moments</Link>
+                <Link to='/'>Tour Moments</Link>
               </p>
               <p>
-                <Link>Academy</Link>
+                <Link to='/'>Academy</Link>
               </p>
               <p>
-                <Link>Safety</Link>
+                <Link to='/'>Safety</Link>
               </p>
               <p>
-                <Link>FAQs</Link>
+                <Link to='/'>FAQs</Link>
               </p>
             </div>
             <div>
-              <h5 className="mb-1 text-lg font-semibold dark:text-gray-200">
+              <h5 className='mb-1 text-lg font-semibold dark:text-gray-200'>
                 Terms
               </h5>
               <p>
-                <Link>Privacy Policy</Link>
+                <Link to='/'>Privacy Policy</Link>
               </p>
               <p>
-                <Link>Terms & Condition</Link>
+                <Link to='/'>Terms & Condition</Link>
               </p>
             </div>
             <div>
-              <h5 className="mb-1 text-lg font-semibold dark:text-gray-200">
+              <h5 className='mb-1 text-lg font-semibold dark:text-gray-200'>
                 Connect
               </h5>
-              <Link to="https://www.twitter.com/">
+              <Link to='https://www.twitter.com/'>
                 <FontAwesomeIcon
-                  className="mt-1 mr-3 text-lg text-blue-800"
+                  className='mt-1 mr-3 text-lg text-blue-800'
                   icon={faTwitter}
                 />
               </Link>
-              <Link to="https://www.facebook.com/">
+              <Link to='https://www.facebook.com/'>
                 <FontAwesomeIcon
-                  className="mt-1 mr-3 text-lg text-blue-800"
+                  className='mt-1 mr-3 text-lg text-blue-800'
                   icon={faFacebook}
                 />
               </Link>
-              <Link to="https://wa.me/">
+              <Link to='https://wa.me/'>
                 <FontAwesomeIcon
-                  className="mt-1 mr-3 text-lg text-red-800"
+                  className='mt-1 mr-3 text-lg text-red-800'
                   icon={faInstagram}
                 />
               </Link>
-              <Link to="https://www.instagram.com/">
+              <Link to='https://www.instagram.com/'>
                 <FontAwesomeIcon
-                  className="mt-1 mr-3 text-lg text-green-800"
+                  className='mt-1 mr-3 text-lg text-green-800'
                   icon={faWhatsapp}
                 />
               </Link>
-              <p className="mt-4">Download Our App</p>
-              <div className="">
-                <Link>
+              <p className='mt-4'>Download Our App</p>
+              <div className=''>
+                <Link to='/'>
                   <img
-                    src="/images/playstore.png"
-                    alt="Google playstore picture"
-                    className="inline h-8 w-16 md:w-20"
+                    src='/images/playstore.png'
+                    alt='Google playstore'
+                    className='inline h-8 w-16 md:w-20'
                   />
                 </Link>
-                <Link>
+                <Link to='/'>
                   <img
-                    src="/images/appstore.png"
-                    alt="Appstore picture"
-                    className="md:w-26 inline h-11 w-24"
+                    src='/images/appstore.png'
+                    alt='Appstore'
+                    className='md:w-26 inline h-11 w-24'
                   />
                 </Link>
               </div>
             </div>
           </div>
         </div>
-        <p className="p-3 text-center">
+        <p className='p-3 text-center'>
           Copyright &copy; {getYear()}. All right reserved.
         </p>
       </footer>

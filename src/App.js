@@ -1,12 +1,12 @@
-import "./assets/main.css";
-import AppRouter from "./router";
+import './assets/main.css';
+import AppRouter from './router';
 
-function App() {
+const App = () => {
   return (
-    <div className="" id="dark">
+    <div className='' id='dark'>
       <AppRouter />
     </div>
   );
-}
+};
 
 export default App;
