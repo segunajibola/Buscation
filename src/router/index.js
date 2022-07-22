@@ -6,7 +6,6 @@ import StatesCards from '../components/StatesCards';
 import ParticularState from '../components/ParticularState';
 import Footer from '../components/Footer';
 import NotFound from '../components/NotFound';
-
 import destination from '../data/allDestinations.js';
 import Login from '../components/Login/Login';
 

@@ -6,10 +6,10 @@ const NotFound = () => {
       <h2 className="text-2xl font-bold">Ooooops!, we are so sorry. 🙇‍♀️</h2>
       <p className="text-xl font-bold">This page cannot be found.</p>
       <p className="mt-10 text-base font-bold">
-        Click{" "}
+        Click
         <Link to="/" className="text-blue-500 underline">
           here
-        </Link>{" "}
+        </Link>
         to go back to the homepage....Thanks!
       </p>
     </div>

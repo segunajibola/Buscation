@@ -2,6 +2,8 @@ import DestinationCards from './DestinationCards';
 import allDestinations from '../data/allDestinations';
 import { Link } from 'react-router-dom';
 
+// DO NOT CLEAR COMMENTS FOR NOW
+
 // scroll = () => { window.scrollTo(0, 0); }
 // function scroll() {
 //     window.scrollTo(0, 0);
