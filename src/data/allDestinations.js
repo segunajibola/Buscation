@@ -14,6 +14,7 @@ const data = [
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
         imageAlt: "Toronto skyline",
+        guide: "segunajibola",
       },
       {
         id: 2,
@@ -44,7 +45,7 @@ const data = [
       },
       {
         id: 5,
-        name: "Tafawa Balewa Square",
+        name: "Tafwa Balewa Square",
         address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
@@ -124,6 +125,16 @@ const data = [
     propertyCount: 38,
     imageUrl: "/images/location3.jpeg",
     imageAlt: "Toronto skyline",
+    tourCenter: [
+      {
+        id: 1,
+        name: "Tafawa Balewa Square",
+        address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
+        rating: "4.1/5",
+        imageUrl: "/images/location1.jpeg",
+        imageAlt: "Toronto skyline",
+      },
+    ],
   },
   {
     id: 4,
@@ -188,6 +199,16 @@ const data = [
     propertyCount: 40,
     imageUrl: "/images/location5.jpeg",
     imageAlt: "Toronto skyline",
+    tourCenter: [
+      {
+        id: 1,
+        name: "Tafawa Balewa Square",
+        address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
+        rating: "4.1/5",
+        imageUrl: "/images/location1.jpeg",
+        imageAlt: "Toronto skyline",
+      },
+    ],
   },
   {
     id: 6,
@@ -196,6 +217,16 @@ const data = [
     propertyCount: 20,
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
+    tourCenter: [
+      {
+        id: 1,
+        name: "Tafawa Balewa Square",
+        address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
+        rating: "4.1/5",
+        imageUrl: "/images/location1.jpeg",
+        imageAlt: "Toronto skyline",
+      },
+    ],
   },
   {
     id: 7,
@@ -204,6 +235,16 @@ const data = [
     propertyCount: 25,
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
+    tourCenter: [
+      {
+        id: 1,
+        name: "Tafawa Balewa Square",
+        address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
+        rating: "4.1/5",
+        imageUrl: "/images/location1.jpeg",
+        imageAlt: "Toronto skyline",
+      },
+    ],
   },
   {
     id: 8,
@@ -212,6 +253,16 @@ const data = [
     propertyCount: 25,
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
+    tourCenter: [
+      {
+        id: 1,
+        name: "Tafawa Balewa Square",
+        address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
+        rating: "4.1/5",
+        imageUrl: "/images/location1.jpeg",
+        imageAlt: "Toronto skyline",
+      },
+    ],
   },
   {
     id: 9,
@@ -220,6 +271,16 @@ const data = [
     propertyCount: 25,
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
+    tourCenter: [
+      {
+        id: 1,
+        name: "Tafawa Balewa Square",
+        address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
+        rating: "4.1/5",
+        imageUrl: "/images/location1.jpeg",
+        imageAlt: "Toronto skyline",
+      },
+    ],
   },
   {
     id: 10,
@@ -228,6 +289,16 @@ const data = [
     propertyCount: 25,
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
+    tourCenter: [
+      {
+        id: 1,
+        name: "Tafawa Balewa Square",
+        address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
+        rating: "4.1/5",
+        imageUrl: "/images/location1.jpeg",
+        imageAlt: "Toronto skyline",
+      },
+    ],
   },
   {
     id: 11,
@@ -236,6 +307,16 @@ const data = [
     propertyCount: 25,
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
+    tourCenter: [
+      {
+        id: 1,
+        name: "Tafawa Balewa Square",
+        address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
+        rating: "4.1/5",
+        imageUrl: "/images/location1.jpeg",
+        imageAlt: "Toronto skyline",
+      },
+    ],
   },
   {
     id: 12,
@@ -244,6 +325,16 @@ const data = [
     propertyCount: 25,
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
+    tourCenter: [
+      {
+        id: 1,
+        name: "Tafawa Balewa Square",
+        address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
+        rating: "4.1/5",
+        imageUrl: "/images/location1.jpeg",
+        imageAlt: "Toronto skyline",
+      },
+    ],
   },
 ];
 

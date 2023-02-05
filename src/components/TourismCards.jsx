@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const TourismCards = ({ center }) => {
+const TourismCards = ({state, center}) => {
   return (
-    <Link to={`/states/${center.name}`} className='block'>
+    <Link to={`/states/${state}/${center.name}`} className='block'>
       <div className='flex transform cursor-pointer items-center overflow-hidden rounded-lg bg-gray-200 shadow-lg transition hover:-translate-y-2.5 hover:scale-105 dark:bg-gray-900'>
         <img
           src={center.imageUrl}
