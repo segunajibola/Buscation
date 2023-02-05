@@ -14,6 +14,7 @@ const data = [
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
         imageAlt: "Toronto skyline",
+        guide: "segunajibola",
       },
       {
         id: 2,
@@ -44,7 +45,7 @@ const data = [
       },
       {
         id: 5,
-        name: "Tafadwa Balewa Square",
+        name: "Tafwa Balewa Square",
         address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
@@ -132,8 +133,8 @@ const data = [
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
         imageAlt: "Toronto skyline",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 4,
@@ -206,8 +207,8 @@ const data = [
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
         imageAlt: "Toronto skyline",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 6,
@@ -224,8 +225,8 @@ const data = [
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
         imageAlt: "Toronto skyline",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 7,
@@ -242,8 +243,8 @@ const data = [
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
         imageAlt: "Toronto skyline",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 8,
@@ -260,8 +261,8 @@ const data = [
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
         imageAlt: "Toronto skyline",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 9,
@@ -278,8 +279,8 @@ const data = [
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
         imageAlt: "Toronto skyline",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 10,
@@ -296,8 +297,8 @@ const data = [
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
         imageAlt: "Toronto skyline",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 11,
@@ -314,8 +315,8 @@ const data = [
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
         imageAlt: "Toronto skyline",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 12,
@@ -332,8 +333,8 @@ const data = [
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
         imageAlt: "Toronto skyline",
-      }
-    ]
+      },
+    ],
   },
 ];
 

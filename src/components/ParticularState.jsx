@@ -8,7 +8,7 @@ const ParticularState = ({ destination }) => {
   console.log("this state", typeof destination.state, state);
 
   return (
-    <div className="overflow-hidden bg-gray-100  dark:bg-gray-700">
+    <div className="overflow-hidden bg-gray-100 dark:bg-gray-700">
       <div className="mx-auto max-w-7xl pt-12">
         {destination
           .filter((destination) => destination.state === state)
