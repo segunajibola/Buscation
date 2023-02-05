@@ -15,14 +15,14 @@ const DestinationCards = ({ destination }) => {
             {destination.state}
           </h3>
           <p className="text-gray-600 dark:text-white">
-            N{destination.averagePrice}
+            {destination.slogan}
           </p>
           <div className="mt-4">
             <a
               href="/"
               className="text-sm font-semibold text-indigo-500 hover:text-indigo-400 dark:text-white"
             >
-              Explore {destination.propertyCount} properties
+              Explore {destination.tourCenter.length} tourist attractions
             </a>
           </div>
         </div>

@@ -2,8 +2,7 @@ const data = [
   {
     id: 1,
     state: "Lagos",
-    averagePrice: "50,000",
-    propertyCount: 76,
+    slogan: "Centre of Excellence",
     imageUrl: "/images/location1.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -92,8 +91,7 @@ const data = [
   {
     id: 2,
     state: "Abuja",
-    averagePrice: "45,000",
-    propertyCount: 40,
+    slogan: "Centre of Unity",
     imageUrl: "/images/location2.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -120,9 +118,8 @@ const data = [
   },
   {
     id: 3,
-    state: "Port-harcourt",
-    averagePrice: "40,000",
-    propertyCount: 38,
+    state: "Rivers",
+    slogan: "Treasure Base of the Nation",
     imageUrl: "/images/location3.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -139,8 +136,7 @@ const data = [
   {
     id: 4,
     state: "Delta",
-    averagePrice: "25,000",
-    propertyCount: 33,
+    slogan: "Sunshine StateThe Big Heart",
     imageUrl: "/images/location4.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -195,8 +191,7 @@ const data = [
   {
     id: 5,
     state: "Ondo",
-    averagePrice: "30,000",
-    propertyCount: 40,
+    slogan: "Sunshine State",
     imageUrl: "/images/location5.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -213,8 +208,7 @@ const data = [
   {
     id: 6,
     state: "Kaduna",
-    averagePrice: "15,000",
-    propertyCount: 20,
+    slogan: "Centre of Learning",
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -231,8 +225,7 @@ const data = [
   {
     id: 7,
     state: "Kwara",
-    averagePrice: "30,000",
-    propertyCount: 25,
+    slogan: "State of Harmony",
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -249,8 +242,7 @@ const data = [
   {
     id: 8,
     state: "Osun",
-    averagePrice: "30,000",
-    propertyCount: 25,
+    slogan: "State of the Living Spring",
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -266,9 +258,8 @@ const data = [
   },
   {
     id: 9,
-    state: "Koggi",
-    averagePrice: "30,000",
-    propertyCount: 25,
+    state: "Kogi",
+    slogan: "The Confluence State",
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -285,8 +276,7 @@ const data = [
   {
     id: 10,
     state: "Imo",
-    averagePrice: "30,000",
-    propertyCount: 25,
+    slogan: "Eastern Heartland",
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -303,8 +293,7 @@ const data = [
   {
     id: 11,
     state: "Adamawa",
-    averagePrice: "30,000",
-    propertyCount: 25,
+    slogan: "Land of Beauty",
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -321,8 +310,7 @@ const data = [
   {
     id: 12,
     state: "Kano",
-    averagePrice: "30,000",
-    propertyCount: 25,
+    slogan: "Centre of Commerce",
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
