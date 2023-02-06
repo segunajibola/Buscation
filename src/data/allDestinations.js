@@ -9,10 +9,13 @@ const data = [
       {
         id: 1,
         name: "Tafawa Balewa Square",
+        historical: "Major national events at TBS includes Nigeria’s independence celebration which took place on 1 October 1960 with the Prime Minister, Tafawa Balewa, delivering his speech. Democracy Day, as well as other multifarious events such as musical jamborees and religious gatherings.",
+        monuments: "The entrance to the square has gigantic sculptures of four white horses hovering above the gate and seven red eagles, which are symbols from the national emblem signifying Strength and Dignity respectively. Other monuments in the square include the Remembrance Arcade (with memorials to World War I, World War II and Nigerian civil war victims) and the 26-storey Independence House, built in 1963 which was for a long time, the tallest building in Nigeria.",
         address: "45/57 Massey Bamgboshe Street, Lagos Island",
         rating: "4.1/5",
         imageUrl: "/images/lagos/Tafawa_Balewa_Square_Image.jpg",
         imageAlt: "Tafawa Balewa Square",
+        Opened: "1972",
         guide: "segunajibola",
       },
       {
