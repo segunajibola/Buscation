@@ -2,18 +2,20 @@ const data = [
   {
     id: 1,
     state: "Lagos",
-    averagePrice: "50,000",
-    propertyCount: 76,
-    imageUrl: "/images/location1.jpeg",
+    slogan: "Centre of Excellence",
+    imageUrl: "/images/lagos/National-Theatre-Lagos-Nigeria.webp",
     imageAlt: "Toronto skyline",
     tourCenter: [
       {
         id: 1,
         name: "Tafawa Balewa Square",
-        address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
+        historical: "Major national events at TBS includes Nigeria’s independence celebration which took place on 1 October 1960 with the Prime Minister, Tafawa Balewa, delivering his speech. Democracy Day, as well as other multifarious events such as musical jamborees and religious gatherings.",
+        monuments: "The entrance to the square has gigantic sculptures of four white horses hovering above the gate and seven red eagles, which are symbols from the national emblem signifying Strength and Dignity respectively. Other monuments in the square include the Remembrance Arcade (with memorials to World War I, World War II and Nigerian civil war victims) and the 26-storey Independence House, built in 1963 which was for a long time, the tallest building in Nigeria.",
+        address: "45/57 Massey Bamgboshe Street, Lagos Island",
         rating: "4.1/5",
-        imageUrl: "/images/location1.jpeg",
-        imageAlt: "Toronto skyline",
+        imageUrl: "/images/lagos/Tafawa_Balewa_Square_Image.jpg",
+        imageAlt: "Tafawa Balewa Square",
+        Opened: "1972",
         guide: "segunajibola",
       },
       {
@@ -34,66 +36,12 @@ const data = [
         imageUrl: "/images/location1.jpeg",
         imageAlt: "Toronto skyline",
       },
-      {
-        id: 4,
-        name: "Jhalobia Recreation Park and Gardens",
-        address:
-          "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
-        rating: "4.2/5",
-        imageUrl: "/images/location1.jpeg",
-        imageAlt: "Toronto skyline",
-      },
-      {
-        id: 5,
-        name: "Tafwa Balewa Square",
-        address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
-        rating: "4.1/5",
-        imageUrl: "/images/location1.jpeg",
-        imageAlt: "Toronto skyline",
-      },
-      {
-        id: 6,
-        name: "Jhalobia Recreation Park and Gardens",
-        address:
-          "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
-        rating: "4.2/5",
-        imageUrl: "/images/location1.jpeg",
-        imageAlt: "Toronto skyline",
-      },
-      {
-        id: 7,
-        name: "Jhalobia Recreation Park and Gardens",
-        address:
-          "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
-        rating: "4.2/5",
-        imageUrl: "/images/location1.jpeg",
-        imageAlt: "Toronto skyline",
-      },
-      {
-        id: 8,
-        name: "Jhalobia Recreation Park and Gardens",
-        address:
-          "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
-        rating: "4.2/5",
-        imageUrl: "/images/location1.jpeg",
-        imageAlt: "Toronto skyline",
-      },
-      {
-        id: 9,
-        name: "Jhalobia Recreation Park and Gardens",
-        address:
-          "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
-        rating: "4.2/5",
-        imageUrl: "/images/location1.jpeg",
-        imageAlt: "Toronto skyline",
-      },
     ],
   },
   {
     id: 2,
     state: "Abuja",
-    averagePrice: "45,000",
-    propertyCount: 40,
+    slogan: "Centre of Unity",
     imageUrl: "/images/location2.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -120,9 +68,8 @@ const data = [
   },
   {
     id: 3,
-    state: "Port-harcourt",
-    averagePrice: "40,000",
-    propertyCount: 38,
+    state: "Rivers",
+    slogan: "Treasure Base of the Nation",
     imageUrl: "/images/location3.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -139,8 +86,7 @@ const data = [
   {
     id: 4,
     state: "Delta",
-    averagePrice: "25,000",
-    propertyCount: 33,
+    slogan: "Sunshine StateThe Big Heart",
     imageUrl: "/images/location4.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -195,8 +141,7 @@ const data = [
   {
     id: 5,
     state: "Ondo",
-    averagePrice: "30,000",
-    propertyCount: 40,
+    slogan: "Sunshine State",
     imageUrl: "/images/location5.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -213,8 +158,7 @@ const data = [
   {
     id: 6,
     state: "Kaduna",
-    averagePrice: "15,000",
-    propertyCount: 20,
+    slogan: "Centre of Learning",
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -231,8 +175,7 @@ const data = [
   {
     id: 7,
     state: "Kwara",
-    averagePrice: "30,000",
-    propertyCount: 25,
+    slogan: "State of Harmony",
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -249,8 +192,7 @@ const data = [
   {
     id: 8,
     state: "Osun",
-    averagePrice: "30,000",
-    propertyCount: 25,
+    slogan: "State of the Living Spring",
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -266,9 +208,8 @@ const data = [
   },
   {
     id: 9,
-    state: "Koggi",
-    averagePrice: "30,000",
-    propertyCount: 25,
+    state: "Kogi",
+    slogan: "The Confluence State",
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -285,8 +226,7 @@ const data = [
   {
     id: 10,
     state: "Imo",
-    averagePrice: "30,000",
-    propertyCount: 25,
+    slogan: "Eastern Heartland",
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -303,8 +243,7 @@ const data = [
   {
     id: 11,
     state: "Adamawa",
-    averagePrice: "30,000",
-    propertyCount: 25,
+    slogan: "Land of Beauty",
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [
@@ -321,8 +260,7 @@ const data = [
   {
     id: 12,
     state: "Kano",
-    averagePrice: "30,000",
-    propertyCount: 25,
+    slogan: "Centre of Commerce",
     imageUrl: "/images/location6.jpeg",
     imageAlt: "Toronto skyline",
     tourCenter: [

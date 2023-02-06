@@ -33,12 +33,19 @@ const ParticularCenter = ({ destination }) => {
                 <h3 className="text-3xl font-semibold text-gray-800 dark:text-white">
                   {center.name}
                 </h3>
-                <div className="bg-gray-300 p-1 rounded-2xl">{center.rating}</div>
+                <div className="bg-gray-300 h-[50%] p-1 rounded-2xl">
+                  {center.rating}
+                </div>
               </div>
-              <div className="text-left my-2">Guide: {center.guide}</div>
-              <p className="mt-1 text-gray-600 dark:text-white">
-                Address: {center.address}
+              <div className="text-left my-2 text-sm">
+              <span className="font-semibold">Guide: </span>{center.guide}
+              </div>
+              <p className="mt-1 text-sm dark:text-white">
+              <span className="font-semibold">Address: </span>{center.address}
               </p>
+              <span>{center.opened}</span>
+              <div className="test-sm m-1"><span className="font-semibold">Historical Events: </span>{center.historical}</div>
+              <div className="test-sm m-1"><span className="font-semibold">Monuments: </span>{center.monuments}</div>
             </div>
           </div>
         ))}
