@@ -17,7 +17,7 @@ const ParticularState = ({ destination }) => {
               <img
                 src={destination.imageUrl}
                 alt={destination.imageAlt}
-                className="h-32 w-full object-cover"
+                className="h-64 w-full object-cover object-center"
               />
               <h1 className="mt-14 text-3xl font-semibold dark:text-white">
                 All tourism center in {destination.state}

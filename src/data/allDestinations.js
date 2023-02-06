@@ -3,16 +3,16 @@ const data = [
     id: 1,
     state: "Lagos",
     slogan: "Centre of Excellence",
-    imageUrl: "/images/location1.jpeg",
+    imageUrl: "/images/lagos/National-Theatre-Lagos-Nigeria.webp",
     imageAlt: "Toronto skyline",
     tourCenter: [
       {
         id: 1,
         name: "Tafawa Balewa Square",
-        address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
+        address: "45/57 Massey Bamgboshe Street, Lagos Island",
         rating: "4.1/5",
-        imageUrl: "/images/location1.jpeg",
-        imageAlt: "Toronto skyline",
+        imageUrl: "/images/lagos/Tafawa_Balewa_Square_Image.jpg",
+        imageAlt: "Tafawa Balewa Square",
         guide: "segunajibola",
       },
       {
@@ -26,59 +26,6 @@ const data = [
       },
       {
         id: 3,
-        name: "Jhalobia Recreation Park and Gardens",
-        address:
-          "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
-        rating: "4.2/5",
-        imageUrl: "/images/location1.jpeg",
-        imageAlt: "Toronto skyline",
-      },
-      {
-        id: 4,
-        name: "Jhalobia Recreation Park and Gardens",
-        address:
-          "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
-        rating: "4.2/5",
-        imageUrl: "/images/location1.jpeg",
-        imageAlt: "Toronto skyline",
-      },
-      {
-        id: 5,
-        name: "Tafwa Balewa Square",
-        address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
-        rating: "4.1/5",
-        imageUrl: "/images/location1.jpeg",
-        imageAlt: "Toronto skyline",
-      },
-      {
-        id: 6,
-        name: "Jhalobia Recreation Park and Gardens",
-        address:
-          "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
-        rating: "4.2/5",
-        imageUrl: "/images/location1.jpeg",
-        imageAlt: "Toronto skyline",
-      },
-      {
-        id: 7,
-        name: "Jhalobia Recreation Park and Gardens",
-        address:
-          "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
-        rating: "4.2/5",
-        imageUrl: "/images/location1.jpeg",
-        imageAlt: "Toronto skyline",
-      },
-      {
-        id: 8,
-        name: "Jhalobia Recreation Park and Gardens",
-        address:
-          "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
-        rating: "4.2/5",
-        imageUrl: "/images/location1.jpeg",
-        imageAlt: "Toronto skyline",
-      },
-      {
-        id: 9,
         name: "Jhalobia Recreation Park and Gardens",
         address:
           "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
