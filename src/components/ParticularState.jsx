@@ -18,7 +18,7 @@ const ParticularState = ({ destination }) => {
                 className="h-64 w-full object-cover object-center"
               />
               <h1 className="mt-14 text-3xl font-semibold dark:text-white">
-                All tourism center in {destination.state}
+                Tourism centers in {destination.state}
               </h1>
             </div>
           ))}

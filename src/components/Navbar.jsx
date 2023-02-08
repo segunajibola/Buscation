@@ -32,11 +32,11 @@ const Navbar = () => {
               <Link to='/' className='flex items-center py-4 px-1'>
                 <img
                   className='inline-block h-8 w-12'
-                  src='/images/buscation.png'
-                  alt='Buscation'
+                  src='/images/tourcation.png'
+                  alt='Tourcation'
                 />
                 <span className='ml-1 text-base font-semibold text-indigo-700 dark:text-white'>
-                  Buscation
+                  Tourcation
                 </span>
               </Link>
             </div>
@@ -61,10 +61,10 @@ const Navbar = () => {
                 Pickup Route
               </Link>
               <Link
-                to='/buscation-plus'
+                to='/Tourcation-plus'
                 className='py-4 px-2 transition duration-300 hover:text-black dark:hover:text-gray-400'
               >
-                Buscation Plus
+                Tourcation Plus
               </Link>
               <Link
                 to='/work-with-us'
