@@ -37,7 +37,7 @@ const ParticularCenter = ({ destination }) => {
                   {center.rating}
                 </div>
               </div>
-              <div className="my-2 text-sm flex gap-x-4 space-around border-4">
+              <div className="my-2 text-sm flex gap-x-4 justify-between">
                 <div>
                   <span className="font-semibold">Guide: </span>
                   {center.guide}
@@ -51,14 +51,13 @@ const ParticularCenter = ({ destination }) => {
                 <span className="font-semibold">Address: </span>
                 {center.address}
               </div>
-              <span>{center.opened}</span>
               <div className="test-sm m-1">
                 <span className="font-semibold">Historical Events: </span>
                 {center.historical}
               </div>
               <div className="test-sm m-1">
-                <span className="font-semibold">Monuments: </span>
-                {center.monuments}
+                <span className="font-semibold">Other Information: </span>
+                {center.info}
               </div>
             </div>
           </div>
