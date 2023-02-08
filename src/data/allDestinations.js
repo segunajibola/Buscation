@@ -26,7 +26,7 @@ const data = [
         address: "Km 19 Lekki - Epe Expy, Lekki Penninsula II 106104, Lekki",
         rating: "4.3/5",
         imageUrl: "/images/lagos/Tafawa_Balewa_Square_Image.jpg",
-        imageAlt: "Tafawa Balewa Square",
+        imageAlt: "Lekki Conservation Centre",
         Opened: "1990",
         guide: "segunajibola",
       },
