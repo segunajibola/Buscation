@@ -37,9 +37,15 @@ const ParticularCenter = ({ destination }) => {
                   {center.rating}
                 </div>
               </div>
-              <div className="my-2 text-sm">
-                <span className="font-semibold">Guide: </span>
-                {center.guide}
+              <div className="my-2 text-sm flex gap-x-4 space-around border-4">
+                <div>
+                  <span className="font-semibold">Guide: </span>
+                  {center.guide}
+                </div>
+                <div>
+                  <span className="font-semibold">Opened: </span>
+                  {center.opened}
+                </div>
               </div>
               <div className="my-2 text-sm dark:text-white">
                 <span className="font-semibold">Address: </span>

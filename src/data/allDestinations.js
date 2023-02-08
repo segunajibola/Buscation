@@ -13,9 +13,9 @@ const data = [
         monuments: "The entrance to the square has gigantic sculptures of four white horses hovering above the gate and seven red eagles, which are symbols from the national emblem signifying Strength and Dignity respectively. Other monuments in the square include the Remembrance Arcade (with memorials to World War I, World War II and Nigerian civil war victims) and the 26-storey Independence House, built in 1963 which was for a long time, the tallest building in Nigeria.",
         address: "45/57 Massey Bamgboshe Street, Lagos Island",
         rating: "4.1/5",
-        imageUrl: "/images/lagos/Tafawa_Balewa_Square_Image.jpg",
+        imageUrl: "/images/lagos/tbs.jpg",
         imageAlt: "Tafawa Balewa Square",
-        Opened: "1972",
+        opened: "1972",
         guide: "segunajibola",
       },
       {
@@ -25,9 +25,9 @@ const data = [
         monuments: "The reserve area which covers a land area of 78 hectares (192.74 acres) is located on Lekki Peninsula, next to the Lekki Lagoon, and near the Lagos Lagoon. It protects the wetlands of the Lekki peninsula which consists of swamp and savannah habitats. Approaching the reserve, there's a boulevard of coconut trees that leads to a well-laid-out car and Visitors Park. It is endowed with an abundance of plant and animal life. Its huge tract of wetlands is set aside for wildlife viewing. Raised walkways enable the viewing of animals like monkeys, crocodiles, snakes, and various birds. There is also a conservation center and a library.",
         address: "Km 19 Lekki - Epe Expy, Lekki Penninsula II 106104, Lekki",
         rating: "4.3/5",
-        imageUrl: "/images/lagos/Tafawa_Balewa_Square_Image.jpg",
+        imageUrl: "/images/lagos/lcc.jpg",
         imageAlt: "Lekki Conservation Centre",
-        Opened: "1990",
+        opened: "1990",
         guide: "segunajibola",
       },
       {
