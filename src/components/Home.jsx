@@ -23,8 +23,7 @@ const Home = () => {
               </span>
             </h1>
             <p className="mt-2 text-gray-600 dark:text-white sm:text-xl">
-              Buscation helps you tour beautiful locations so you can enjoy
-              nature.
+              Tourcation lets you tour beautiful locations so you can have enjoyable memories.
             </p>
             <img
               src="/images/bus.jpg"

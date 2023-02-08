@@ -5,8 +5,6 @@ import TourismCards from "./TourismCards";
 const ParticularState = ({ destination }) => {
   const { state } = useParams();
 
-  console.log("this state", typeof destination.state, state);
-
   return (
     <div className="overflow-hidden bg-gray-100 dark:bg-gray-700">
       <div className="mx-auto max-w-7xl pt-12">
@@ -20,7 +18,7 @@ const ParticularState = ({ destination }) => {
                 className="h-64 w-full object-cover object-center"
               />
               <h1 className="mt-14 text-3xl font-semibold dark:text-white">
-                All tourism center in {destination.state}
+                Tourism centers in {destination.state}
               </h1>
             </div>
           ))}
