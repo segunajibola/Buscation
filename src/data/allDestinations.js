@@ -37,7 +37,7 @@ const data = [
         info: "The museum houses the collections of artifacts belonging to different cultures of the ethnic groups in Nigeria. The size of the collection is estimated at 47,000 objects, made of different materials such as wood, ivory, metal and terracotta. The artifacts include masks, textiles, drums, dane guns and wooden figures. Among the artifacts, in the Yoruba section, the museum includes Egungun costumes and clay pots. The museum has a collection of statues dating from different periods of Nigeria's history.",
         address: "Onikan Rd, Ikoyi",
         rating: "3.9/5",
-        imageUrl: "/images/lagos/nationa_museum.jpg",
+        imageUrl: "/images/lagos/national_museum.jpg",
         imageAlt: "National Musuem",
         opened: "1957",
         guide: "segunajibola",

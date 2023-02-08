@@ -8,9 +8,9 @@ const TourismCards = ({state, center}) => {
         <img
           src={center.imageUrl}
           alt={center.imageAlt}
-          className='h-48 w-32 flex-shrink-0 object-cover object-center'
+          className='h-48 w-40 flex-shrink-0 object-cover object-center'
         />
-        <div className='px-5 py-2'>
+        <div className='px-3 py-2'>
           <h3 className='text-lg font-semibold text-gray-800 dark:text-white'>
             {center.name}
           </h3>
