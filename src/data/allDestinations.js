@@ -20,12 +20,15 @@ const data = [
       },
       {
         id: 2,
-        name: "Jhalobia Recreation Park and Gardens",
-        address:
-          "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
-        rating: "4.2/5",
-        imageUrl: "/images/location1.jpeg",
-        imageAlt: "Toronto skyline",
+        name: "Lekki Conservation Centre",
+        historical: "The Centre was established in 1990 to serve as biodiversity conservation icon and environment education centre. The facility was built by the Chevron Corporation for the Nigerian Conservation Foundation (NCF), as a reserved sanctuary for the rich flora and fauna of the Lekki Peninsula. The company has since provided annual funding for the management of the Centre.",
+        monuments: "The reserve area which covers a land area of 78 hectares (192.74 acres) is located on Lekki Peninsula, next to the Lekki Lagoon, and near the Lagos Lagoon. It protects the wetlands of the Lekki peninsula which consists of swamp and savannah habitats. Approaching the reserve, there's a boulevard of coconut trees that leads to a well-laid-out car and Visitors Park. It is endowed with an abundance of plant and animal life. Its huge tract of wetlands is set aside for wildlife viewing. Raised walkways enable the viewing of animals like monkeys, crocodiles, snakes, and various birds. There is also a conservation center and a library.",
+        address: "Km 19 Lekki - Epe Expy, Lekki Penninsula II 106104, Lekki",
+        rating: "4.3/5",
+        imageUrl: "/images/lagos/Tafawa_Balewa_Square_Image.jpg",
+        imageAlt: "Tafawa Balewa Square",
+        Opened: "1990",
+        guide: "segunajibola",
       },
       {
         id: 3,
