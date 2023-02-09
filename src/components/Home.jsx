@@ -81,10 +81,13 @@ const Home = () => {
       </div>
 
       <div className="mx-auto max-w-full px-8 py-40 bg-gray-100 dark:bg-gray-700 lg:max-w-full lg:px-8">
-        <h2 className="text-center text-2xl font-semibold tracking-wider text-gray-900 dark:text-white">
+        <h2 className="mb-5 text-center text-2xl font-semibold tracking-wider text-gray-900 dark:text-white">
           Find Tourist Attraction (by tourist centers)
         </h2>
-        <p className="text-center mt-10">coming soon...</p>
+        <div className="w-[80%] mx-auto">
+          <input className="rounded-lg bg-gray-500 p-2 w-64 mx-auto" type="text" />
+        <button className="p-2 m-3 bg-indigo-500 rounded-lg">Search</button>
+        </div>
       </div>
     </>
   );
