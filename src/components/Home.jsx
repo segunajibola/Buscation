@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="dark:bg-gray-800">
+    <>
       <div className="grid bg-gray-100 pt-16 lg:pt-20 lg:pb-8 dark:bg-gray-700 lg:grid-cols-2 2xl:grid-cols-5">
         <div className="mx-auto max-w-md px-4 py-4 sm:max-w-xl lg:max-w-full lg:px-12 lg:py-28 xl:mr-0 2xl:col-span-2">
           <div className="max-w-xl">
@@ -89,13 +89,13 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mx-auto my-20 max-w-full px-8 py-20 bg-gray-100 dark:bg-gray-800 lg:max-w-full lg:px-8">
+      <div className="mx-auto max-w-full px-8 py-40 bg-gray-100 dark:bg-gray-700 lg:max-w-full lg:px-8">
         <h2 className="text-center text-2xl font-semibold tracking-wider text-gray-900 dark:text-white">
           Find Tourist Attraction (by tourist centers)
         </h2>
-        <p className="text-center my-10">coming soon...</p>
+        <p className="text-center mt-10">coming soon...</p>
       </div>
-    </div>
+    </>
   );
 };
 export default Home;
