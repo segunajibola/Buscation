@@ -2,19 +2,11 @@ import DestinationCards from "./DestinationCards";
 import allDestinations from "../data/allDestinations";
 import { Link } from "react-router-dom";
 
-// DO NOT CLEAR COMMENTS FOR NOW
-
-// scroll = () => { window.scrollTo(0, 0); }
-// function scroll() {
-//     window.scrollTo(0, 0);
-// };
-
 const Home = () => {
   return (
     <>
       <div className="grid bg-gray-100 pt-16 lg:pt-20 lg:pb-8 dark:bg-gray-700 lg:grid-cols-2 2xl:grid-cols-5">
         <div className="mx-auto max-w-md px-4 py-4 sm:max-w-xl lg:max-w-full lg:px-12 lg:py-28 xl:mr-0 2xl:col-span-2">
-          <div className="max-w-xl">
             <h1 className="mt-2 text-2xl font-bold text-gray-900 dark:text-white sm:mt-4 sm:text-4xl lg:mt-4 lg:text-3xl xl:text-4xl">
               You can travel anywhere.
               <br />
@@ -44,7 +36,6 @@ const Home = () => {
                 Know more
               </a>
             </div>
-          </div>
         </div>
 
         <div className="relative m-3 hidden lg:block 2xl:col-span-3">
