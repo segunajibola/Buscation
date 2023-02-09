@@ -31,9 +31,7 @@ const AppRouter = ({ handleMode, darkMode }) => {
           path="/states/:state"
           element={<ParticularState destination={destination} />}
         />
-
         
-
         <Route path="/log-in" element={<Login />} />
 
         <Route path="*" element={<NotFound />} />

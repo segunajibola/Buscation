@@ -6,7 +6,8 @@ const ParticularCenter = ({ destination }) => {
 
   // get the state array
   const stateArr = destination.filter(
-    (destination) => destination.state === state
+    (destination) =>
+      destination.state === state.charAt(0).toUpperCase() + state.slice(1)
   );
   console.log("stateArr", stateArr);
 
@@ -14,8 +15,22 @@ const ParticularCenter = ({ destination }) => {
   const tourCenterArr = stateArr[0].tourCenter;
   console.log("tourCenterArr", tourCenterArr);
 
+  function capEachWord(item) {
+    const arr = item.split(" ");
+
+    //loop through each element of the array and capitalize the first letter.
+
+    for (let i = 0; i < arr.length; i++) {
+      arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+
+    return arr.join(" ");
+  }
+
   // get the center array
-  const centerArr = tourCenterArr.filter((item) => item.name === center);
+  const centerArr = tourCenterArr.filter(
+    (item) => item.name === capEachWord(center)
+  );
   console.log("centerArr", centerArr);
 
   return (
