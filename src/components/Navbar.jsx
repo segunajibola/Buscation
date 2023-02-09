@@ -1,28 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { FaMoon, FaLightbulb, FaBars, FaTimes } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/fontawesome-free-solid";
 
-function toggleMenu() {
-  const menu = document.getElementById("menu");
-  if (menu.classList.contains("hidden")) {
-    menu.classList = " ";
-  } else {
-    menu.classList = "hidden";
-  }
-}
+const Navbar = ({ handleMode, darkMode }) => {
+  const [nav, setNav] = useState(false);
+  const toggleMenu = () => setNav(!nav);
 
-function darkMode() {
-  const btn = document.getElementById("dark");
-  if (btn.classList.contains("dark")) {
-    btn.classList = "";
-  } else {
-    btn.classList = "dark";
-  }
-}
-
-const Navbar = () => {
   return (
     <nav className="fixed z-10 w-full bg-white shadow-lg dark:bg-gray-800">
       <div className="z-20 m-auto max-w-7xl px-4 text-xs">
@@ -97,17 +83,17 @@ const Navbar = () => {
               Sign Up
             </Link>
           </div>
-          <div>
+          {/* <div>
             <FontAwesomeIcon
               className="mt-6 ml-20 -mr-20 cursor-pointer text-xl text-yellow-400 dark:text-white sm:ml-72 md:ml-0"
-              onClick={darkMode}
+              onClick={handleMode}
               icon={faMoon}
             />
-          </div>
+          </div> */}
 
           <div
-            onClick={darkMode}
-            className="z-30 ml-20 sm:ml-[30rem] md:ml-0 cursor-pointer text-yellow-400 dark:text-white"
+            onClick={handleMode}
+            className="mt-6 ml-20 -mr-20 cursor-pointer text-yellow-400 dark:text-white sm:ml-72 md:ml-0"
           >
             {darkMode ? <FaMoon size={27} /> : <FaLightbulb size={27} />}
           </div>
@@ -125,7 +111,6 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                {" "}
                 <path d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </button>
@@ -133,7 +118,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="hidden" id="menu">
+      <div className={`md:hidden ${
+          nav ? "" : "hidden"
+        }`}>
         <ul
           className="m-1 bg-gray-200 py-3 px-2 text-lg dark:bg-gray-500 dark:text-white"
           onClick={toggleMenu}
