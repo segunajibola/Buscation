@@ -83,19 +83,11 @@ const Navbar = ({ handleMode, darkMode }) => {
               Sign Up
             </Link>
           </div>
-          {/* <div>
-            <FontAwesomeIcon
-              className="mt-6 ml-20 -mr-20 cursor-pointer text-xl text-yellow-400 dark:text-white sm:ml-72 md:ml-0"
-              onClick={handleMode}
-              icon={faMoon}
-            />
-          </div> */}
-
           <div
             onClick={handleMode}
             className="mt-6 ml-20 -mr-20 cursor-pointer text-yellow-400 dark:text-white sm:ml-72 md:ml-0"
           >
-            {darkMode ? <FaMoon size={27} /> : <FaLightbulb size={27} />}
+            {darkMode ? <FaLightbulb size={27} /> : <FaMoon size={27} /> }
           </div>
 
           {/* Mobile menu button icon --> only shows in sm */}
