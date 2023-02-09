@@ -10,10 +10,10 @@ import NotFound from "../components/NotFound";
 import destination from "../data/allDestinations.js";
 import Login from "../components/Login/Login";
 
-const AppRouter = () => {
+const AppRouter = ({ handleMode, darkMode }) => {
   return (
     <Router>
-      <Navbar />
+      <Navbar handleMode={handleMode} darkMode={darkMode} />
       <Routes>
         <Route exact path="/" element={<Home />} />
 
@@ -31,9 +31,7 @@ const AppRouter = () => {
           path="/states/:state"
           element={<ParticularState destination={destination} />}
         />
-
         
-
         <Route path="/log-in" element={<Login />} />
 
         <Route path="*" element={<NotFound />} />

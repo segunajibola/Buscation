@@ -57,7 +57,8 @@ const Home = () => {
       </div>
       <div className="mx-auto max-w-full px-8 py-20 dark:bg-gray-800 lg:max-w-full lg:px-8">
         <h2 className="text-center text-2xl font-semibold tracking-wider text-gray-900 dark:text-white">
-          Find Tourist Attraction (by state)
+          Find Tourist Attraction <br />
+          (by state)
         </h2>
 
         <div className="mt-6 grid gap-6 rounded-md lg:grid-cols-2 xl:grid-cols-3">
@@ -88,11 +89,11 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mx-auto my-20 max-w-full px-8 py-20 bg-gray-100 dark:bg-gray-800 lg:max-w-full lg:px-8">
+      <div className="mx-auto max-w-full px-8 py-40 bg-gray-100 dark:bg-gray-700 lg:max-w-full lg:px-8">
         <h2 className="text-center text-2xl font-semibold tracking-wider text-gray-900 dark:text-white">
           Find Tourist Attraction (by tourist centers)
         </h2>
-        <p className="text-center my-10">coming soon...</p>
+        <p className="text-center mt-10">coming soon...</p>
       </div>
     </>
   );
