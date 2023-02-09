@@ -23,15 +23,15 @@ const AppRouter = ({ handleMode, darkMode }) => {
         />
 
         <Route
-          path="/states/:state/:center"
+          path="/:state/:center"
           element={<ParticularCenter destination={destination} />}
         />
 
         <Route
-          path="/states/:state"
+          path="/:state"
           element={<ParticularState destination={destination} />}
         />
-        
+
         <Route path="/log-in" element={<Login />} />
 
         <Route path="*" element={<NotFound />} />

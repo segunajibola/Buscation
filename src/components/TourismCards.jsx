@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const TourismCards = ({state, center}) => {
   return (
-    <Link to={`/states/${state}/${center.name.toLowerCase()}`} className='block'>
+    <Link to={`/${state}/${center.name.toLowerCase()}`} className='block'>
       <div className='flex transform cursor-pointer items-center overflow-hidden rounded-lg bg-gray-200 shadow-lg transition hover:-translate-y-2.5 hover:scale-105 dark:bg-gray-900'>
         <img
           src={center.imageUrl}
