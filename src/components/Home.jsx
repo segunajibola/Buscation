@@ -6,24 +6,23 @@ const Home = () => {
   return (
     <>
       <div className="grid bg-gray-100 pt-16 lg:pt-20 lg:pb-8 dark:bg-gray-700 lg:grid-cols-2 2xl:grid-cols-5 content-start">
-        <div className="mx-auto max-w-md px-4 py-4 sm:max-w-xl lg:max-w-full lg:px-12 lg:py-0 h-[28rem] xl:mr-0 2xl:col-span-2 border-4">
-          <h1 className="mt-2 text-2xl font-bold text-gray-900 dark:text-white sm:mt-4 sm:text-4xl lg:mt-4 lg:text-3xl xl:text-4xl">
-            You can travel anywhere.
+        <div className="mx-auto max-w-md px-4 py-4 sm:max-w-xl lg:max-w-full lg:px-12 lg:py-0 h-[28drem] xl:mr-0 2xl:col-span-2">
+          <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white sm:mt-4 lg:mt-4  ">
+            Tour beautiful places.
             <br />
             <span className="text-indigo-500 dark:text-indigo-600">
-              Take advantage of that.
+            Make lasting memories.
             </span>
           </h1>
-          <p className="mt-2 text-gray-600 dark:text-white sm:text-xl">
-            Tourcation lets you tour beautiful locations so you can have
-            enjoyable memories.
+          <p className="my-4 md:mt-8 text-gray-600 dark:text-white sm:text-xl">
+            Whether it's a place of interest, value, history or cultural significance - Tourcation saves your seat in the next tour to your favorite tourist attraction.
           </p>
           <img
             src="/images/bus.jpg"
             alt="People going in the bus"
-            className="my-2 h-52 w-full rounded-lg object-center shadow-xl sm:mt-8 sm:h-64 sm:object-cover lg:hidden"
+            className="my-2 h-64 w-full rounded-lg object-center shadow-xl sm:mt-8 sm:h-64 sm:object-cover lg:hidden"
           />
-          <div className="mt-10 space-x-1 sm:mt-6">
+          <div className="mt-8 md:mt-32 inline-block overflow-hidden space-x-1">
             <a
               href="/"
               className="focus:outline-none inline-block transform rounded-lg bg-indigo-500 px-5 py-3 text-sm font-semibold uppercase tracking-wider text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-indigo-400 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 focus:ring-offset-2 active:bg-indigo-600 dark:bg-indigo-600  sm:text-base "
