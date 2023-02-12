@@ -19,7 +19,7 @@ const TourismCards = ({ state, center }) => {
           </p>
           <div className="mt-2">
             <div>Rating: {center.rating}</div>
-            <div>State: {center.state.charAt(0).toUpperCase() + state.slice(1)}</div>
+            <div>State: {center.state?.charAt(0).toUpperCase() + state?.slice(1)}</div>
           </div>
         </div>
       </div>
