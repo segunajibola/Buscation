@@ -9,6 +9,7 @@ const data = [
       {
         id: 1,
         name: "Tafawa Balewa Square",
+        state: "lagos",
         historical: "Major national events at TBS includes Nigeria’s independence celebration which took place on 1 October 1960 with the Prime Minister, Tafawa Balewa, delivering his speech. Democracy Day, as well as other multifarious events such as musical jamborees and religious gatherings.",
         info: "The entrance to the square has gigantic sculptures of four white horses hovering above the gate and seven red eagles, which are symbols from the national emblem signifying Strength and Dignity respectively. Other monument in the square include the Remembrance Arcade (with memorials to World War I, World War II and Nigerian civil war victims) and the 26-storey Independence House, built in 1963 which was for a long time, the tallest building in Nigeria.",
         address: "45/57 Massey Bamgboshe Street, Lagos Island",
@@ -21,6 +22,7 @@ const data = [
       {
         id: 2,
         name: "Lekki Conservation Centre",
+        state: "lagos",
         historical: "The Centre was established in 1990 to serve as biodiversity conservation icon and environment education centre. The facility was built by the Chevron Corporation for the Nigerian Conservation Foundation (NCF), as a reserved sanctuary for the rich flora and fauna of the Lekki Peninsula. The company has since provided annual funding for the management of the Centre.",
         info: "The reserve area which covers a land area of 78 hectares (192.74 acres) is located on Lekki Peninsula, next to the Lekki Lagoon, and near the Lagos Lagoon. It protects the wetlands of the Lekki peninsula which consists of swamp and savannah habitats. Approaching the reserve, there's a boulevard of coconut trees that leads to a well-laid-out car and Visitors Park. It is endowed with an abundance of plant and animal life. Its huge tract of wetlands is set aside for wildlife viewing. Raised walkways enable the viewing of animals like monkeys, crocodiles, snakes, and various birds. There is also a conservation center and a library.",
         address: "Km 19 Lekki - Epe Expy, Lekki Penninsula II 106104, Lekki",
@@ -33,6 +35,7 @@ const data = [
       {
         id: 3,
         name: "National Musuem",
+        state: "lagos",
         historical: "In July 1948, the first architectural sketches of the museum were submitted to a conference on museum policy in Nigeria. The museum was founded in 1957 by the English archaeologist Kenneth Murray. The main purpose of constructing this museum was to preserve different historical artifacts of Nigeria. Kenneth Murray had collected several traditional masks from Cross River State, these masks were displayed in the museum.",
         info: "The museum houses the collections of artifacts belonging to different cultures of the ethnic groups in Nigeria. The size of the collection is estimated at 47,000 objects, made of different materials such as wood, ivory, metal and terracotta. The artifacts include masks, textiles, drums, dane guns and wooden figures. Among the artifacts, in the Yoruba section, the museum includes Egungun costumes and clay pots. The museum has a collection of statues dating from different periods of Nigeria's history.",
         address: "Onikan Rd, Ikoyi",
@@ -53,16 +56,8 @@ const data = [
     tourCenter: [
       {
         id: 1,
-        name: "Tafawa Balewa Square",
-        address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
-        rating: "4.1/5",
-        image: "/images/location2.jpeg",
-        imageUrl: "/images/location2.jpeg",
-        imageAlt: "Toronto skyline",
-      },
-      {
-        id: 2,
-        name: "Jhalobia Recreation Park and Gardens",
+        name: "Lekki Recreation Park and Gardens",
+        state: "abuja",
         address:
           "M/M International Airport Road, Between Hajj Camp and Ajao Estate, Ajao Estate",
         rating: "4.2/5",
@@ -82,6 +77,7 @@ const data = [
       {
         id: 1,
         name: "Tafawa Balewa Square",
+        state: "rivers",
         address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
@@ -99,6 +95,7 @@ const data = [
       {
         id: 1,
         name: "Park Vega Waterpark",
+        state: "delta",
         address:
           "Nmordi Street Ewuru Road, off Benin-Asaba Hwy, Expressway, Agbor",
         rating: "4.8/5",
@@ -109,6 +106,7 @@ const data = [
       {
         id: 2,
         name: "Shiloh Beach Resort and Apartment",
+        state: "delta",
         address: "Resort & apartment, LGA, Shiloh Beach 330105, Eku",
         rating: "3.9/5",
         image: "/images/location2.jpeg",
@@ -118,6 +116,7 @@ const data = [
       {
         id: 3,
         name: "Falcorp Mangrove Park",
+        state: "delta",
         address: " Ijala Ikenren, 332101, Warri",
         rating: "3.9/5",
         image: "/images/location3.jpeg",
@@ -127,6 +126,7 @@ const data = [
       {
         id: 4,
         name: "Nelson Mandela Gardens",
+        state: "delta",
         address: " Within the Asaba International Airport",
         rating: "4.0/5",
         image: "/images/location4.jpeg",
@@ -136,6 +136,7 @@ const data = [
       {
         id: 5,
         name: "Nanna Living History Museum",
+        state: "delta",
         address: "Koko town, Warri North LGA",
         rating: "5.0/5",
         image: "/images/location5.jpeg",
@@ -154,6 +155,7 @@ const data = [
       {
         id: 1,
         name: "Tafawa Balewa Square",
+        state: "ondo",
         address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
@@ -171,6 +173,7 @@ const data = [
       {
         id: 1,
         name: "Tafawa Balewa Square",
+        state: "kaduna",
         address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
@@ -188,6 +191,7 @@ const data = [
       {
         id: 1,
         name: "Tafawa Balewa Square",
+        state: "kwara",
         address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
@@ -205,6 +209,7 @@ const data = [
       {
         id: 1,
         name: "Tafawa Balewa Square",
+        state: "osun",
         address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
@@ -222,6 +227,7 @@ const data = [
       {
         id: 1,
         name: "Tafawa Balewa Square",
+        state: "kogi",
         address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
@@ -239,6 +245,7 @@ const data = [
       {
         id: 1,
         name: "Tafawa Balewa Square",
+        state: "imo",
         address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
@@ -256,6 +263,7 @@ const data = [
       {
         id: 1,
         name: "Tafawa Balewa Square",
+        state: "adamawa",
         address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
@@ -273,6 +281,7 @@ const data = [
       {
         id: 1,
         name: "Tafawa Balewa Square",
+        state: "kano",
         address: "45/57 Massey Bamgboshe Street, Lagos Island 102273",
         rating: "4.1/5",
         imageUrl: "/images/location1.jpeg",
