@@ -1,8 +1,69 @@
 import DestinationCards from "./DestinationCards";
 import allDestinations from "../data/allDestinations";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import TourismCards from "./TourismCards";
 
 const Home = () => {
+  const [tour, SetTour] = useState("");
+
+  const searchTour = (tour) => console.log(tour);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    searchTour(tour);
+    SetTour(tour);
+  };
+
+  let allArray = [];
+
+  for (let i = 0; i < allDestinations.length; i++) {
+    allArray.push(allDestinations[i].tourCenter);
+  }
+
+  console.log("allArray", allArray);
+
+  const filteredArray = [];
+
+  if (tour) {
+    for (let i = 0; i < allArray.length; i++) {
+      filteredArray.push(
+        allArray[i].filter((item) => item.name.includes(tour))
+      );
+      console.log("filteredArray", filteredArray);
+    }
+  }
+
+  const lastArr = [];
+
+  if (tour) {
+    for (let i = 0; i < filteredArray.length; i++) {
+      lastArr.push(
+        filteredArray[i].reduce(
+          (obj, item) => ({
+            ...obj,
+            id: item.id,
+            name: item.name,
+            state: item.state,
+            historical: item.historical,
+            info: item.info,
+            address: item.address,
+            rating: item.rating,
+            imageUrl: item.imageUrl,
+            imageAlt: item.imageAlt,
+            opened: item.opened,
+            guide: item.guide,
+          }),
+          {}
+        )
+      );
+    }
+  }
+
+  const finalArray = lastArr.filter((value) => Object.keys(value).length !== 0);
+  console.log("lastArr", lastArr, typeof lastArr);
+  console.log("finalArray", finalArray, typeof finalArray);
+
   return (
     <>
       <div className="grid bg-gray-100 pt-16 lg:pt-20 lg:pb-8 dark:bg-gray-700 lg:grid-cols-2 2xl:grid-cols-5 content-start">
@@ -11,11 +72,13 @@ const Home = () => {
             Tour beautiful places.
             <br />
             <span className="text-indigo-500 dark:text-indigo-600">
-            Make lasting memories.
+              Make lasting memories.
             </span>
           </h1>
           <p className="my-4 md:mt-8 text-gray-600 dark:text-white sm:text-xl">
-            Whether it's a place of interest, value, history or cultural significance - Tourcation saves your seat in the next tour to your favorite tourist attraction.
+            Whether it's a place of interest, value, history or cultural
+            significance - Tourcation saves your seat in the next tour to your
+            favorite tourist attraction.
           </p>
           <img
             src="/images/bus.jpg"
@@ -53,20 +116,14 @@ const Home = () => {
         </h2>
 
         <div className="mt-6 grid gap-6 rounded-md lg:grid-cols-2 xl:grid-cols-3">
-          {/* <DestinationCards destination={popularDestinations[1]} key={popularDestinations[1].city} /> show for one */}
           {allDestinations
             .filter((item, index) => index < 6)
             .map((eachDestination) => (
-              <>
-                <DestinationCards
-                  destination={eachDestination}
-                  key={eachDestination.id}
-                />
-              </>
+              <DestinationCards
+                destination={eachDestination}
+                key={eachDestination.id}
+              />
             ))}
-
-          {/* <ul className='mt-10 font-medium text-center'> Only Lagos: </ul>
-                    {popularDestinations.filter(destination => destination.city === 'Lagos').map(destination => <DestinationCards destination={destination} key={destination.city} />)} */}
         </div>
         <div className="text-center">
           <Link to="/all-states">
@@ -82,11 +139,24 @@ const Home = () => {
 
       <div className="mx-auto max-w-full px-8 py-40 bg-gray-100 dark:bg-gray-700 lg:max-w-full lg:px-8">
         <h2 className="mb-5 text-center text-2xl font-semibold tracking-wider text-gray-900 dark:text-white">
-          Find Tourist Attraction (by tourist centers)
+          Find Tourist Attraction <br />
+          (by tourist centers)
         </h2>
-        <div className="w-[80%] mx-auto">
-          <input className="rounded-lg bg-gray-500 p-2 w-64 mx-auto" type="text" />
-        <button className="p-2 m-3 bg-indigo-500 rounded-lg">Search</button>
+        <form className="w-[80%] mx-auto text-center" onSubmit={onSubmit}>
+          <input
+            className="rounded-lg bg-gray-500 p-2 w-64 mx-auto"
+            type="text"
+            onChange={(e) => SetTour(e.target.value)}
+          />
+          {/* <button className="py-1.5 px-3 m-3 bg-indigo-500 text-white text-xl rounded-lg">
+            Search
+          </button> */}
+        </form>
+
+        <div className="mt-6 grid gap-8 w-[80%] mx-auto lg:grid-cols-2">
+          {finalArray?.map((item) => (
+            <TourismCards state={item.state} center={item} key={item.id} />
+          ))}
         </div>
       </div>
     </>
