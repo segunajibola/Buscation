@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import TourismCards from "./CenterCard";
+import Button from './General/Button';
+import CenterCard from "./CenterCard";
 import { Link } from "react-router-dom";
 
 const ParticularState = ({ destination }) => {
@@ -38,7 +39,7 @@ const ParticularState = ({ destination }) => {
           )
           .map((destination) =>
             destination.tourCenter?.map((center) => (
-              <TourismCards
+              <CenterCard
                 state={
                   destination.state.charAt(0).toLowerCase() + state.slice(1)
                 }
@@ -55,6 +56,11 @@ const ParticularState = ({ destination }) => {
           >
             See all states
           </button>
+          <Button
+            type="submit"
+            text="Logkkk In"
+            classes="w-full md:w-9/12 mt-6 rounded-md"
+          />
         </Link>
       </div>
     </div>

@@ -7,7 +7,6 @@ const ParticularCenter = ({ destination }) => {
   console.log("centersdsd", center);
   console.log("centersdsd", state);
 
-
   // get the state array
   const stateArr = destination.filter(
     (destination) =>

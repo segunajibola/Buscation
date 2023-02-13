@@ -20,7 +20,7 @@ const LoginForm = () => {
     <>
       <div className='md:w-5/12  w-full mt-10 px-6 text-center md:text-left'>
         <h1 className='text-primary mt-8 md:mt-0 font-bold text-3xl'>
-          Welcome to Buscation
+          Welcome to Tourcation
         </h1>
         <p className='text-inactive mt-3'>Enter details to login</p>
         <form className='flex flex-col mt-4 ' onSubmit={formik.handleSubmit}>

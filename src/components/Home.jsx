@@ -2,7 +2,7 @@ import DestinationCards from "./StateCard";
 import allDestinations from "../data/allDestinations";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import TourismCards from "./CenterCard";
+import CenterCard from "./CenterCard";
 
 const Home = () => {
   const [tour, SetTour] = useState("");
@@ -152,7 +152,7 @@ const Home = () => {
 
         <div className="mt-6 grid gap-8 w-[80%] mx-auto lg:grid-cols-2">
           {finalArray?.map((item) => (
-            <TourismCards state={item.state} center={item} key={item.id} />
+            <CenterCard state={item.state} center={item} key={item.id} />
           ))}
         </div>
       </div>
