@@ -1,8 +1,8 @@
-import DestinationCards from "./DestinationCards";
+import DestinationCards from "./StateCard";
 import allDestinations from "../data/allDestinations";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import TourismCards from "./TourismCards";
+import TourismCards from "./CenterCard";
 
 const Home = () => {
   const [tour, SetTour] = useState("");
@@ -140,7 +140,7 @@ const Home = () => {
         </h2>
         <form className="w-[80%] mx-auto text-center" onSubmit={onSubmit}>
           <input
-            className="rounded-lg bg-gray-500 p-2 w-[18rem] mx-auto mt-5"
+            className="rounded-lg bg-gray-500 p-2 w-[18rem] mx-auto my-5"
             type="text"
             placeholder="type your favourite tourism attraction"
             onChange={(e) => SetTour(e.target.value)}

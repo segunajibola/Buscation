@@ -4,6 +4,10 @@ import { useParams } from "react-router-dom";
 const ParticularCenter = ({ destination }) => {
   const { state, center } = useParams();
 
+  console.log("centersdsd", center);
+  console.log("centersdsd", state);
+
+
   // get the state array
   const stateArr = destination.filter(
     (destination) =>

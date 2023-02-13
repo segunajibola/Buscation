@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const TourismCards = ({ state, center }) => {
+const CenterCard = ({ state, center }) => {
   return (
     <Link to={`/${state}/${center.name.toLowerCase()}`} className="block">
       <div className="flex transform cursor-pointer items-center overflow-hidden rounded-lg bg-gray-200 shadow-lg transition hover:-translate-y-2.5 hover:scale-105 dark:bg-gray-900">
@@ -27,4 +27,4 @@ const TourismCards = ({ state, center }) => {
   );
 };
 
-export default TourismCards;
+export default CenterCard;
