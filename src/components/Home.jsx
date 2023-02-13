@@ -15,44 +15,44 @@ const Home = () => {
     SetTour(tour);
   };
 
-  let allArray = [];
+  let tourCenterArr = [];
 
   for (let i = 0; i < allDestinations.length; i++) {
-    allArray.push(allDestinations[i].tourCenter);
+    tourCenterArr.push(allDestinations[i].tourCenter.filter((item) => item.name.includes(tour)));
   }
 
-  console.log("allArray", allArray);
+  console.log("tourCenterArr", tourCenterArr);
+
+  // const filteredArray = [];
+
+  // if (tour) {
+  //   for (let i = 0; i < tourCenterArr.length; i++) {
+  //     filteredArray.push(
+  //       tourCenterArr[i].filter((item) => item.name.includes(tour))
+  //     );
+  //     console.log("filteredArray", filteredArray);
+  //   }
+  // }
 
   const filteredArray = [];
 
   if (tour) {
-    for (let i = 0; i < allArray.length; i++) {
+    for (let i = 0; i < tourCenterArr.length; i++) {
       filteredArray.push(
-        allArray[i].filter((item) => item.name.includes(tour))
-      );
-      console.log("filteredArray", filteredArray);
-    }
-  }
-
-  const lastArr = [];
-
-  if (tour) {
-    for (let i = 0; i < filteredArray.length; i++) {
-      lastArr.push(
-        filteredArray[i].reduce(
+        tourCenterArr[i].reduce(
           (obj, item) => ({
             ...obj,
             id: item.id,
             name: item.name,
-            // state: item.state,
-            // historical: item.historical,
-            // info: item.info,
-            // address: item.address,
-            // rating: item.rating,
-            // imageUrl: item.imageUrl,
-            // imageAlt: item.imageAlt,
-            // opened: item.opened,
-            // guide: item.guide,
+            state: item.state,
+            historical: item.historical,
+            info: item.info,
+            address: item.address,
+            rating: item.rating,
+            imageUrl: item.imageUrl,
+            imageAlt: item.imageAlt,
+            opened: item.opened,
+            guide: item.guide,
           }),
           {}
         )
@@ -60,8 +60,8 @@ const Home = () => {
     }
   }
 
-  const finalArray = lastArr.filter((value) => Object.keys(value).length !== 0);
-  console.log("lastArr", lastArr, typeof lastArr);
+  const finalArray = filteredArray.filter((value) => Object.keys(value).length !== 0);
+  console.log("filteredArray", filteredArray, typeof filteredArray);
   console.log("finalArray", finalArray, typeof finalArray);
 
   return (
