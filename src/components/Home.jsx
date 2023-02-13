@@ -18,21 +18,14 @@ const Home = () => {
   let tourCenterArr = [];
 
   for (let i = 0; i < allDestinations.length; i++) {
-    tourCenterArr.push(allDestinations[i].tourCenter.filter((item) => item.name.includes(tour)));
+    tourCenterArr.push(
+      allDestinations[i].tourCenter.filter((item) =>
+        item.name.toLowerCase().includes(tour.toLowerCase())
+      )
+    );
   }
 
   console.log("tourCenterArr", tourCenterArr);
-
-  // const filteredArray = [];
-
-  // if (tour) {
-  //   for (let i = 0; i < tourCenterArr.length; i++) {
-  //     filteredArray.push(
-  //       tourCenterArr[i].filter((item) => item.name.includes(tour))
-  //     );
-  //     console.log("filteredArray", filteredArray);
-  //   }
-  // }
 
   const filteredArray = [];
 
@@ -41,7 +34,6 @@ const Home = () => {
       filteredArray.push(
         tourCenterArr[i].reduce(
           (obj, item) => ({
-            ...obj,
             id: item.id,
             name: item.name,
             state: item.state,
@@ -60,8 +52,12 @@ const Home = () => {
     }
   }
 
-  const finalArray = filteredArray.filter((value) => Object.keys(value).length !== 0);
   console.log("filteredArray", filteredArray, typeof filteredArray);
+
+  const finalArray = filteredArray.filter(
+    (value) => Object.keys(value).length !== 0
+  );
+
   console.log("finalArray", finalArray, typeof finalArray);
 
   return (
@@ -144,8 +140,9 @@ const Home = () => {
         </h2>
         <form className="w-[80%] mx-auto text-center" onSubmit={onSubmit}>
           <input
-            className="rounded-lg bg-gray-500 p-2 w-64 mx-auto"
+            className="rounded-lg bg-gray-500 p-2 w-[18rem] mx-auto mt-5"
             type="text"
+            placeholder="type your favourite tourism attraction"
             onChange={(e) => SetTour(e.target.value)}
           />
           {/* <button className="py-1.5 px-3 m-3 bg-indigo-500 text-white text-xl rounded-lg">
