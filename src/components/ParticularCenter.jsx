@@ -40,6 +40,7 @@ const ParticularCenter = ({ destination }) => {
   const googleSearch = (centerName) => {
     const url = "http://www.google.com/search?q=" + centerName;
     console.log("centerName", centerName);
+    console.log("centerName");
     window.open(url, "_blank");
   };
 
@@ -89,17 +90,10 @@ const ParticularCenter = ({ destination }) => {
             </div>
             <Button
               type="submit"
-              text={`"See More on google"`}
+              text={`More about ${center.name} on google`}
               classes="transform mt-0 px-6 py-2 uppercase tracking-widest text-white"
               onClick={() => googleSearch(center.name)}
             />
-            <button
-              onClick={() => googleSearch(center.name)}
-              type="submit"
-              className={`mb-5 block mx-auto rounded-lg bg-indigo-500 text-sm font-medium transition duration-300 hover:bg-indigo-600 dark:bg-indigo-600 focus:ring-indigo-500 focus:ring-opacity-50 active:bg-indigo-600 dark:border-white shadow-lg hover:-translate-y-0.5 transform px-6 py-2 uppercase tracking-widest text-white`}
-            >
-              See More on google
-            </button>
           </div>
         ))}
       </div>
