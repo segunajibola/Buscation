@@ -36,6 +36,12 @@ const ParticularCenter = ({ destination }) => {
   );
   console.log("centerArr", centerArr);
 
+  const googleSearch = (centerName) => {
+    const url = "http://www.google.com/search?q=" + centerName;
+    console.log("centerName", centerName);
+    window.open(url, "_blank");
+  };
+
   return (
     <div className="overflow-hidden bg-gray-100 dark:bg-gray-700">
       <div className="mx-auto w-[98%] pt-[80px]">
@@ -78,6 +84,9 @@ const ParticularCenter = ({ destination }) => {
                 {center.info}
               </div>
             </div>
+            <button className="bg-indigo-500" onClick={() => googleSearch(center.name)}>
+              Search {center.name} on google
+            </button>
           </div>
         ))}
       </div>

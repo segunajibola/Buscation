@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Button from './General/Button';
+import Button from "./General/Button";
 import CenterCard from "./CenterCard";
 import { Link } from "react-router-dom";
 
@@ -48,21 +48,16 @@ const ParticularState = ({ destination }) => {
               />
             ))
           )}
-
-        <Link to="/all-states">
-          <button
-            className="m-5 transform rounded-lg bg-indigo-500 px-6 py-2 text-sm font-semibold uppercase tracking-widest text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-indigo-400 focus:ring-indigo-500 focus:ring-opacity-50 active:bg-indigo-600 dark:border-white dark:bg-indigo-600 dark:text-white"
-            onClick={() => window.scrollTo(0, 0)}
-          >
-            See all states
-          </button>
-          <Button
-            type="submit"
-            text="Logkkk In"
-            classes="w-full md:w-9/12 mt-6 rounded-md"
-          />
-        </Link>
       </div>
+
+      <Link to="/all-states" className="">
+        <Button
+          type="submit"
+          text="See all states"
+          classes="transform px-6 py-2 uppercase tracking-widest text-white"
+          onClick={() => window.scrollTo(0, 0)}
+        />
+      </Link>
     </div>
   );
 };
