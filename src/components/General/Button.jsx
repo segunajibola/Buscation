@@ -4,7 +4,7 @@ const Button = ({ text, type, handleClick, classes }) => {
   return (
     <>
       <button
-        onClick={handleClick()}
+        onClick={handleClick}
         type={type}
         className={`${classes} my-5 block mx-auto rounded-lg bg-indigo-500 text-sm font-medium transition duration-300 hover:bg-indigo-600 dark:bg-indigo-600 focus:ring-indigo-500 focus:ring-opacity-50 active:bg-indigo-600 dark:border-white shadow-lg hover:-translate-y-0.5`}
       >
