@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../components/Home";
 import Navbar from "../components/Navbar";
-import StatesCards from "../components/StatesCards";
+import AllStatesCards from "../components/AllStatesCards";
 import ParticularState from "../components/ParticularState";
 import ParticularCenter from "../components/ParticularCenter";
 import Footer from "../components/Footer";
@@ -19,7 +19,7 @@ const AppRouter = ({ handleMode, darkMode }) => {
 
         <Route
           path="/all-states"
-          element={<StatesCards destination={destination} />}
+          element={<AllStatesCards destination={destination} />}
         />
 
         <Route

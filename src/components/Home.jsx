@@ -1,8 +1,8 @@
-import DestinationCards from "./DestinationCards";
+import DestinationCards from "./StateCard";
 import allDestinations from "../data/allDestinations";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import TourismCards from "./TourismCards";
+import CenterCard from "./CenterCard";
 
 const Home = () => {
   const [tour, SetTour] = useState("");
@@ -15,44 +15,36 @@ const Home = () => {
     SetTour(tour);
   };
 
-  let allArray = [];
+  let tourCenterArr = [];
 
   for (let i = 0; i < allDestinations.length; i++) {
-    allArray.push(allDestinations[i].tourCenter);
+    tourCenterArr.push(
+      allDestinations[i].tourCenter.filter((item) =>
+        item.name.toLowerCase().includes(tour.toLowerCase())
+      )
+    );
   }
 
-  console.log("allArray", allArray);
+  console.log("tourCenterArr", tourCenterArr);
 
   const filteredArray = [];
 
   if (tour) {
-    for (let i = 0; i < allArray.length; i++) {
+    for (let i = 0; i < tourCenterArr.length; i++) {
       filteredArray.push(
-        allArray[i].filter((item) => item.name.includes(tour))
-      );
-      console.log("filteredArray", filteredArray);
-    }
-  }
-
-  const lastArr = [];
-
-  if (tour) {
-    for (let i = 0; i < filteredArray.length; i++) {
-      lastArr.push(
-        filteredArray[i].reduce(
+        tourCenterArr[i].reduce(
           (obj, item) => ({
-            ...obj,
             id: item.id,
             name: item.name,
-            // state: item.state,
-            // historical: item.historical,
-            // info: item.info,
-            // address: item.address,
-            // rating: item.rating,
-            // imageUrl: item.imageUrl,
-            // imageAlt: item.imageAlt,
-            // opened: item.opened,
-            // guide: item.guide,
+            state: item.state,
+            historical: item.historical,
+            info: item.info,
+            address: item.address,
+            rating: item.rating,
+            imageUrl: item.imageUrl,
+            imageAlt: item.imageAlt,
+            opened: item.opened,
+            guide: item.guide,
           }),
           {}
         )
@@ -60,8 +52,12 @@ const Home = () => {
     }
   }
 
-  const finalArray = lastArr.filter((value) => Object.keys(value).length !== 0);
-  console.log("lastArr", lastArr, typeof lastArr);
+  console.log("filteredArray", filteredArray, typeof filteredArray);
+
+  const finalArray = filteredArray.filter(
+    (value) => Object.keys(value).length !== 0
+  );
+
   console.log("finalArray", finalArray, typeof finalArray);
 
   return (
@@ -144,8 +140,9 @@ const Home = () => {
         </h2>
         <form className="w-[80%] mx-auto text-center" onSubmit={onSubmit}>
           <input
-            className="rounded-lg bg-gray-500 p-2 w-64 mx-auto"
+            className="rounded-lg bg-gray-500 p-2 w-[18rem] mx-auto my-5"
             type="text"
+            placeholder="type your favourite tourism attraction"
             onChange={(e) => SetTour(e.target.value)}
           />
           {/* <button className="py-1.5 px-3 m-3 bg-indigo-500 text-white text-xl rounded-lg">
@@ -155,7 +152,7 @@ const Home = () => {
 
         <div className="mt-6 grid gap-8 w-[80%] mx-auto lg:grid-cols-2">
           {finalArray?.map((item) => (
-            <TourismCards state={item.state} center={item} key={item.id} />
+            <CenterCard state={item.state} center={item} key={item.id} />
           ))}
         </div>
       </div>

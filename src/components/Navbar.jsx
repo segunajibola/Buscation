@@ -87,7 +87,7 @@ const Navbar = ({ handleMode, darkMode }) => {
             onClick={handleMode}
             className="mt-6 ml-20 -mr-20 cursor-pointer text-yellow-400 dark:text-white sm:ml-72 md:ml-0"
           >
-            {darkMode ? <FaLightbulb size={27} /> : <FaMoon size={27} /> }
+            {darkMode ? <FaLightbulb size={27} /> : <FaMoon size={27} />}
           </div>
 
           {/* Mobile menu button icon --> only shows in sm */}
@@ -110,9 +110,7 @@ const Navbar = ({ handleMode, darkMode }) => {
         </div>
       </div>
 
-      <div className={`md:hidden ${
-          nav ? "" : "hidden"
-        }`}>
+      <div className={`md:hidden ${nav ? "" : "hidden"}`}>
         <ul
           className="m-1 bg-gray-200 py-3 px-2 text-lg dark:bg-gray-500 dark:text-white"
           onClick={toggleMenu}

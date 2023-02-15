@@ -1,6 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import TourismCards from "./TourismCards";
+import Button from "./General/Button";
+import CenterCard from "./CenterCard";
+import { Link } from "react-router-dom";
 
 const ParticularState = ({ destination }) => {
   const { state } = useParams();
@@ -9,7 +11,11 @@ const ParticularState = ({ destination }) => {
     <div className="overflow-hidden bg-gray-100 dark:bg-gray-700">
       <div className="mx-auto max-w-7xl pt-12">
         {destination
-          .filter((destination) => destination.state === state.charAt(0).toUpperCase() + state.slice(1))
+          .filter(
+            (destination) =>
+              destination.state ===
+              state.charAt(0).toUpperCase() + state.slice(1)
+          )
           .map((destination) => (
             <div className="flex-shrink-0 text-center" key={destination.id}>
               <img
@@ -26,13 +32,32 @@ const ParticularState = ({ destination }) => {
 
       <div className="mx-auto mb-3 grid max-w-full gap-6 rounded-md px-4 py-6 md:grid-cols-2 lg:max-w-full lg:px-8 xl:grid-cols-3">
         {destination
-          .filter((destination) => destination.state === state.charAt(0).toUpperCase() + state.slice(1))
+          .filter(
+            (destination) =>
+              destination.state ===
+              state.charAt(0).toUpperCase() + state.slice(1)
+          )
           .map((destination) =>
             destination.tourCenter?.map((center) => (
-              <TourismCards state={destination.state.charAt(0).toLowerCase() + state.slice(1)} center={center} key={center.id} />
+              <CenterCard
+                state={
+                  destination.state.charAt(0).toLowerCase() + state.slice(1)
+                }
+                center={center}
+                key={center.id}
+              />
             ))
           )}
       </div>
+
+      <Link to="/all-states" className="">
+        <Button
+          type="submit"
+          text="See all states"
+          classes="transform px-6 py-2 uppercase tracking-widest text-white"
+          onClick={() => window.scrollTo(0, 0)}
+        />
+      </Link>
     </div>
   );
 };
