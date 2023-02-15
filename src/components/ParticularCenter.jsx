@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import Button from "./General/Button";
 
 const ParticularCenter = ({ destination }) => {
   const { state, center } = useParams();
@@ -46,47 +47,52 @@ const ParticularCenter = ({ destination }) => {
     <div className="overflow-hidden bg-gray-100 dark:bg-gray-700">
       <div className="mx-auto w-[98%] pt-[80px]">
         {centerArr.map((center) => (
-          <div className="grid lg:grid-cols-2 mx-auto gap-2 w-[90%] pb-20">
-            <img
-              src={center.imageUrl}
-              alt={center.imageAlt}
-              className="h-full w-full rounded-2xl object-cover object-center"
-            />
-            <div className="px-1 lg:px-3 py-5 lg:py-2">
-              <div className="flex justify-between">
-                <h3 className="text-3xl font-semibold text-gray-800 dark:text-white">
-                  {center.name}
-                </h3>
-                <div className="bg-yellow-400 h-[50%] p-1 rounded-2xl">
-                  {center.rating}
+          <div>
+            <div className="grid lg:grid-cols-2 mx-auto gap-2 w-[90%] pb-10">
+              <img
+                src={center.imageUrl}
+                alt={center.imageAlt}
+                className="h-full w-full rounded-2xl object-cover object-center"
+              />
+              <div className="px-1 lg:px-3 py-5 lg:py-2">
+                <div className="flex justify-between">
+                  <h3 className="text-3xl font-semibold text-gray-800 dark:text-white">
+                    {center.name}
+                  </h3>
+                  <div className="bg-yellow-400 h-[50%] p-1 rounded-2xl">
+                    {center.rating}
+                  </div>
                 </div>
-              </div>
-              <div className="my-2 text-sm flex gap-x-4 justify-between">
-                <div>
-                  <span className="font-semibold">Guide: </span>
-                  {center.guide}
+                <div className="my-2 text-sm flex gap-x-4 justify-between">
+                  <div>
+                    <span className="font-semibold">Guide: </span>
+                    {center.guide}
+                  </div>
+                  <div>
+                    <span className="font-semibold">Opened: </span>
+                    {center.opened}
+                  </div>
                 </div>
-                <div>
-                  <span className="font-semibold">Opened: </span>
-                  {center.opened}
+                <div className="my-2 text-sm dark:text-white">
+                  <span className="font-semibold">Address: </span>
+                  {center.address}
                 </div>
-              </div>
-              <div className="my-2 text-sm dark:text-white">
-                <span className="font-semibold">Address: </span>
-                {center.address}
-              </div>
-              <div className="test-sm m-1">
-                <span className="font-semibold">Historical Events: </span>
-                {center.historical}
-              </div>
-              <div className="test-sm m-1">
-                <span className="font-semibold">Other Information: </span>
-                {center.info}
+                <div className="test-sm m-1">
+                  <span className="font-semibold">Historical Events: </span>
+                  {center.historical}
+                </div>
+                <div className="test-sm m-1">
+                  <span className="font-semibold">Other Information: </span>
+                  {center.info}
+                </div>
               </div>
             </div>
-            <button className="bg-indigo-500" onClick={() => googleSearch(center.name)}>
-              Search {center.name} on google
-            </button>
+            <Button
+              type="submit"
+              text={`See More on google`}
+              classes="transform mt-0 px-6 py-2 uppercase tracking-widest text-white"
+              onClick={() => googleSearch(center.name)}
+            />
           </div>
         ))}
       </div>
