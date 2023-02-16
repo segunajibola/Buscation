@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import CenterCard from "./CenterCard";
 
-// react-icons in footer instead of fontawesome 
+// react-icons in footer instead of fontawesome
 
 const Home = () => {
   const [tour, SetTour] = useState("");
@@ -67,14 +67,14 @@ const Home = () => {
 
   let stateCenterArr = [];
 
-    stateCenterArr.push(
-      allDestinations.filter((item) =>
-        item.state.toLowerCase().includes(state.toLowerCase())
-      )
-    );
+  stateCenterArr.push(
+    allDestinations.filter((item) =>
+      item.state.toLowerCase().includes(state.toLowerCase())
+    )
+  );
 
   console.log("stateCenterArr", stateCenterArr);
-
+  console.log("state", state);
 
   // get the state arr
   //
@@ -140,9 +140,26 @@ const Home = () => {
             onChange={(e) => SetState(e.target.value)}
           />
         </form>
+        <div className="mt-6 grid gap-8 w-[80%] mx-auto lg:grid-cols-2">
+          {allDestinations
+            .filter((item, index) => item.state === state)
+            .map((eachDestination) => (
+              <StateCard
+                destination={eachDestination}
+                key={eachDestination.id}
+              />
+            ))}
+          {/* {stateCenterArr.map((eachDestination) => (
+            <StateCard
+            destination={eachDestination}
+            key={eachDestination.id}
+          />
+          ))} */}
+        </div>
         <div className="mt-6 grid gap-6 rounded-md lg:grid-cols-2 xl:grid-cols-3">
           {allDestinations
             .filter((item, index) => index < 6)
+            .filter((item, index) => item.state === "Lagos")
             .map((eachDestination) => (
               <StateCard
                 destination={eachDestination}
