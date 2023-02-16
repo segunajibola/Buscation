@@ -1,17 +1,17 @@
-import DestinationCards from "./StateCard";
+import StateCard from "./StateCard";
 import allDestinations from "../data/allDestinations";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import CenterCard from "./CenterCard";
 
+// react-icons in footer instead of fontawesome 
+
 const Home = () => {
   const [tour, SetTour] = useState("");
+  const [state, SetState] = useState("");
 
-  const searchTour = (tour) => console.log(tour);
-
-  const onSubmit = (e) => {
+  const onSubmitTour = (e) => {
     e.preventDefault();
-    searchTour(tour);
     SetTour(tour);
   };
 
@@ -59,6 +59,28 @@ const Home = () => {
   );
 
   console.log("finalArray", finalArray, typeof finalArray);
+
+  const onSubmitState = (e) => {
+    e.preventDefault();
+    SetState(state);
+  };
+
+  let stateCenterArr = [];
+
+    stateCenterArr.push(
+      allDestinations.filter((item) =>
+        item.state.toLowerCase().includes(state.toLowerCase())
+      )
+    );
+
+  console.log("stateCenterArr", stateCenterArr);
+
+
+  // get the state arr
+  //
+  //
+
+  // const stateArr = allDestinations.map(item => )
 
   return (
     <>
@@ -110,12 +132,19 @@ const Home = () => {
           Find Tourist Attraction <br />
           (by state)
         </h2>
-
+        <form className="w-[80%] mx-auto text-center" onSubmit={onSubmitState}>
+          <input
+            className="rounded-lg bg-gray-500 p-2 w-[18rem] mx-auto my-5"
+            type="text"
+            placeholder="search state here"
+            onChange={(e) => SetState(e.target.value)}
+          />
+        </form>
         <div className="mt-6 grid gap-6 rounded-md lg:grid-cols-2 xl:grid-cols-3">
           {allDestinations
             .filter((item, index) => index < 6)
             .map((eachDestination) => (
-              <DestinationCards
+              <StateCard
                 destination={eachDestination}
                 key={eachDestination.id}
               />
@@ -138,16 +167,13 @@ const Home = () => {
           Find Tourist Attraction <br />
           (by tourist centers)
         </h2>
-        <form className="w-[80%] mx-auto text-center" onSubmit={onSubmit}>
+        <form className="w-[80%] mx-auto text-center" onSubmit={onSubmitTour}>
           <input
             className="rounded-lg bg-gray-500 p-2 w-[18rem] mx-auto my-5"
             type="text"
             placeholder="type your favourite tourism attraction"
             onChange={(e) => SetTour(e.target.value)}
           />
-          {/* <button className="py-1.5 px-3 m-3 bg-indigo-500 text-white text-xl rounded-lg">
-            Search
-          </button> */}
         </form>
 
         <div className="mt-6 grid gap-8 w-[80%] mx-auto lg:grid-cols-2">

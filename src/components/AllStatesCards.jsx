@@ -1,5 +1,5 @@
 import React from "react";
-import DestinationCards from "./StateCard";
+import StateCard from "./StateCard";
 
 const AllStatesCards = ({ destination }) => {
   return (
@@ -12,7 +12,7 @@ const AllStatesCards = ({ destination }) => {
       </p>
       <div className="mt-6 grid gap-6 rounded-lg p-4 dark:bg-gray-900 lg:grid-cols-2 xl:grid-cols-3">
         {destination.map((destination) => (
-          <DestinationCards destination={destination} key={destination.id} />
+          <StateCard destination={destination} key={destination.id} />
         ))}
       </div>
     </div>
