@@ -60,21 +60,21 @@ const Home = () => {
 
   console.log("finalArray", finalArray, typeof finalArray);
 
-  const onSubmitState = (e) => {
-    e.preventDefault();
-    SetState(state);
-  };
+  // const onSubmitState = (e) => {
+  //   e.preventDefault();
+  //   SetState(state);
+  // };
 
-  let stateCenterArr = [];
+  // let stateCenterArr = [];
 
-  stateCenterArr.push(
-    allDestinations.filter((item) =>
-      item.state.toLowerCase().includes(state.toLowerCase())
-    )
-  );
+  // stateCenterArr.push(
+  //   allDestinations.filter((item) =>
+  //     item.state.toLowerCase().includes(state.toLowerCase())
+  //   )
+  // );
 
-  console.log("stateCenterArr", stateCenterArr);
-  console.log("state", state);
+  // console.log("stateCenterArr", stateCenterArr);
+  // console.log("state", state);
 
   // get the state arr
   //
@@ -132,7 +132,7 @@ const Home = () => {
           Find Tourist Attraction <br />
           (by state)
         </h2>
-        <form className="w-[80%] mx-auto text-center" onSubmit={onSubmitState}>
+        <form className="w-[80%] mx-auto text-center">
           <input
             className="rounded-lg bg-gray-500 p-2 w-[18rem] mx-auto my-5"
             type="text"
@@ -141,25 +141,18 @@ const Home = () => {
           />
         </form>
         <div className="mt-6 grid gap-8 w-[80%] mx-auto lg:grid-cols-2">
-          {allDestinations
-            .filter((item, index) => item.state === state)
+          {state? allDestinations
+            .filter((item, index) => item.state.toLowerCase() === state.toLowerCase())
             .map((eachDestination) => (
               <StateCard
                 destination={eachDestination}
                 key={eachDestination.id}
               />
-            ))}
-          {/* {stateCenterArr.map((eachDestination) => (
-            <StateCard
-            destination={eachDestination}
-            key={eachDestination.id}
-          />
-          ))} */}
+            )) : ""}
         </div>
         <div className="mt-6 grid gap-6 rounded-md lg:grid-cols-2 xl:grid-cols-3">
           {allDestinations
             .filter((item, index) => index < 6)
-            .filter((item, index) => item.state === "Lagos")
             .map((eachDestination) => (
               <StateCard
                 destination={eachDestination}
