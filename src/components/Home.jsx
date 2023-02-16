@@ -136,20 +136,22 @@ const Home = () => {
           <input
             className="rounded-lg bg-gray-500 p-2 w-[18rem] mx-auto my-5"
             type="text"
-            placeholder="search state here"
+            placeholder="input state name in full"
             onChange={(e) => SetState(e.target.value)}
           />
         </form>
-        <div className="mt-6 grid gap-8 w-[80%] mx-auto lg:grid-cols-2">
+        <div className="mt-6 flex justify-center w-auto mx-auto">
           {state? allDestinations
-            .filter((item, index) => item.state.toLowerCase() === state.toLowerCase())
+            .filter(item => item.state.toLowerCase() === state.toLowerCase())
             .map((eachDestination) => (
               <StateCard
+                className="w-12 mx-auto"
                 destination={eachDestination}
                 key={eachDestination.id}
               />
             )) : ""}
         </div>
+        <h2 className="text-center text-xl my-5 font-semibold tracking-wider text-gray-900 dark:text-white">Some Popular States</h2>
         <div className="mt-6 grid gap-6 rounded-md lg:grid-cols-2 xl:grid-cols-3">
           {allDestinations
             .filter((item, index) => index < 6)
