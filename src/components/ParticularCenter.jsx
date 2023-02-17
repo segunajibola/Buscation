@@ -48,7 +48,7 @@ const ParticularCenter = ({ destination }) => {
 
   return (
     <div className="overflow-hidden bg-gray-100 dark:bg-gray-700">
-      <div className="mx-auto w-[70%] pt-[80px]">
+      <div className="mx-auto w-[90%] pt-[80px]">
         {centerArr.map((center) => (
           <div>
             <div className="grid lg:grid-cols-2 mx-auto gap-2 w-[90%] pb-10">
