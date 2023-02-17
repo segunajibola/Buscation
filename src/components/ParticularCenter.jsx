@@ -88,12 +88,14 @@ const ParticularCenter = ({ destination }) => {
                 </div>
               </div>
             </div>
+            <div className="flex justify-center">
             <Button
               type="submit"
               text={`More about ${center.name} on google`}
-              classes="transform mt-0 px-6 py-2 uppercase tracking-widest text-white"
+              classes="transform mt-0 px-6 py-2 uppercase tracking-widest text-white mx-10 text-[10px] md:text-[14px]"
               onClick={() => googleSearch(center.name)}
             />
+            </div>
           </div>
         ))}
       </div>
