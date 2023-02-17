@@ -118,7 +118,7 @@ const Home = () => {
   );
 
   // remove empty array
-  const finalArray = mainFilterdTourArr.filter(
+  let finalArray = mainFilterdTourArr.filter(
     (value) => Object.keys(value).length !== 0
   );
 
