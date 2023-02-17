@@ -129,8 +129,8 @@ const Home = () => {
 
   return (
     <>
-      <div className="grid bg-gray-100 pt-16 lg:pt-20 lg:pb-8 dark:bg-gray-700 lg:grid-cols-2 2xl:grid-cols-5 content-start">
-        <div className="mx-auto max-w-md px-4 py-4 sm:max-w-xl lg:max-w-full lg:px-12 lg:py-0 h-[28drem] xl:mr-0 2xl:col-span-2">
+      <div className="grid bg-gray-100 mx-auto pt-16 lg:pt-20 lg:pb-8 dark:bg-gray-700 lg:grid-cols-2 2xl:grid-cols-5 content-start">
+        <div className="w-[80%] mx-auto max-w-md px-4 py-4 sm:max-w-xl lg:max-w-full lg:px-12 lg:py-0 xl:mr-0 2xl:col-span-2">
           <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white sm:mt-4 lg:mt-4  ">
             Tour beautiful places.
             <br />
@@ -146,7 +146,7 @@ const Home = () => {
           <img
             src="/images/bus.jpg"
             alt="People going in the bus"
-            className="my-2 h-64 w-full rounded-lg object-center shadow-xl sm:mt-8 sm:h-64 sm:object-cover lg:hidden"
+            className="my-2 h-64 w-full rounded-xl object-center shadow-xl sm:mt-8 sm:h-64 sm:object-cover lg:hidden"
           />
           <div className="mt-8 md:mt-32 inline-block overflow-hidden space-x-1">
             <a
@@ -164,15 +164,15 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="relative m-3 hidden lg:block 2xl:col-span-3">
+        <div className="relative w-[80%] m-3 hidden lg:block 2xl:col-span-3">
           <img
             src="/images/bus.jpg"
             alt="People going in the bus"
-            className="absolute inset-0 h-full w-full rounded object-cover object-center"
+            className="absolute inset-0 h-full w-full rounded-xl object-cover object-center"
           />
         </div>
       </div>
-      <div className="mx-auto max-w-full px-8 py-20 dark:bg-gray-800 lg:max-w-full lg:px-8">
+      <div className="mx-auto w-[80%] px-8 py-20 dark:bg-gray-800 lg:px-8">
         <h2 className="text-center text-2xl font-semibold tracking-wider text-gray-900 dark:text-white">
           Find Tourist Attraction <br />
           (by state)
@@ -185,7 +185,7 @@ const Home = () => {
             onChange={(e) => SetState(e.target.value)}
           />
         </form>
-        <div className="mt-6 flex justify-center w-auto mx-auto">
+        <div className="mt-6 flex justify-center mx-auto">
           {state
             ? allDestinations
                 .filter(
