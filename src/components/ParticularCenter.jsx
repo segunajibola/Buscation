@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Button from "./General/Button";
+import { Link } from "react-router-dom";
 
 const ParticularCenter = ({ destination }) => {
   const { state, center } = useParams();
@@ -70,8 +71,10 @@ const ParticularCenter = ({ destination }) => {
                     {center.guide}
                   </div>
                   <div>
-                    <span className="font-semibold">Opened: </span>
-                    {center.opened}
+                    <span className="font-semibold">
+                      {center.opened ? "Opened" : "Discovered"}:{" "}
+                    </span>
+                    {center.opened || center.discovered}
                   </div>
                 </div>
                 <div className="my-2 text-sm dark:text-white">
@@ -88,13 +91,20 @@ const ParticularCenter = ({ destination }) => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center">
-            <Button
-              type="submit"
-              text={`More about ${center.name} on google`}
-              classes="transform mt-0 px-6 py-2 uppercase tracking-widest text-white mx-10 text-[10px] md:text-[14px]"
-              onClick={() => googleSearch(center.name)}
-            />
+            <div className="flex justify-center mx-10">
+              <Button
+                type="submit"
+                text={`More about ${center.name} on google`}
+                classes="transform mt-0 px-6 py-2 uppercase tracking-widest text-white mx-10 text-[10px] md:text-[14px]"
+                onClick={() => googleSearch(center.name)}
+              />
+              <Link to={`/${state}`}>
+                <Button
+                  type="submit"
+                  text={`See all ${center.state} tour center`}
+                  classes="transform mt-0 px-6 py-2 uppercase tracking-widest text-white mx-10 text-[10px] md:text-[14px]"
+                />
+              </Link>
             </div>
           </div>
         ))}
