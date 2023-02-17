@@ -9,7 +9,7 @@ const ParticularState = ({ destination }) => {
 
   return (
     <div className="overflow-hidden bg-gray-100 dark:bg-gray-700">
-      <div className="mx-auto pt-12 w-[70%]">
+      <div className="mx-auto pt-12 w-[90%]">
         {destination
           .filter(
             (destination) =>
@@ -30,7 +30,7 @@ const ParticularState = ({ destination }) => {
           ))}
       </div>
 
-      <div className="mx-auto w-[70%] mb-3 grid gap-6 rounded-md px-4 py-6 md:grid-cols-2 lg:px-8 xl:grid-cols-3">
+      <div className="mx-auto w-[90%] mb-3 grid gap-6 rounded-md px-4 py-6 md:grid-cols-2 lg:px-8 xl:grid-cols-3">
         {destination
           .filter(
             (destination) =>
