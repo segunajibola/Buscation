@@ -1,38 +1,97 @@
-import DestinationCards from "./StateCard";
+import StateCard from "./StateCard";
+import CenterCard from "./CenterCard";
 import allDestinations from "../data/allDestinations";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import CenterCard from "./CenterCard";
+import Button from "./General/Button";
+
+// react-icons in footer instead of fontawesome
 
 const Home = () => {
   const [tour, SetTour] = useState("");
+  const [state, SetState] = useState("");
 
-  const searchTour = (tour) => console.log(tour);
-
-  const onSubmit = (e) => {
+  const onSubmitTour = (e) => {
     e.preventDefault();
-    searchTour(tour);
     SetTour(tour);
   };
 
-  let tourCenterArr = [];
+  // arrays of all tours array
+
+  let allTourCenterArr = [];
 
   for (let i = 0; i < allDestinations.length; i++) {
-    tourCenterArr.push(
+    allTourCenterArr.push(allDestinations[i].tourCenter);
+  }
+
+  console.log("allTourCenterArr", allTourCenterArr, typeof allTourCenterArr);
+
+  // arrays of all tours object
+  const realTourArray = [];
+
+  for (let i = 0; i < allTourCenterArr.length; i++) {
+    realTourArray.push(
+      allTourCenterArr[i].reduce(
+        (obj, item) => ({
+          id: item.id,
+          name: item.name,
+          state: item.state,
+          historical: item.historical,
+          info: item.info,
+          address: item.address,
+          rating: item.rating,
+          imageUrl: item.imageUrl,
+          imageAlt: item.imageAlt,
+          opened: item.opened,
+          guide: item.guide,
+        }),
+        {}
+      )
+    );
+  }
+  console.log("realTourArray", realTourArray);
+
+  // if (realTourArray.length) {
+  //   let shuffleArr = shuffle(realTourArray);
+
+  //   console.log("shuffleArr", shuffleArr);
+  // }
+
+  let shuffledArr = [];
+  
+  // if (realTourArray.length) {
+    shuffledArr = realTourArray.sort(() => 0.5 - Math.random()).slice(0, 6);
+    console.log("shuffledArr", shuffledArr);
+  // }
+
+  let filteredTourCenterArr = [];
+
+  // add all tour center that satisfy the filter condition
+  for (let i = 0; i < allDestinations.length; i++) {
+    filteredTourCenterArr.push(
       allDestinations[i].tourCenter.filter((item) =>
         item.name.toLowerCase().includes(tour.toLowerCase())
       )
     );
   }
 
-  console.log("tourCenterArr", tourCenterArr);
+  console.log("filteredTourCenterArr", filteredTourCenterArr);
 
-  const filteredArray = [];
+  // contained tour center arr
 
+  // const containedMainFilterdTourArr = filteredTourCenterArr.filter(
+  //   (e) => e.length
+  // );
+
+  // console.log("containedMainFilterdTourArr", containedMainFilterdTourArr);
+
+  const mainFilterdTourArr = [];
+
+  // convert array of arrays to array of objects
   if (tour) {
-    for (let i = 0; i < tourCenterArr.length; i++) {
-      filteredArray.push(
-        tourCenterArr[i].reduce(
+    for (let i = 0; i < filteredTourCenterArr.length; i++) {
+      mainFilterdTourArr.push(
+        filteredTourCenterArr[i].reduce(
           (obj, item) => ({
             id: item.id,
             name: item.name,
@@ -52,13 +111,22 @@ const Home = () => {
     }
   }
 
-  console.log("filteredArray", filteredArray, typeof filteredArray);
+  console.log(
+    "mainFilterdTourArr",
+    mainFilterdTourArr,
+    typeof mainFilterdTourArr
+  );
 
-  const finalArray = filteredArray.filter(
+  // remove empty array
+  let finalArray = mainFilterdTourArr.filter(
     (value) => Object.keys(value).length !== 0
   );
 
   console.log("finalArray", finalArray, typeof finalArray);
+
+  function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
   return (
     <>
@@ -110,12 +178,37 @@ const Home = () => {
           Find Tourist Attraction <br />
           (by state)
         </h2>
-
+        <form className="w-[80%] mx-auto text-center">
+          <input
+            className="rounded-lg bg-gray-500 p-2 w-[18rem] mx-auto my-5"
+            type="text"
+            placeholder="input state name in full eg. lagos"
+            onChange={(e) => SetState(e.target.value)}
+          />
+        </form>
+        <div className="mt-6 flex justify-center w-auto mx-auto">
+          {state
+            ? allDestinations
+                .filter(
+                  (item) => item.state.toLowerCase() === state.toLowerCase()
+                )
+                .map((eachDestination) => (
+                  <StateCard
+                    className="w-12 mx-auto"
+                    destination={eachDestination}
+                    key={eachDestination.id}
+                  />
+                ))
+            : ""}
+        </div>
+        <h2 className="text-center text-xl my-5 font-semibold tracking-wider text-gray-900 dark:text-white">
+          Some Popular States
+        </h2>
         <div className="mt-6 grid gap-6 rounded-md lg:grid-cols-2 xl:grid-cols-3">
           {allDestinations
             .filter((item, index) => index < 6)
             .map((eachDestination) => (
-              <DestinationCards
+              <StateCard
                 destination={eachDestination}
                 key={eachDestination.id}
               />
@@ -123,12 +216,12 @@ const Home = () => {
         </div>
         <div className="text-center">
           <Link to="/all-states">
-            <button
-              className="m-5 transform rounded-lg bg-indigo-500 px-6 py-2 text-sm font-semibold uppercase tracking-widest text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-indigo-400 focus:ring-indigo-500 focus:ring-opacity-50 active:bg-indigo-600 dark:border-white dark:bg-indigo-600 dark:text-white"
+            <Button
+              type="submit"
+              text="See all states"
+              classes="transform mt-10 px-6 py-2 uppercase tracking-widest text-white"
               onClick={() => window.scrollTo(0, 0)}
-            >
-              See all
-            </button>
+            />
           </Link>
         </div>
       </div>
@@ -138,22 +231,38 @@ const Home = () => {
           Find Tourist Attraction <br />
           (by tourist centers)
         </h2>
-        <form className="w-[80%] mx-auto text-center" onSubmit={onSubmit}>
+        <form className="w-[80%] mx-auto text-center" onSubmit={onSubmitTour}>
           <input
             className="rounded-lg bg-gray-500 p-2 w-[18rem] mx-auto my-5"
             type="text"
             placeholder="type your favourite tourism attraction"
             onChange={(e) => SetTour(e.target.value)}
           />
-          {/* <button className="py-1.5 px-3 m-3 bg-indigo-500 text-white text-xl rounded-lg">
-            Search
-          </button> */}
         </form>
 
         <div className="mt-6 grid gap-8 w-[80%] mx-auto lg:grid-cols-2">
           {finalArray?.map((item) => (
             <CenterCard state={item.state} center={item} key={item.id} />
           ))}
+        </div>
+
+        <h2 className="text-center text-xl my-5 font-semibold tracking-wider text-gray-900 dark:text-white">
+          Some Popular Tourist Attraction
+        </h2>
+          <div className="mt-6 grid gap-8 w-[80%] mx-auto lg:grid-cols-2">
+            {shuffledArr?.map((item) => (
+              <CenterCard state={item.state} center={item} />
+            ))}
+          </div>
+        <div className="text-center">
+          <Link to="/all-states">
+            <Button
+              type="submit"
+              text="See all states"
+              classes="transform mt-10 px-6 py-2 uppercase tracking-widest text-white"
+              onClick={() => window.scrollTo(0, 0)}
+            />
+          </Link>
         </div>
       </div>
     </>

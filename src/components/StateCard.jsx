@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 const StateCard = ({ destination }) => {
   return (
     <Link to={`/${destination.state.toLowerCase()}`} className="block">
-      <div className="flex transform cursor-pointer items-center overflow-hidden rounded-lg bg-gray-200 shadow-lg transition hover:-translate-y-2.5 hover:scale-105 dark:bg-gray-700">
+      <div className="flex h-[100%] transform cursor-pointer items-center overflow-hidden rounded-lg bg-gray-200 shadow-lg transition hover:-translate-y-2.5 hover:scale-105 dark:bg-gray-700">
         <img
           src={destination.imageUrl}
           alt={destination.imageAlt}
-          className="h-32 w-32 flex-shrink-0"
+          className="h-[100%] w-32 flex-shrink-0 object-cover object-center"
         />
         <div className="px-5 py-4">
           <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
