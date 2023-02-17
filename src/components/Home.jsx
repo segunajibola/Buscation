@@ -29,27 +29,40 @@ const Home = () => {
   // arrays of all tours object
   const realTourArray = [];
 
-  // for (let i = 0; i < 20; i++) {
-  //   realTourArray.push(
-  //     allTourCenterArr[i].reduce(
-  //       (obj, item) => ({
-  //         id: item.id,
-  //         name: item.name,
-  //         state: item.state,
-  //         historical: item.historical,
-  //         info: item.info,
-  //         address: item.address,
-  //         rating: item.rating,
-  //         imageUrl: item.imageUrl,
-  //         imageAlt: item.imageAlt,
-  //         opened: item.opened,
-  //         guide: item.guide,
-  //       }),
-  //       {}
-  //     )
-  //   );
+  for (let i = 0; i < allTourCenterArr.length; i++) {
+    realTourArray.push(
+      allTourCenterArr[i].reduce(
+        (obj, item) => ({
+          id: item.id,
+          name: item.name,
+          state: item.state,
+          historical: item.historical,
+          info: item.info,
+          address: item.address,
+          rating: item.rating,
+          imageUrl: item.imageUrl,
+          imageAlt: item.imageAlt,
+          opened: item.opened,
+          guide: item.guide,
+        }),
+        {}
+      )
+    );
+  }
+  console.log("realTourArray", realTourArray);
+
+  // if (realTourArray.length) {
+  //   let shuffleArr = shuffle(realTourArray);
+
+  //   console.log("shuffleArr", shuffleArr);
   // }
-  // console.log("realTourArray", realTourArray)
+
+  let shuffledArr = [];
+  
+  // if (realTourArray.length) {
+    shuffledArr = realTourArray.sort(() => 0.5 - Math.random()).slice(0, 6);
+    console.log("shuffledArr", shuffledArr);
+  // }
 
   let filteredTourCenterArr = [];
 
@@ -236,16 +249,11 @@ const Home = () => {
         <h2 className="text-center text-xl my-5 font-semibold tracking-wider text-gray-900 dark:text-white">
           Some Popular Tourist Attraction
         </h2>
-        <div className="mt-6 grid gap-6 rounded-md lg:grid-cols-3">
-          {/* {allDestinations[getRndInteger(0, 12)].tourCenter
-            .filter((item, index) => index < 1)
-            .map((eachDestination) => (
-              <CenterCard
-                state={eachDestination.state.toLowerCase()}
-                center={eachDestination}
-              />
-            ))} */}
-        </div>
+          <div className="mt-6 grid gap-8 w-[80%] mx-auto lg:grid-cols-2">
+            {shuffledArr?.map((item) => (
+              <CenterCard state={item.state} center={item} key={item.id} />
+            ))}
+          </div>
         <div className="text-center">
           <Link to="/all-states">
             <Button
