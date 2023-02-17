@@ -57,7 +57,7 @@ const ParticularCenter = ({ destination }) => {
                 alt={center.imageAlt}
                 className="h-full w-full rounded-2xl object-cover object-center"
               />
-              <div className="px-1 lg:px-3 py-5 lg:py-2 flex flex-col justify-between">
+              <div className="px-1 lg:px-3 py-5 lg:py-2 flex flex-col justify-around">
                 <div>
                   <div className="flex justify-between">
                     <h3 className="text-3xl font-semibold text-gray-800 dark:text-white">

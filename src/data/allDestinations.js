@@ -115,7 +115,7 @@ const data = [
         state: "rivers",
         historical:
           "Julius Berger of Nigeria was awarded the contract to construct the park and started work in May 2016. The whole project was completed within 12 months of the commencement date. The Government of Rivers State commissioned and opened the Port Harcourt Pleasure Park for public use in a grand ceremony that attracted thousands of Riverians from all walks of life. Former governor, Peter Odili inaugurated the project, which was initiated, designed and constructed by the Nyesom Wike administration.",
-        info: "The Finima Nature Park is a natural park in Bonny Island, Rivers State, Nigeria covering an area of approximately 1000 ha (3.9 sq mi). It was established by the Nigeria Liquefied Natural Gas Limited with the aim of conserving nature and biodiversity in the region.",
+        info: "Port Harcourt Pleasure Park is a public recreation park in Niger-Delta's oil rich garden city of Port Harcourt. It is strategically located along the major Aba Road, and flanked between the Army Barracks (a.k.a. Bori Camp) and Air Force base junction, on an expansive open land with 24-7-365 internal security.",
         address:
           "R2Q6+7X9 Peace Park, Between Army Bori Camp and Airforce base junction, City Centre, Port Harcourt",
         rating: "4.3/5",
