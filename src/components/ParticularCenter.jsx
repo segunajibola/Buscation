@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 const ParticularCenter = ({ destination }) => {
   const { state, center } = useParams();
 
-  console.log("centersdsd", center);
-  console.log("centersdsd", state);
+  console.log("center", center);
+  console.log("state", state);
 
   // get the state array
   const stateArr = destination.filter(
@@ -36,6 +36,7 @@ const ParticularCenter = ({ destination }) => {
   const centerArr = tourCenterArr.filter(
     (item) => item.name === capEachWord(center)
   );
+
   console.log("centerArr", centerArr);
 
   const googleSearch = (centerName) => {
@@ -47,7 +48,7 @@ const ParticularCenter = ({ destination }) => {
 
   return (
     <div className="overflow-hidden bg-gray-100 dark:bg-gray-700">
-      <div className="mx-auto w-[98%] pt-[80px]">
+      <div className="mx-auto w-[70%] pt-[80px]">
         {centerArr.map((center) => (
           <div>
             <div className="grid lg:grid-cols-2 mx-auto gap-2 w-[90%] pb-10">
@@ -56,30 +57,32 @@ const ParticularCenter = ({ destination }) => {
                 alt={center.imageAlt}
                 className="h-full w-full rounded-2xl object-cover object-center"
               />
-              <div className="px-1 lg:px-3 py-5 lg:py-2">
-                <div className="flex justify-between">
-                  <h3 className="text-3xl font-semibold text-gray-800 dark:text-white">
-                    {center.name}
-                  </h3>
-                  <div className="bg-yellow-400 h-[50%] p-1 rounded-2xl">
-                    {center.rating}
+              <div className="px-1 lg:px-3 py-5 lg:py-2 flex flex-col justify-around">
+                <div>
+                  <div className="flex justify-between">
+                    <h3 className="text-3xl font-semibold text-gray-800 dark:text-white">
+                      {center.name}
+                    </h3>
+                    <div className="bg-yellow-400 h-[50%] p-1 rounded-2xl">
+                      {center.rating}
+                    </div>
                   </div>
-                </div>
-                <div className="my-2 text-sm flex gap-x-4 justify-between">
-                  <div>
-                    <span className="font-semibold">Guide: </span>
-                    {center.guide}
+                  <div className="my-2 text-sm flex gap-x-4 justify-between">
+                    <div>
+                      <span className="font-semibold">Guide: </span>
+                      {center.guide}
+                    </div>
+                    <div>
+                      <span className="font-semibold">
+                        {center.opened ? "Opened" : "Discovered"}:{" "}
+                      </span>
+                      {center.opened || center.discovered}
+                    </div>
                   </div>
-                  <div>
-                    <span className="font-semibold">
-                      {center.opened ? "Opened" : "Discovered"}:{" "}
-                    </span>
-                    {center.opened || center.discovered}
+                  <div className="my-2 text-sm dark:text-white">
+                    <span className="font-semibold">Address: </span>
+                    {center.address}
                   </div>
-                </div>
-                <div className="my-2 text-sm dark:text-white">
-                  <span className="font-semibold">Address: </span>
-                  {center.address}
                 </div>
                 <div className="test-sm m-1">
                   <span className="font-semibold">Historical Events: </span>
@@ -91,14 +94,16 @@ const ParticularCenter = ({ destination }) => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center mx-10">
-              <Button
-                type="submit"
-                text={`More about ${center.name} on google`}
-                classes="transform mt-0 px-6 py-2 uppercase tracking-widest text-white mx-10 text-[10px] md:text-[14px]"
-                onClick={() => googleSearch(center.name)}
-              />
-              <Link to={`/${state}`}>
+            <div className="flex flex-col md:flex-row justify-center mx-10">
+              <div className="flex justify-center">
+                <Button
+                  type="submit"
+                  text={`More about ${center.name} on google`}
+                  classes="transform mt-0 px-6 py-2 uppercase tracking-widest text-white mx-10 text-[10px] md:text-[14px]"
+                  onClick={() => googleSearch(center.name)}
+                />
+              </div>
+              <Link to={`/${state}`} className="flex justify-center">
                 <Button
                   type="submit"
                   text={`See all ${center.state} tour center`}
