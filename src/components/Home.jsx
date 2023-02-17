@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Button from "./General/Button";
 
-// react-icons in footer instead of fontawesome
 
 const Home = () => {
   const [tour, SetTour] = useState("");
