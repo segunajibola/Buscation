@@ -251,7 +251,7 @@ const Home = () => {
         </h2>
           <div className="mt-6 grid gap-8 w-[80%] mx-auto lg:grid-cols-2">
             {shuffledArr?.map((item) => (
-              <CenterCard state={item.state} center={item} key={item.id} />
+              <CenterCard state={item.state} center={item} />
             ))}
           </div>
         <div className="text-center">
