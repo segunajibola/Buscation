@@ -16,7 +16,7 @@ const Navbar = ({ handleMode, darkMode }) => {
           <div className="flex space-x-8">
             <div className="md:mr-32">
               {/* Website Logo --> show on all screens*/}
-              <Link to="/" className="flex items-center py-4 px-1">
+              <Link href="/" className="flex items-center py-4 px-1">
                 <img
                   className="inline-block h-8 w-12"
                   src="/images/tourcation.png"
@@ -30,37 +30,37 @@ const Navbar = ({ handleMode, darkMode }) => {
             {/* Primary Navbar items --> show from md up */}
             <div className="hidden items-center space-x-8 text-indigo-600 dark:text-white md:flex">
               <Link
-                to="/"
+                href="/"
                 className="py-4 px-2 hover:text-black dark:hover:text-gray-400"
               >
                 Home
               </Link>
               <Link
-                to="/experience"
+                href="/experience"
                 className="py-4 px-2 transition duration-300 hover:text-black dark:hover:text-gray-400"
               >
                 Experience
               </Link>
               <Link
-                to="/pickup-route"
+                href="/pickup-route"
                 className="py-4 px-2 transition duration-300 hover:text-black dark:hover:text-gray-400"
               >
                 Pickup Route
               </Link>
               <Link
-                to="/Tourcation-plus"
+                href="/Tourcation-plus"
                 className="py-4 px-2 transition duration-300 hover:text-black dark:hover:text-gray-400"
               >
                 Tourcation Plus
               </Link>
               <Link
-                to="/work-with-us"
+                href="/work-with-us"
                 className="py-4 px-2 transition duration-300 hover:text-black dark:hover:text-gray-400"
               >
                 Work with us
               </Link>
               <Link
-                to="/contact"
+                href="/contact"
                 className="py-4 px-2 transition duration-300 hover:text-black dark:hover:text-gray-400"
               >
                 Contact Us
@@ -71,13 +71,13 @@ const Navbar = ({ handleMode, darkMode }) => {
           {/* Secondary Navbar items --> show from md up */}
           <div className="hidden items-center space-x-3 md:flex">
             <Link
-              to="/log-in"
+              href="/log-in"
               className="rounded bg-indigo-500 py-2 px-2 font-medium text-white transition duration-300 hover:bg-indigo-600 dark:bg-indigo-600 dark:text-white"
             >
               Log In
             </Link>
             <Link
-              to="/sign-up"
+              href="/sign-up"
               className="rounded bg-indigo-500 py-2 px-2 font-medium text-white transition duration-300 hover:bg-indigo-600 dark:bg-indigo-600"
             >
               Sign Up
@@ -117,7 +117,7 @@ const Navbar = ({ handleMode, darkMode }) => {
         >
           <li className="">
             <Link
-              to="/"
+              href="/"
               className="block px-2 py-4 hover:bg-indigo-400 dark:hover:bg-indigo-300 dark:hover:text-black"
             >
               Home
@@ -125,7 +125,7 @@ const Navbar = ({ handleMode, darkMode }) => {
           </li>
           <li>
             <Link
-              to="/services"
+              href="/services"
               className="block px-2 py-4 transition duration-300 hover:bg-indigo-400 dark:hover:bg-indigo-300 dark:hover:text-black"
             >
               Services
@@ -133,7 +133,7 @@ const Navbar = ({ handleMode, darkMode }) => {
           </li>
           <li>
             <Link
-              to="/about"
+              href="/about"
               className="block px-2 py-4 transition duration-300 hover:bg-indigo-400 dark:hover:bg-indigo-300 dark:hover:text-black"
             >
               About
@@ -141,7 +141,7 @@ const Navbar = ({ handleMode, darkMode }) => {
           </li>
           <li>
             <Link
-              to="/contact"
+              href="/contact"
               className="block px-2 py-4 transition duration-300 hover:bg-indigo-400 dark:hover:bg-indigo-400 dark:hover:text-black"
             >
               Contact Us
@@ -149,7 +149,7 @@ const Navbar = ({ handleMode, darkMode }) => {
           </li>
           <li>
             <Link
-              to="/log-in"
+              href="/log-in"
               className="mt-1 inline-block rounded bg-indigo-500 py-2 px-2 font-medium text-white transition duration-300 hover:bg-indigo-600 dark:bg-indigo-600 dark:text-white"
             >
               Log In
@@ -157,7 +157,7 @@ const Navbar = ({ handleMode, darkMode }) => {
           </li>
           <li>
             <Link
-              to="/sign-up"
+              href="/sign-up"
               className="my-2 inline-block rounded bg-indigo-500 py-2 px-2 font-medium text-white transition duration-300 hover:bg-indigo-600 dark:bg-indigo-600"
             >
               Sign Up

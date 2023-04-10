@@ -1,11 +1,11 @@
 'use client';
 
 import React from "react";
-import { Link } from "next/link";
+import Link from "next/link";
 
 const StateCard = ({ destination }) => {
   return (
-    <Link to={`/${destination.state.toLowerCase()}`} className="block">
+    <Link href={`/${destination.state.toLowerCase()}`} className="block">
       <div className="flex h-[100%] transform cursor-pointer items-center overflow-hidden rounded-lg bg-gray-200 shadow-lg transition hover:-translate-y-2.5 hover:scale-105 dark:bg-gray-700">
         <img
           src={destination.imageUrl}
