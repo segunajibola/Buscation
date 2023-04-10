@@ -3,7 +3,7 @@
 import React from "react";
 import { useRouter } from 'next/router'
 import Button from "./General/Button";
-import { Link } from "next/link";
+import Link from "next/link";
 
 const ParticularCenter = ({ destination }) => {
   const router = useRouter()
@@ -106,7 +106,7 @@ const ParticularCenter = ({ destination }) => {
                   onClick={() => googleSearch(center.name)}
                 />
               </div>
-              <Link to={`/${state}`} className="flex justify-center">
+              <Link href={`/${state}`} className="flex justify-center">
                 <Button
                   type="submit"
                   text={`See all ${center.state} tour center`}

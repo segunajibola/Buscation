@@ -23,16 +23,16 @@ const Footer = () => {
               Company
             </h5>
             <p>
-              <Link to="/">About</Link>
+              <Link href="/">About</Link>
             </p>
             <p>
-              <Link to="/">Awards</Link>
+              <Link href="/">Awards</Link>
             </p>
             <p>
-              <Link to="/">Contact us</Link>
+              <Link href="/">Contact us</Link>
             </p>
             <p>
-              <Link to="/">Bus Terminals</Link>
+              <Link href="/">Bus Terminals</Link>
             </p>
           </div>
           <div>
@@ -40,16 +40,16 @@ const Footer = () => {
               Exerience
             </h5>
             <p>
-              <Link to="/">Tour Moments</Link>
+              <Link href="/">Tour Moments</Link>
             </p>
             <p>
-              <Link to="/">Academy</Link>
+              <Link href="/">Academy</Link>
             </p>
             <p>
-              <Link to="/">Safety</Link>
+              <Link href="/">Safety</Link>
             </p>
             <p>
-              <Link to="/">FAQs</Link>
+              <Link href="/">FAQs</Link>
             </p>
           </div>
           <div>
@@ -57,35 +57,35 @@ const Footer = () => {
               Terms
             </h5>
             <p>
-              <Link to="/">Privacy Policy</Link>
+              <Link href="/">Privacy Policy</Link>
             </p>
             <p>
-              <Link to="/">Terms & Condition</Link>
+              <Link href="/">Terms & Condition</Link>
             </p>
           </div>
           <div>
             <h5 className="mb-1 text-lg font-semibold dark:text-gray-200">
               Connect
             </h5>
-            <Link to="https://www.twitter.com/">
+            <Link href="https://www.twitter.com/">
               <FaWhatsapp
                 className="mt-1 mr-3 text-lg text-blue-800"
                 size={24}
               />
             </Link>
-            <Link to="https://www.facebook.com/">
+            <Link href="https://www.facebook.com/">
               <FaWhatsapp
                 className="mt-1 mr-3 text-lg text-blue-800"
                 size={24}
               />
             </Link>
-            <Link to="https://wa.me/">
+            <Link href="https://wa.me/">
               <FaWhatsapp
                 className="mt-1 mr-3 text-lg text-red-800"
                 size={24}
               />
             </Link>
-            <Link to="https://www.instagram.com/">
+            <Link href="https://www.instagram.com/">
               <FaWhatsapp
                 className="mt-1 mr-3 text-lg text-green-800"
                 size={24}
@@ -93,14 +93,14 @@ const Footer = () => {
             </Link>
             <p className="mt-4">Download Our App</p>
             <div className="">
-              <Link to="/">
+              <Link href="/">
                 <img
                   src="/images/playstore.png"
                   alt="Google playstore"
                   className="inline h-8 w-16 md:w-20"
                 />
               </Link>
-              <Link to="/">
+              <Link href="/">
                 <img
                   src="/images/appstore.png"
                   alt="Appstore"
