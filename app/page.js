@@ -8,13 +8,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <>
       {/* <Link to="/about">
         About
       </Link> */}
       <Navbar />
       <Hero />
       <Footer />
-    </main>
+    </>
   );
 }

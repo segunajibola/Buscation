@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
 import React from "react";
-import Link from 'next/link'
+import Link from "next/link";
 import { useState } from "react";
 import { FaMoon, FaLightbulb, FaBars, FaTimes } from "react-icons/fa";
 
@@ -22,8 +22,8 @@ const Navbar = ({ handleMode, darkMode }) => {
                   src="/images/tourcation.png"
                   alt="Tourcation"
                 />
-                <span className="ml-1 text-base font-semibold text-indigo-700 dark:text-white">
-                  Tourcation
+                <span className="ml-1 text-base font-semibold text-red-700 dark:text-white">
+                  Tourcationdf
                 </span>
               </Link>
             </div>
