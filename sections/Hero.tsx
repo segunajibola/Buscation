@@ -3,9 +3,9 @@
 import StateCard from "../components/StateCard";
 import CenterCard from "../components/CenterCard";
 import allDestinations from "../data/allDestinations";
-import { Link } from "next/link";
+import Link from "next/link";
 import { useState } from "react";
-import Button from "../components/General/Button";
+import Button from "../components/general/Button";
 
 const Hero = () => {
   const [tour, SetTour] = useState("");
@@ -215,7 +215,7 @@ const Hero = () => {
             ))}
         </div>
         <div className="text-center">
-          <Link to="/all-states">
+          <Link href="/all-states">
             <Button
               type="submit"
               text="See all states"
@@ -255,7 +255,7 @@ const Hero = () => {
           ))}
         </div>
         <div className="text-center">
-          <Link to="/all-states">
+          <Link href="/all-states">
             <Button
               type="submit"
               text="See all states"
