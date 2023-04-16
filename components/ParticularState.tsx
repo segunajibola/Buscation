@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
 import React from "react";
-import { useRouter } from 'next/router'
-import Button from "./General/Button";
+import { useRouter } from "next/router";
+import Button from "./general/Button";
 import CenterCard from "./CenterCard";
 import { Link } from "next/link";
 
 const ParticularState = ({ destination }) => {
-  const router = useRouter()
+  const router = useRouter();
   const { state } = router.query;
 
   return (

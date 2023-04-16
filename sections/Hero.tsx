@@ -1,12 +1,11 @@
-'use client';
+"use client";
 
-import StateCard from "./StateCard";
-import CenterCard from "./CenterCard";
+import StateCard from "../components/StateCard";
+import CenterCard from "../components/CenterCard";
 import allDestinations from "../data/allDestinations";
 import { Link } from "next/link";
 import { useState } from "react";
-import Button from "./General/Button";
-
+import Button from "../components/General/Button";
 
 const Hero = () => {
   const [tour, SetTour] = useState("");
@@ -59,10 +58,10 @@ const Hero = () => {
   // }
 
   let shuffledArr = [];
-  
+
   // if (realTourArray.length) {
-    shuffledArr = realTourArray.sort(() => 0.5 - Math.random()).slice(0, 6);
-    console.log("shuffledArr", shuffledArr);
+  shuffledArr = realTourArray.sort(() => 0.5 - Math.random()).slice(0, 6);
+  console.log("shuffledArr", shuffledArr);
   // }
 
   let filteredTourCenterArr = [];
@@ -250,11 +249,11 @@ const Hero = () => {
         <h2 className="text-center text-xl my-5 font-semibold tracking-wider text-gray-900 dark:text-white">
           Some Popular Tourist Attraction
         </h2>
-          <div className="mt-6 grid gap-8 w-[80%] mx-auto lg:grid-cols-2">
-            {shuffledArr?.map((item) => (
-              <CenterCard state={item.state} center={item} />
-            ))}
-          </div>
+        <div className="mt-6 grid gap-8 w-[80%] mx-auto lg:grid-cols-2">
+          {shuffledArr?.map((item) => (
+            <CenterCard state={item.state} center={item} />
+          ))}
+        </div>
         <div className="text-center">
           <Link to="/all-states">
             <Button
