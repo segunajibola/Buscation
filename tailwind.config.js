@@ -8,6 +8,7 @@ module.exports = {
     './sections/**/*.{html,js,ts,jsx,tsx}',
     './styles/**/*.{js,jsx}',
   ],
+  darkMode: "class",
   theme: {
     extend: {},
   },

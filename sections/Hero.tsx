@@ -131,13 +131,9 @@ const Hero = () => {
   return (
     <>
       <div className="grid bg-gray-100 mx-auto pt-16 lg:pt-20 lg:pb-8 dark:bg-gray-700 lg:grid-cols-2 2xl:grid-cols-5 content-start">
-        <div className="w-[80%] mx-auto max-w-md px-4 py-4 sm:max-w-xl lg:max-w-full lg:px-12 lg:py-0 xl:mr-0 2xl:col-span-2">
-          <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white sm:mt-4 lg:mt-4  ">
-            Tour beautiful places.
-            <br />
-            <span className="text-indigo-500 dark:text-indigo-600">
-              Make lasting memories.
-            </span>
+        <div className="w-[90%] mx-auto max-w-md px-4 py-4 sm:max-w-xl lg:max-w-full lg:px-12 lg:py-0 xl:mr-0 2xl:col-span-2">
+          <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white sm:mt-4 lg:mt-4">
+            Tour nice places - make lasting memories.
           </h1>
           <p className="my-4 md:mt-8 text-gray-600 dark:text-white sm:text-xl">
             Whether it's a place of interest, value, history or cultural
@@ -145,7 +141,7 @@ const Hero = () => {
             favorite tourist attraction.
           </p>
           <img
-            src="/images/bus.jpg"
+            src="/bus.jpg"
             alt="People going in the bus"
             className="my-2 h-64 w-full rounded-xl object-center shadow-xl sm:mt-8 sm:h-64 sm:object-cover lg:hidden"
           />
@@ -167,7 +163,7 @@ const Hero = () => {
 
         <div className="relative w-[80%] m-3 hidden lg:block 2xl:col-span-3">
           <img
-            src="/images/bus.jpg"
+            src="/bus.jpg"
             alt="People going in the bus"
             className="absolute inset-0 h-full w-full rounded-xl object-cover object-center"
           />
@@ -194,7 +190,7 @@ const Hero = () => {
                 )
                 .map((eachDestination) => (
                   <StateCard
-                    className="w-12 mx-auto"
+                    // className="w-12 mx-auto"
                     destination={eachDestination}
                     key={eachDestination.id}
                   />

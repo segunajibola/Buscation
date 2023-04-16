@@ -95,14 +95,14 @@ const Footer = () => {
             <div className="">
               <Link href="/">
                 <img
-                  src="/images/playstore.png"
+                  src="/playstore.png"
                   alt="Google playstore"
                   className="inline h-8 w-16 md:w-20"
                 />
               </Link>
               <Link href="/">
                 <img
-                  src="/images/appstore.png"
+                  src="/appstore.png"
                   alt="Appstore"
                   className="md:w-26 inline h-11 w-24"
                 />
