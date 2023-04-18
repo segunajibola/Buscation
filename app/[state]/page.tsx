@@ -1,19 +1,20 @@
 "use client";
 
 import React from "react";
-import { useRouter } from "next/router";
-import Button from "./general/Button";
-import CenterCard from "./CenterCard";
-import { Link } from "next/link";
+// import { useRouter } from "next/router";
+import Button from "../../components/general/Button";
+import { CenterCard } from "../../components";
+import allDestinations from "../../data/allDestinations";
+import Link from "next/link";
 
-const ParticularState = ({ destination }) => {
-  const router = useRouter();
-  const { state } = router.query;
+const ParticularState = ({ params }) => {
+  //   const router = useRouter();
+  const { state } = params;
 
   return (
     <div className="overflow-hidden bg-gray-100 dark:bg-gray-700">
       <div className="mx-auto pt-12 w-[90%]">
-        {destination
+        {allDestinations
           .filter(
             (destination) =>
               destination.state ===
@@ -34,7 +35,7 @@ const ParticularState = ({ destination }) => {
       </div>
 
       <div className="mx-auto w-[90%] mb-3 grid gap-6 rounded-md px-4 py-6 md:grid-cols-2 lg:px-8 xl:grid-cols-3">
-        {destination
+        {allDestinations
           .filter(
             (destination) =>
               destination.state ===
@@ -53,7 +54,7 @@ const ParticularState = ({ destination }) => {
           )}
       </div>
 
-      <Link to="/all-states" className="">
+      <Link href="/all-states" className="">
         <Button
           type="submit"
           text="See all states"

@@ -1,10 +1,9 @@
 "use client";
 
-import StateCard from "../components/StateCard";
-import CenterCard from "../components/CenterCard";
+import { useState } from "react";
+import { CenterCard, StateCard } from "../components";
 import allDestinations from "../data/allDestinations";
 import Link from "next/link";
-import { useState } from "react";
 import Button from "../components/general/Button";
 
 const Hero = () => {
