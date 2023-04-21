@@ -53,9 +53,6 @@ const ParticularCenter = () => {
 
   return (
     <div className="overflow-hidden bg-gray-100 dark:bg-gray-700">
-      <h1 className="m-20 text-4xl"> State: {state}</h1>
-      <h1 className="m-20 text-4xl"> Center: {realCenter}</h1>
-      <h1 className="m-20 text-4xl"> Centcer: {capEachWord(center)}</h1>
       <div className="mx-auto w-[90%] pt-[80px]">
         {centerArr.map((center) => (
           <div>
