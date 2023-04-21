@@ -1,15 +1,14 @@
 "use client";
 
 import React from "react";
-// import { useRouter } from "next/router";
-import Button from "../../components/general/Button";
-import { CenterCard } from "../../components";
-import allDestinations from "../../data/allDestinations";
+import { useParams } from "next/navigation";
+import Button from "../../../components/general/Button";
+import { CenterCard } from "../../../components";
+import allDestinations from "../../../data/allDestinations";
 import Link from "next/link";
 
-const ParticularState = ({ params }) => {
-  //   const router = useRouter();
-  const { state } = params;
+const ParticularState = () => {
+  const { state } = useParams();
 
   return (
     <div className="overflow-hidden bg-gray-100 dark:bg-gray-700">
@@ -62,6 +61,9 @@ const ParticularState = ({ params }) => {
           onClick={() => window.scrollTo(0, 0)}
         />
       </Link>
+
+      <Link href={`/state/${state}/center/`}>link to center</Link>
+      <h1 className="m-20 text-4xl"> Statg: {state}</h1>
     </div>
   );
 };

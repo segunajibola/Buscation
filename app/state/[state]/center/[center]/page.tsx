@@ -1,17 +1,18 @@
 "use client";
 
 import React from "react";
-// import { useRouter } from "next/router";
-import Button from "../../../components/general/Button";
+import { useParams } from "next/navigation";
+import Button from "../../../../../components/general/Button";
 import Link from "next/link";
-import allDestinations from "../../../data/allDestinations";
+import allDestinations from "../../../../../data/allDestinations";
 
-const ParticularCenter = ({ params }) => {
-  // const router = useRouter();
-  const { state, center } = params;
+const ParticularCenter = () => {
+  const { state, center } = useParams();
 
   console.log("center", center);
   console.log("state", state);
+
+  const realCenter = center.replace(/%20/g, " ");
 
   // get the state array
   const stateArr = allDestinations.filter(
@@ -38,7 +39,7 @@ const ParticularCenter = ({ params }) => {
 
   // get the center array
   const centerArr = tourCenterArr.filter(
-    (item) => item.name === capEachWord(center)
+    (item) => item.name === capEachWord(realCenter)
   );
 
   console.log("centerArr", centerArr);
@@ -52,6 +53,9 @@ const ParticularCenter = ({ params }) => {
 
   return (
     <div className="overflow-hidden bg-gray-100 dark:bg-gray-700">
+      <h1 className="m-20 text-4xl"> State: {state}</h1>
+      <h1 className="m-20 text-4xl"> Center: {realCenter}</h1>
+      <h1 className="m-20 text-4xl"> Centcer: {capEachWord(center)}</h1>
       <div className="mx-auto w-[90%] pt-[80px]">
         {centerArr.map((center) => (
           <div>

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const StateCard = ({ destination }) => {
   return (
-    <Link href={`/${destination.state.toLowerCase()}`} className="">
+    <Link href={`/state/${destination.state.toLowerCase()}`} className="">
       <div className="flex h-[100%] transform cursor-pointer items-center overflow-hidden rounded-lg bg-gray-200 shadow-lg transition hover:-translate-y-2.5 hover:scale-105 dark:bg-gray-700">
         <img
           src={destination.imageUrl}

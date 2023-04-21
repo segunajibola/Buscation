@@ -152,7 +152,7 @@ const Hero = () => {
               Join next tour
             </a>
             <a
-              href="/"
+              href="/about"
               className="focus:outline-none inline-block rounded-lg bg-gray-300 px-5 py-3 text-sm font-semibold uppercase tracking-wider text-gray-800 hover:bg-gray-200 focus:ring focus:ring-gray-300 focus:ring-opacity-50 focus:ring-offset-2 active:bg-gray-400 sm:text-base"
             >
               Know more
