@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = (): JSX.Element => {
   return (
-    <div>About Page</div>
+    <div className='m-20'>About Page</div>
   )
 }
 

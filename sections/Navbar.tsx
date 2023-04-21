@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
 import React from "react";
-import Link from 'next/link'
+import Link from "next/link";
 import { useState } from "react";
 import { FaMoon, FaLightbulb, FaBars, FaTimes } from "react-icons/fa";
 
@@ -18,11 +18,11 @@ const Navbar = ({ handleMode, darkMode }) => {
               {/* Website Logo --> show on all screens*/}
               <Link href="/" className="flex items-center py-4 px-1">
                 <img
-                  className="inline-block h-8 w-12"
-                  src="/images/tourcation.png"
+                  className="inline-block h-8 w-8"
+                  src="tourcation.png"
                   alt="Tourcation"
                 />
-                <span className="ml-1 text-base font-semibold text-indigo-700 dark:text-white">
+                <span className="ml-1 text-base font-semibold text-red-700 dark:text-white">
                   Tourcation
                 </span>
               </Link>

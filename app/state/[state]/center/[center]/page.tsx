@@ -1,19 +1,21 @@
 "use client";
 
 import React from "react";
-import { useRouter } from "next/router";
-import Button from "./general/Button";
+import { useParams } from "next/navigation";
+import Button from "../../../../../components/general/Button";
 import Link from "next/link";
+import allDestinations from "../../../../../data/allDestinations";
 
-const ParticularCenter = ({ destination }) => {
-  const router = useRouter();
-  const { state, center } = router.query;
+const ParticularCenter = () => {
+  const { state, center } = useParams();
 
   console.log("center", center);
   console.log("state", state);
 
+  const realCenter = center.replace(/%20/g, " ");
+
   // get the state array
-  const stateArr = destination.filter(
+  const stateArr = allDestinations.filter(
     (destination) =>
       destination.state === state.charAt(0).toUpperCase() + state.slice(1)
   );
@@ -23,7 +25,7 @@ const ParticularCenter = ({ destination }) => {
   const tourCenterArr = stateArr[0].tourCenter;
   console.log("tourCenterArr", tourCenterArr);
 
-  function capEachWord(item) {
+  function capEachWord(item: string) {
     const arr = item.split(" ");
 
     //loop through each element of the array and capitalize the first letter.
@@ -37,12 +39,12 @@ const ParticularCenter = ({ destination }) => {
 
   // get the center array
   const centerArr = tourCenterArr.filter(
-    (item) => item.name === capEachWord(center)
+    (item) => item.name === capEachWord(realCenter)
   );
 
   console.log("centerArr", centerArr);
 
-  const googleSearch = (centerName) => {
+  const googleSearch = (centerName: string) => {
     const url = "http://www.google.com/search?q=" + centerName;
     console.log("centerName", centerName);
     console.log("centerName");
@@ -109,6 +111,7 @@ const ParticularCenter = ({ destination }) => {
               <Link href={`/${state}`} className="flex justify-center">
                 <Button
                   type="submit"
+                  onClick={""}
                   text={`See all ${center.state} tour center`}
                   classes="transform mt-0 px-6 py-2 uppercase tracking-widest text-white mx-10 text-[10px] md:text-[14px]"
                 />

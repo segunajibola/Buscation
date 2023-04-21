@@ -1,12 +1,10 @@
-'use client';
+"use client";
 
-import StateCard from "./StateCard";
-import CenterCard from "./CenterCard";
-import allDestinations from "../data/allDestinations";
-import { Link } from "next/link";
 import { useState } from "react";
-import Button from "./General/Button";
-
+import { CenterCard, StateCard } from "../components";
+import allDestinations from "../data/allDestinations";
+import Link from "next/link";
+import Button from "../components/general/Button";
 
 const Hero = () => {
   const [tour, SetTour] = useState("");
@@ -59,10 +57,10 @@ const Hero = () => {
   // }
 
   let shuffledArr = [];
-  
+
   // if (realTourArray.length) {
-    shuffledArr = realTourArray.sort(() => 0.5 - Math.random()).slice(0, 6);
-    console.log("shuffledArr", shuffledArr);
+  shuffledArr = realTourArray.sort(() => 0.5 - Math.random()).slice(0, 6);
+  console.log("shuffledArr", shuffledArr);
   // }
 
   let filteredTourCenterArr = [];
@@ -132,13 +130,9 @@ const Hero = () => {
   return (
     <>
       <div className="grid bg-gray-100 mx-auto pt-16 lg:pt-20 lg:pb-8 dark:bg-gray-700 lg:grid-cols-2 2xl:grid-cols-5 content-start">
-        <div className="w-[80%] mx-auto max-w-md px-4 py-4 sm:max-w-xl lg:max-w-full lg:px-12 lg:py-0 xl:mr-0 2xl:col-span-2">
-          <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white sm:mt-4 lg:mt-4  ">
-            Tour beautiful places.
-            <br />
-            <span className="text-indigo-500 dark:text-indigo-600">
-              Make lasting memories.
-            </span>
+        <div className="w-[90%] mx-auto max-w-md px-4 py-4 sm:max-w-xl lg:max-w-full lg:px-12 lg:py-0 xl:mr-0 2xl:col-span-2">
+          <h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white sm:mt-4 lg:mt-4">
+            Tour nice places - make lasting memories.
           </h1>
           <p className="my-4 md:mt-8 text-gray-600 dark:text-white sm:text-xl">
             Whether it's a place of interest, value, history or cultural
@@ -146,7 +140,7 @@ const Hero = () => {
             favorite tourist attraction.
           </p>
           <img
-            src="/images/bus.jpg"
+            src="/bus.jpg"
             alt="People going in the bus"
             className="my-2 h-64 w-full rounded-xl object-center shadow-xl sm:mt-8 sm:h-64 sm:object-cover lg:hidden"
           />
@@ -158,7 +152,7 @@ const Hero = () => {
               Join next tour
             </a>
             <a
-              href="/"
+              href="/about"
               className="focus:outline-none inline-block rounded-lg bg-gray-300 px-5 py-3 text-sm font-semibold uppercase tracking-wider text-gray-800 hover:bg-gray-200 focus:ring focus:ring-gray-300 focus:ring-opacity-50 focus:ring-offset-2 active:bg-gray-400 sm:text-base"
             >
               Know more
@@ -168,7 +162,7 @@ const Hero = () => {
 
         <div className="relative w-[80%] m-3 hidden lg:block 2xl:col-span-3">
           <img
-            src="/images/bus.jpg"
+            src="/bus.jpg"
             alt="People going in the bus"
             className="absolute inset-0 h-full w-full rounded-xl object-cover object-center"
           />
@@ -195,7 +189,7 @@ const Hero = () => {
                 )
                 .map((eachDestination) => (
                   <StateCard
-                    className="w-12 mx-auto"
+                    // className="w-12 mx-auto"
                     destination={eachDestination}
                     key={eachDestination.id}
                   />
@@ -216,7 +210,7 @@ const Hero = () => {
             ))}
         </div>
         <div className="text-center">
-          <Link to="/all-states">
+          <Link href="/all-states">
             <Button
               type="submit"
               text="See all states"
@@ -250,13 +244,13 @@ const Hero = () => {
         <h2 className="text-center text-xl my-5 font-semibold tracking-wider text-gray-900 dark:text-white">
           Some Popular Tourist Attraction
         </h2>
-          <div className="mt-6 grid gap-8 w-[80%] mx-auto lg:grid-cols-2">
-            {shuffledArr?.map((item) => (
-              <CenterCard state={item.state} center={item} />
-            ))}
-          </div>
+        <div className="mt-6 grid gap-8 w-[80%] mx-auto lg:grid-cols-2">
+          {shuffledArr?.map((item) => (
+            <CenterCard state={item.state} center={item} />
+          ))}
+        </div>
         <div className="text-center">
-          <Link to="/all-states">
+          <Link href="/all-states">
             <Button
               type="submit"
               text="See all states"
