@@ -2,8 +2,6 @@ import React from 'react';
 
 const Button = ({ text, type, onClick, classes }) => {
 
-// 
-
   return (
     <>
       <button
