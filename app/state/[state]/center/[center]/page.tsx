@@ -7,7 +7,7 @@ import Link from "next/link";
 import allDestinations from "../../../../../data/allDestinations";
 
 const ParticularCenter = () => {
-  const { state, center } = useParams();
+  const { state, center }: Record<string, string> = useParams();
 
   console.log("center", center);
   console.log("state", state);
