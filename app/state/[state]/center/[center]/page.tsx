@@ -5,14 +5,18 @@ import { useParams } from "next/navigation";
 import Button from "../../../../../components/general/Button";
 import Link from "next/link";
 import allDestinations from "../../../../../data/allDestinations";
-import Image from "next/image"
+import Image from "next/image";
 
 const ParticularCenter = () => {
-  const { state, center }: Record<string, string> = useParams();
+  const {
+    state,
+    center,
+  }: Record<string, string | string[]> | null | any = useParams();
 
   console.log("center", center);
   console.log("state", state);
   console.log("stte", state);
+  console.log("useParams", useParams());
 
   const realCenter = center.replace(/%20/g, " ");
 
