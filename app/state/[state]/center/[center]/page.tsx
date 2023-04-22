@@ -108,7 +108,7 @@ const ParticularCenter = () => {
                   onClick={() => googleSearch(center.name)}
                 />
               </div>
-              <Link href={`/${state}`} className="flex justify-center">
+              <Link href={`/state/${state}`} className="flex justify-center">
                 <Button
                   type="submit"
                   onClick={""}

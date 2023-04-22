@@ -16,7 +16,7 @@ const CenterCard = ({ state, center }) => {
           <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
             {center.name}
           </h3>
-          <p className="mt-2 text-gray-600 dark:text-white">
+          <p className="mt-2 text-gray-600 dark:text-white truncate">
             Address: {center.address}
           </p>
           <div className="mt-2">
