@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useParams } from "next/navigation";
-import Button from "../../../components/general/Button";
+import Button from "../../../components/gene/Button";
 import { CenterCard } from "../../../components";
 import allDestinations from "../../../data/allDestinations";
 import Link from "next/link";

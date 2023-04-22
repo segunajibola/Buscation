@@ -4,7 +4,7 @@ import { useState } from "react";
 import { CenterCard, StateCard } from "../components";
 import allDestinations from "../data/allDestinations";
 import Link from "next/link";
-import Button from "../components/general/Button";
+import Button from "../components/gene/Button";
 
 const Hero = () => {
   const [tour, SetTour] = useState("");
