@@ -1,11 +1,11 @@
 'use client';
 
 import React from "react";
-import {StateCard} from "../../components";
+import { StateCard } from "../../components";
 import allDestinations from "../../data/allDestinations";
 
 
-const AllStatesCards = ({ destination }) => {
+const AllStatesCards = () => {
   return (
     <div className="mx-auto max-w-full px-4 py-6 pt-20 dark:bg-gray-800 lg:max-w-full lg:px-8">
       <h2 className="text-center text-xl text-gray-900 dark:text-white">

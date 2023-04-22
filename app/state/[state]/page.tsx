@@ -56,7 +56,7 @@ const ParticularState = () => {
           )}
       </div>
 
-      <Link href="/all-states" className="">
+      <Link href="/allstates" className="">
         <Button
           type="submit"
           text="See all states"
@@ -64,9 +64,6 @@ const ParticularState = () => {
           onClick={() => window.scrollTo(0, 0)}
         />
       </Link>
-
-      <Link href={`/state/${state}/center/`}>link to center</Link>
-      <h1 className="m-20 text-4xl"> Statg: {state}</h1>
     </div>
   );
 };
