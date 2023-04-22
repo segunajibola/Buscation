@@ -6,9 +6,10 @@ import Button from "../../../components/general/Button";
 import { CenterCard } from "../../../components";
 import allDestinations from "../../../data/allDestinations";
 import Link from "next/link";
+import Image from "next/image"
 
 const ParticularState = () => {
-  const { state } = useParams();
+  const { state }: Record<string, string>  = useParams();
 
   return (
     <div className="overflow-hidden bg-gray-100 dark:bg-gray-700">
@@ -21,7 +22,9 @@ const ParticularState = () => {
           )
           .map((destination) => (
             <div className="flex-shrink-0 text-center" key={destination.id}>
-              <img
+              <Image
+                width={500}
+                height={500}
                 src={destination.imageUrl}
                 alt={destination.imageAlt}
                 className="h-64 w-full object-cover object-center"

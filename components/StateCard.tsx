@@ -2,12 +2,15 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image"
 
 const StateCard = ({ destination }) => {
   return (
     <Link href={`/state/${destination.state.toLowerCase()}`} className="">
       <div className="flex h-[100%] transform cursor-pointer items-center overflow-hidden rounded-lg bg-gray-200 shadow-lg transition hover:-translate-y-2.5 hover:scale-105 dark:bg-gray-700">
-        <img
+        <Image
+          width={500}
+          height={500}
           src={destination.imageUrl}
           alt={destination.imageAlt}
           className="h-[100%] w-40 flex-shrink-0 object-cover object-center"

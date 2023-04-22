@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import Button from "../../../../../components/general/Button";
 import Link from "next/link";
 import allDestinations from "../../../../../data/allDestinations";
+import Image from "next/image"
 
 const ParticularCenter = () => {
   const { state, center }: Record<string, string> = useParams();
@@ -56,9 +57,11 @@ const ParticularCenter = () => {
     <div className="overflow-hidden bg-gray-100 dark:bg-gray-700">
       <div className="mx-auto w-[90%] pt-[80px]">
         {centerArr.map((center) => (
-          <div>
+          <div key={center.id}>
             <div className="grid lg:grid-cols-2 mx-auto gap-2 w-[90%] pb-10">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src={center.imageUrl}
                 alt={center.imageAlt}
                 className="h-full w-full rounded-2xl object-cover object-center"
