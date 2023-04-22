@@ -11,7 +11,7 @@ const ParticularCenter = () => {
 
   console.log("center", center);
   console.log("state", state);
-  console.log("state", state);
+  console.log("stte", state);
 
   const realCenter = center.replace(/%20/g, " ");
 
