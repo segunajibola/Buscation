@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useRouter } from "next/router";
-import Button from "./gene/Button";
+import Button from "./general/Button";
 import Link from "next/link";
 
 const ParticularCenter = ({ destination }) => {
