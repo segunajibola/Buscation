@@ -1,6 +1,6 @@
 'use client';
 
-import { Link } from "next/link";
+import Link from "next/link";
 
 const NotFound = () => {
   return (
@@ -9,7 +9,7 @@ const NotFound = () => {
       <p className="text-xl font-bold">This page cannot be found.</p>
       <p className="mt-10 text-base font-bold">
         Click
-        <Link to="/" className="text-blue-500 underline">
+        <Link href="/" className="text-blue-500 underline">
           here
         </Link>
         to go back to the homepage....Thanks!
