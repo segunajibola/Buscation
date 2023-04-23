@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 
-const Button = ({ text, type, onClick, classes }) => {
+interface ButtonProps {
+  text: string;
+  type?: 'button' | 'submit' | 'reset';
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  classes?: string;
+}
+
+const Button = ({ text, type, onClick, classes }: ButtonProps) => {
 //
   return (
     <>

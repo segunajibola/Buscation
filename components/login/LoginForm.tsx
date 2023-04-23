@@ -44,6 +44,7 @@ const LoginForm = () => {
           />
           <Button
             type="submit"
+            onClick={undefined}
             text="Log In"
             classes="w-full md:w-9/12 mt-6 rounded-md"
           />

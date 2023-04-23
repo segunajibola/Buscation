@@ -1,4 +1,27 @@
-import React from 'react';
+import React, { ChangeEvent } from "react";
+
+declare module "react" {
+  interface HTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {
+    // extends React's HTMLAttributes
+    cols?: number;
+    rows?: number;
+  }
+}
+
+type InputProps = {
+  type: string;
+  name: string;
+  id: string;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  value: string;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  maxLength?: number;
+  accept?: string;
+  placeholder?: string;
+  cols?: number;
+  rows?: number;
+  classes: string;
+};
 
 const Input = ({
   type,
@@ -13,7 +36,7 @@ const Input = ({
   accept,
   placeholder,
   classes,
-}) => {
+}: InputProps) => {
   return (
     <>
       <input

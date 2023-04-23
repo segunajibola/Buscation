@@ -119,7 +119,6 @@ const ParticularCenter = (): JSX.Element => {
               <Link href={`/state/${state}`} className="">
                 <Button
                   type="submit"
-                  onClick={""}
                   text={`See all ${center.state} tour center`}
                   classes="transform mt-0 px-6 py-2 uppercase tracking-widest text-white mx-10 text-[10px] md:text-[14px]"
                 />
