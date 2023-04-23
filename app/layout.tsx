@@ -4,7 +4,7 @@ import "./globals.css";
 import { Navbar, Footer} from "../sections";
 import { useState } from "react";
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }): JSX.Element {
   const [darkMode, setDarkMode] = useState(false);
   const handleMode = () => setDarkMode(!darkMode);
   return (

@@ -8,8 +8,8 @@ import allDestinations from "../../../data/allDestinations";
 import Link from "next/link";
 import Image from "next/image"
 
-const ParticularState = () => {
-  const { state }: Record<string, string>  = useParams();
+const ParticularState = (): JSX.Element => {
+  const { state }: Record<string, string | string[]> | null | any  = useParams();
 
   return (
     <div className="overflow-hidden bg-gray-100 dark:bg-gray-700">

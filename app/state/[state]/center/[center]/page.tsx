@@ -7,7 +7,7 @@ import Link from "next/link";
 import allDestinations from "../../../../../data/allDestinations";
 import Image from "next/image";
 
-const ParticularCenter = () => {
+const ParticularCenter = (): JSX.Element => {
   const {
     state,
     center,
@@ -107,8 +107,8 @@ const ParticularCenter = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row justify-center mx-10">
-              <div className="flex justify-center">
+            <div className="flex flex-col md:flex-row justify-between mx-auto w-[90%]">
+              <div className="">
                 <Button
                   type="submit"
                   text={`More about ${center.name} on google`}
@@ -116,7 +116,7 @@ const ParticularCenter = () => {
                   onClick={() => googleSearch(center.name)}
                 />
               </div>
-              <Link href={`/state/${state}`} className="flex justify-center">
+              <Link href={`/state/${state}`} className="">
                 <Button
                   type="submit"
                   onClick={""}

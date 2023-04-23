@@ -6,7 +6,7 @@ import { Hero } from "../sections";
 
 // const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
     <>
       {/* <Link to="/about">
