@@ -26,7 +26,7 @@ const LoginForm = () => {
         <form className="flex flex-col mt-4 " onSubmit={formik.handleSubmit}>
           <Input
             placeholder="Username"
-            type="text"
+            type="textarea"
             name="username"
             id="username"
             onChange={formik.handleChange}
@@ -35,7 +35,7 @@ const LoginForm = () => {
           />
           <Input
             placeholder="Password"
-            type="text"
+            type="textarea"
             name="password"
             id="password"
             onChange={formik.handleChange}

@@ -1,12 +1,12 @@
 import React, { ChangeEvent } from "react";
 
-declare module "react" {
-  interface HTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {
-    // extends React's HTMLAttributes
-    cols?: number;
-    rows?: number;
-  }
-}
+// declare module "react" {
+//   interface HTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {
+//     // extends React's HTMLAttributes
+//     cols?: number;
+//     rows?: number;
+//   }
+// }
 
 type InputProps = {
   type: string;
@@ -31,8 +31,8 @@ const Input = ({
   value,
   onBlur,
   maxLength,
-  cols,
-  rows,
+  // cols,
+  // rows,
   accept,
   placeholder,
   classes,
@@ -49,8 +49,6 @@ const Input = ({
         onChange={onChange}
         value={value}
         onBlur={onBlur}
-        cols={cols}
-        rows={rows}
         accept={accept}
       />
     </>
