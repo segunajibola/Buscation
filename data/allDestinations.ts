@@ -1,7 +1,17 @@
-let person: [number, boolean, string] = [3, true, "Hi"];
-// array will contain number, boolean and string in the order
-
-// Objects
+interface tourCenterTypes {
+  id: number;
+  name: string;
+  state: string;
+  historical: string;
+  info: string;
+  address: string;
+  rating: string;
+  imageUrl: string;
+  imageAlt: string;
+  discovered?: string;
+  opened?: string;
+  guide: string;
+}
 
 type userType = {
   id: number;
@@ -9,13 +19,10 @@ type userType = {
   slogan: string;
   imageUrl: string;
   imageAlt: string;
-  tourCenter: []
-}; // specify the type of the user object below
+  tourCenter: tourCenterTypes[];
+};
 
-// 19 - 69
-// const dataType: [userType]
-
-const data: [userType] = [
+const data: userType[] = [
   {
     id: 1,
     state: "Lagos",
