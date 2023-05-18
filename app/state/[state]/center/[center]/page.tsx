@@ -2,9 +2,9 @@
 
 import React from "react";
 import { useParams } from "next/navigation";
-import Button from "../../../../../components/general/Button";
+import Button from "@/components/general/Button";
 import Link from "next/link";
-import allDestinations from "../../../../../data/allDestinations";
+import allDestinations from "@/data/allDestinations";
 import Image from "next/image";
 
 const ParticularCenter = (): JSX.Element => {

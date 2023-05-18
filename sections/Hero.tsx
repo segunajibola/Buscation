@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { CenterCard, StateCard } from "../components";
-import allDestinations from "../data/allDestinations";
+import allDestinations from "@/data/allDestinations";
 import Link from "next/link";
-import Button from "../components/general/Button";
+import Button from "@/components/general/Button";
 
 const Hero = () => {
   const [tour, SetTour] = useState("");
@@ -15,7 +15,22 @@ const Hero = () => {
     SetTour(tour);
   };
 
-  // arrays of all tours array
+  // arrays of all tours arr
+
+  type allTourCenterArrType = {
+    id?: number;
+    name?: string;
+    state?: string;
+    historical?: string;
+    info?: string;
+    address?: string;
+    rating?: string;
+    imageUrl?: string;
+    imageAlt?: string;
+    discovered?: string;
+    guide?: string;
+    opened?: undefined;
+  };
 
   let allTourCenterArr = [];
 

@@ -1,4 +1,21 @@
-const data = [
+let person: [number, boolean, string] = [3, true, "Hi"];
+// array will contain number, boolean and string in the order
+
+// Objects
+
+type userType = {
+  id: number;
+  state: string;
+  slogan: string;
+  imageUrl: string;
+  imageAlt: string;
+  tourCenter: []
+}; // specify the type of the user object below
+
+// 19 - 69
+// const dataType: [userType]
+
+const data: [userType] = [
   {
     id: 1,
     state: "Lagos",
